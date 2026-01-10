@@ -11,6 +11,8 @@ from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import SessionLocal
 import security
+from fastapi.security import OAuth2PasswordBearer
+
 
 # Dependency
 def get_db():
@@ -109,3 +111,23 @@ def create_user(user:UserCreate,db:Session=Depends(get_db)):
     db.commit()
     return{"message":"success"}
 
+from fastapi.security import OAuth2PasswordRequestForm
+
+@app.post("/login")
+def for_login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    db_user = db.query(models.UserDB).filter(models.UserDB.username == form_data.username).first()
+    if db_user is None:
+        raise HTTPException(status_code=401, detail="Invalid username")
+    if not security.verify_password(form_data.password, db_user.hashed_password):
+        raise HTTPException(status_code=401, detail="Invalid password")
+    token = security.create_access_token(data={"sub": form_data.username})
+    return {"access_token": token, "token_type": "bearer"}
+
+oauth2_scheme=OAuth2PasswordBearer(tokenUrl="login")
+@app.get("/me")
+def to_check_token(token:str=Depends(oauth2_scheme),db:Session=Depends(get_db)):
+    username=security.decode_access_token(token)
+    if username is None:
+        raise HTTPException(status_code=404,detail="not with coorect jwt token")
+    user=db.query(models.UserDB).filter(models.UserDB.username==username).first()
+    return{"username of you":user.username,"id":user.id}

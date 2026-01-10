@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Agent (Bare Minimum)</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #333; }
+        input { padding: 8px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #0056b3; }
+        .job-item { border-bottom: 1px solid #eee; padding: 10px 0; }
+        .delete-btn { background-color: #dc3545; font-size: 0.8em; padding: 5px 10px; margin-left: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>🤖 AI Career Agent Dashboard</h1>
+    <p>This is the "Proof" that your backend works.</p>
+
+    <!-- SECTION 1: REGISTER USER -->
+    <div class="card">
+        <h2>1. Register User</h2>
+        <input type="text" id="reg-username" placeholder="Username (e.g. admin)">
+        <input type="password" id="reg-password" placeholder="Password (e.g. secret123)">
+        <button onclick="registerUser()">Create User</button>
+        <p id="reg-result" style="color: green;"></p>
+    </div>
+
+    <!-- SECTION 2: CREATE JOB -->
+    <div class="card">
+        <h2>2. Post a New Job</h2>
+        <input type="text" id="job-title" placeholder="Job Title (e.g. Python Dev)">
+        <input type="text" id="job-location" placeholder="Location (e.g. Remote)">
+        <input type="number" id="job-salary" placeholder="Salary (e.g. 5000)">
+        <button onclick="createJob()">Post Job</button>
+    </div>
+
+    <!-- SECTION 3: JOB LIST -->
+    <div class="card">
+        <h2>3. Job Board (Live from Database)</h2>
+        <button onclick="loadJobs()" style="background-color: #28a745;">Refresh List</button>
+        <div id="job-list"></div>
+    </div>
+
+    <script>
+        const API_URL = ""; 
+
+        // 1. REGISTER USER
+        async function registerUser() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            
+            const response = await fetch(API_URL + '/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: username, password: password })
+            });
+            
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('reg-result').innerText = "Success! " + JSON.stringify(data);
+            } else {
+                document.getElementById('reg-result').innerText = "Error: " + JSON.stringify(data);
+                document.getElementById('reg-result').style.color = "red";
+            }
+        }
+
+        // 2. CREATE JOB
+        async function createJob() {
+            const title = document.getElementById('job-title').value;
+            const location = document.getElementById('job-location').value;
+            const salary = document.getElementById('job-salary').value;
+
+            // Notice: We don't send ID. The DB handles it.
+            const response = await fetch(API_URL + '/jobs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: 0, title: title, location: location, salary: parseInt(salary) }) 
+            });
+
+            if (response.ok) {
+                alert("Job Posted!");
+                loadJobs(); // Auto-refresh list
+            } else {
+                alert("Error posting job");
+            }
+        }
+
+        // 3. GET JOBS
+        async function loadJobs() {
+            const response = await fetch(API_URL + '/jobs');
+            const jobs = await response.json();
+            
+            const listDiv = document.getElementById('job-list');
+            listDiv.innerHTML = ""; // Clear list
+
+            jobs.forEach(job => {
+                const item = document.createElement('div');
+                item.className = 'job-item';
+                item.innerHTML = `
+                    <strong>${job.title}</strong> (${job.location}) - $${job.salary}
+                    <button class="delete-btn" onclick="deleteJob(${job.id})">Delete</button>
+                `;
+                listDiv.appendChild(item);
+            });
+        }
+
+        // 4. DELETE JOB
+        async function deleteJob(id) {
+            if(!confirm("Are you sure?")) return;
+            await fetch(API_URL + '/jobs/' + id, { method: 'DELETE' });
+            loadJobs();
+        }
+
+        // Load jobs on page load
+        loadJobs();
+    </script>
+</body>
+</html>

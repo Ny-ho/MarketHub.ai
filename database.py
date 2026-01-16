@@ -17,7 +17,13 @@ if DATABASE_URL.startswith("postgres://"):
 if "sqlite" in DATABASE_URL:
     engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 else:
-    engine = create_engine(DATABASE_URL)
+    # Production Hardening: Added pre-ping and pool size limits for Render Free Tier
+    engine = create_engine(
+        DATABASE_URL, 
+        pool_pre_ping=True,
+        pool_size=5,
+        max_overflow=10
+    )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()

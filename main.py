@@ -112,17 +112,22 @@ class Job(BaseModel):
     description: Optional[str] = None
 @app.post("/jobs")
 def create_job(job: Job, db: Session = Depends(get_db)):
-    # Standard DB insertion (ID is auto-generated)
-    new_job = models.JobDB(
-        title=job.title,
-        location=job.location,
-        salary=job.salary,
-        description=job.description
-    )
-    db.add(new_job)
-    db.commit()
-    db.refresh(new_job)
-    return new_job
+    try:
+        # Standard DB insertion (ID is auto-generated)
+        new_job = models.JobDB(
+            title=job.title,
+            location=job.location,
+            salary=job.salary,
+            description=job.description
+        )
+        db.add(new_job)
+        db.commit()
+        db.refresh(new_job)
+        return new_job
+    except Exception as e:
+        db.rollback()
+        print(f"JOB DEPLOYMENT FAILED: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Market Signal Failure: {str(e)}")
 #now to apply our resume or give information to jobs company
 class Applicant(BaseModel):
     name:str
@@ -252,53 +257,57 @@ class salary_input(BaseModel):
     company_size: str    
 @app.post("/predict_salary")
 def predict_salary(input_data: salary_input):
-    # 1. AI Cleaning (Lazy Loaded)
-    classifier = get_classifier()
-    result = classifier(input_data.title, KNOWN_TITLES)
-    cleaned_title = result['labels'][0]
-    match_score = result['scores'][0] # How sure the LLM is (0.0 to 1.0)
+    try:
+        # 1. AI Cleaning (Lazy Loaded)
+        classifier = get_classifier()
+        result = classifier(input_data.title, KNOWN_TITLES)
+        cleaned_title = result['labels'][0]
+        match_score = result['scores'][0] # How sure the LLM is (0.0 to 1.0)
 
-    # 2. Confidence Level Logic
-    if match_score > 0.8:
-        confidence = "High"
-    elif match_score > 0.5:
-        confidence = "Medium"
-    else:
-        confidence = "Low"
+        # 2. Confidence Level Logic
+        if match_score > 0.8:
+            confidence = "High"
+        elif match_score > 0.5:
+            confidence = "Medium"
+        else:
+            confidence = "Low"
 
-    # 3. Predict Base Number
-    df = pd.DataFrame({
-        "title": [cleaned_title],
-        "location": [input_data.location],
-        "years_experience": [input_data.years_of_experience],
-        "tech_stack": [input_data.tech_stack],
-        "seniority": [input_data.seniority],
-        "company_size": [input_data.company_size]
-    })
-    base_prediction = int(get_salary_model().predict(df)[0])
+        # 3. Predict Base Number
+        df = pd.DataFrame({
+            "title": [cleaned_title],
+            "location": [input_data.location],
+            "years_experience": [input_data.years_of_experience],
+            "tech_stack": [input_data.tech_stack],
+            "seniority": [input_data.seniority],
+            "company_size": [input_data.company_size]
+        })
+        base_prediction = int(get_salary_model().predict(df)[0])
 
-    # 4. Range Logic (+/- 10%)
-    low_range = int(base_prediction * 0.9)
-    high_range = int(base_prediction * 1.1)
+        # 4. Range Logic (+/- 10%)
+        low_range = int(base_prediction * 0.9)
+        high_range = int(base_prediction * 1.1)
 
-    # 5. Warning Logic
-    warning = None
-    if match_score < 0.4:
-        warning = f"⚠️ ABERRANT INPUT DETECTED: Title '{input_data.title}' does not match standard industry roles. Results may be inaccurate."
+        # 5. Warning Logic
+        warning = None
+        if match_score < 0.4:
+            warning = f"⚠️ ABERRANT INPUT DETECTED: Title '{input_data.title}' does not match standard industry roles. Results may be inaccurate."
 
-    return {
-        "prediction": {
-            "average": base_prediction,
-            "range": f"${low_range:,} - ${high_range:,}",
-            "confidence_level": confidence,
-            "match_accuracy": f"{match_score:.2%}"
-        },
-        "metadata": {
-            "cleaned_title": cleaned_title,
-            "warning": warning,
-            "disclaimer": "Projection based on synthetic market data (2,000+ samples). Actual results vary by negotiation and stock options."
+        return {
+            "prediction": {
+                "average": base_prediction,
+                "range": f"${low_range:,} - ${high_range:,}",
+                "confidence_level": confidence,
+                "match_accuracy": f"{match_score:.2%}"
+            },
+            "metadata": {
+                "cleaned_title": cleaned_title,
+                "warning": warning,
+                "disclaimer": "Projection based on synthetic market data (2,000+ samples). Actual results vary by negotiation and stock options."
+            }
         }
-    }
+    except Exception as e:
+        print(f"AI SIMULATION FAILURE: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"AI Brain Link Interrupted: {str(e)}")
 @app.post("/predict_salary_batch")
 def predict_salary_batch(inputs:List[salary_input]):
     data=[item.dict()for item in inputs]

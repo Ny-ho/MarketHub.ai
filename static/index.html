@@ -845,6 +845,9 @@
                     document.getElementById("prof-id").innerText = `ID: RF-0${data.id}-NEXUS • ${data.email}`;
                 } else {
                     console.error("Profile Fetch Failed:", res.status);
+                    const errData = await res.json().catch(() => ({ detail: "NEXUS Connection High-Load" }));
+                    document.getElementById("prof-email").innerText = "SIGNAL DEGRADED";
+                    document.getElementById("prof-id").innerText = `ERR ${res.status}: ${errData.detail}`;
                 }
             } catch (err) {
                 console.error("Profile Link Error:", err);

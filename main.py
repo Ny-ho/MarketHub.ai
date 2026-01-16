@@ -10,10 +10,23 @@ models.Base.metadata.create_all(bind=engine)
 # Database Schema Initialization
 def init_db():
     try:
-        # This will create tables if they don't exist.
-        # If they exist but columns are missing, we rely on the DB being fresh.
         models.Base.metadata.create_all(bind=engine)
-        print("DATABASE BOOT: Registry Synchronized.")
+        from sqlalchemy import text, inspect
+        inspector = inspect(engine)
+        with engine.connect() as conn:
+            # FORCE ADD 'description' if it was missed in earlier deploys
+            if 'jobs' in inspector.get_table_names():
+                cols = [c['name'] for c in inspector.get_columns('jobs')]
+                if 'description' not in cols:
+                    conn.execute(text("ALTER TABLE jobs ADD COLUMN description TEXT"))
+                    conn.commit()
+            # FORCE ADD 'username' to 'users'
+            if 'users' in inspector.get_table_names():
+                cols = [c['name'] for c in inspector.get_columns('users')]
+                if 'username' not in cols:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN username TEXT"))
+                    conn.commit()
+        print("DATABASE BOOT: Registry Synchronized and Self-Healed.")
     except Exception as e:
         print(f"DATABASE BOOT ERROR: {str(e)}")
 

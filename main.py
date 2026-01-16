@@ -1,19 +1,38 @@
 from fastapi import FastAPI,HTTPException
-from typing import Optional
-from pydantic import BaseModel
+from typing import Optional,List
+from pydantic import BaseModel,EmailStr
 import time
 from fastapi import Request
 from fastapi.staticfiles import StaticFiles
 from database import engine
 import models
 models.Base.metadata.create_all(bind=engine)
+# Standard SQLite Schema Auto-Patch
+from sqlalchemy import text
+try:
+    with engine.connect() as conn:
+        try: conn.execute(text("ALTER TABLE jobs ADD COLUMN description TEXT"))
+        except Exception: pass
+        try: conn.execute(text("ALTER TABLE users ADD COLUMN username TEXT"))
+        except Exception: pass
+        conn.commit()
+except Exception: pass
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import SessionLocal
 import security
 from fastapi.security import OAuth2PasswordBearer
+import joblib
+import pandas as pd
 
+from transformers import pipeline
 
+# Known Valid Titles (Must match your CSV)
+KNOWN_TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOps", "Designer", "QA Engineer", "Sales", "HR"]
+
+# Load the "Classifier" (Downloads 500MB once)
+# main.py
+classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
 # Dependency
 def get_db():
     db = SessionLocal()
@@ -22,7 +41,18 @@ def get_db():
     finally:
         db.close()
 
+oauth2_scheme=OAuth2PasswordBearer(tokenUrl="login")
 
+def get_current_user(token:str=Depends(oauth2_scheme),db:Session=Depends(get_db)):
+    username=security.decode_access_token(token)
+    if username is None:
+        raise HTTPException(status_code=404,detail="not with coorect jwt token")
+    user=db.query(models.UserDB).filter(models.UserDB.email==username).first()
+    if user is None:
+        raise HTTPException(status_code=401,detail="user not found")
+    return user
+
+model =joblib.load("salary_model.pkl")
 app=FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 #just a middlware for calculating time taken of a function
@@ -52,12 +82,14 @@ class Job(BaseModel):
     title:str
     location:str
     salary:int
+    description: Optional[str] = None
 @app.post("/jobs")
 def create_job(job:Job,db: Session =Depends(get_db)):
    new_job=models.JobDB(
        title=job.title,
        location=job.location,
-       salary=job.salary
+       salary=job.salary,
+       description=job.description
    )
    db.add(new_job)
    db.commit()
@@ -70,11 +102,12 @@ class Applicant(BaseModel):
     location:str
     projects_done:str
 @app.post("/jobs/{job_id}/apply")
-def apply_for_job(job_id:int,db:Session=Depends(get_db)):
-    applying_for_job=db.query(models.JobDB).filter(models.JobDB.id==job_id).first()
-    if applying_for_job is None:
-            raise HTTPException(status_code=404,details="job dont exist")
-    return applying_for_job
+async def apply_for_job(job_id: int, db: Session = Depends(get_db), current_user: models.UserDB = Depends(get_current_user)):
+    job = db.query(models.JobDB).filter(models.JobDB.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    print(f"User {current_user.email} applying for job {job.title}")
+    return {"message": "Application signal sent successfully."}
 
 @app.delete("/jobs/{job_id}")
 def delete_job(job_id:int, db:Session=Depends(get_db)):
@@ -98,36 +131,137 @@ def update_job(job_id:int,job_update:Job,db:Session=Depends(get_db)):
 
 #password hashing (making password gibbrish)
 class UserCreate(BaseModel):
+    email:EmailStr
     username:str
     password:str
 @app.post("/users")
-def create_user(user:UserCreate,db:Session=Depends(get_db)):
-    hashed_pwd=security.get_password_hash(user.password)
-    new_user=models.UserDB(
+async def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    new_user = models.UserDB(
+        email=user.email,
         username=user.username,
-        hashed_password=hashed_pwd
+        hashed_password=security.get_password_hash(user.password)
     )
     db.add(new_user)
     db.commit()
-    return{"message":"success"}
+    return {"message": "Agent Signal Initialized."}
 
 from fastapi.security import OAuth2PasswordRequestForm
 
 @app.post("/login")
 def for_login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    db_user = db.query(models.UserDB).filter(models.UserDB.username == form_data.username).first()
+    # Check both email AND username so agents can use either to log in
+    db_user = db.query(models.UserDB).filter(
+        (models.UserDB.email == form_data.username) | (models.UserDB.username == form_data.username)
+    ).first()
+    
     if db_user is None:
-        raise HTTPException(status_code=401, detail="Invalid username")
+        raise HTTPException(status_code=401, detail="Invalid Signal ID (Email or Agent Name)")
     if not security.verify_password(form_data.password, db_user.hashed_password):
-        raise HTTPException(status_code=401, detail="Invalid password")
-    token = security.create_access_token(data={"sub": form_data.username})
+        raise HTTPException(status_code=401, detail="Invalid Secret Cipher")
+    
+    # Always use email as the token subject for consistency in auth guards
+    token = security.create_access_token(data={"sub": db_user.email})
     return {"access_token": token, "token_type": "bearer"}
 
-oauth2_scheme=OAuth2PasswordBearer(tokenUrl="login")
 @app.get("/me")
-def to_check_token(token:str=Depends(oauth2_scheme),db:Session=Depends(get_db)):
-    username=security.decode_access_token(token)
-    if username is None:
-        raise HTTPException(status_code=404,detail="not with coorect jwt token")
-    user=db.query(models.UserDB).filter(models.UserDB.username==username).first()
-    return{"username of you":user.username,"id":user.id}
+def view_profile(current_user:models.UserDB=Depends(get_current_user)):
+    return{"email":current_user.email,"username":current_user.username,"id":current_user.id}
+
+@app.get("/community")
+def get_community(db:Session=Depends(get_db)):
+    users = db.query(models.UserDB).all()
+    return [{"id": u.id, "username": u.username or "Anonymous Agent"} for u in users]
+
+class todocreate(BaseModel):
+    task:str
+class todoresponse(BaseModel):
+    id:int
+    task:str
+    is_done:bool
+    owner_id:int
+    
+    class Config:
+        from_attributes=True
+@app.post("/todos",response_model=todoresponse)
+def create_todo(todo:todocreate,db:Session=Depends(get_db),current_user:models.UserDB=Depends(get_current_user)):
+    new_todo=models.TodoDB(
+        task=todo.task,
+        owner_id=current_user.id
+    )
+    db.add(new_todo)
+    db.commit()
+    db.refresh(new_todo)
+    return new_todo
+@app.get("/todos")
+def get_my_todos(db:Session=Depends(get_db),current_user:models.UserDB=Depends(get_current_user)):
+    return db.query(models.TodoDB).filter(models.TodoDB.owner_id==current_user.id).all()
+
+class salary_input(BaseModel):
+    title: str
+    location: str
+    years_of_experience: int
+    tech_stack: str      
+    seniority: str       
+    company_size: str    
+@app.post("/predict_salary")
+def predict_salary(input_data: salary_input):
+    # 1. AI Cleaning
+    result = classifier(input_data.title, KNOWN_TITLES)
+    cleaned_title = result['labels'][0]
+    match_score = result['scores'][0] # How sure the LLM is (0.0 to 1.0)
+
+    # 2. Confidence Level Logic
+    if match_score > 0.8:
+        confidence = "High"
+    elif match_score > 0.5:
+        confidence = "Medium"
+    else:
+        confidence = "Low"
+
+    # 3. Predict Base Number
+    df = pd.DataFrame({
+        "title": [cleaned_title],
+        "location": [input_data.location],
+        "years_experience": [input_data.years_of_experience],
+        "tech_stack": [input_data.tech_stack],
+        "seniority": [input_data.seniority],
+        "company_size": [input_data.company_size]
+    })
+    base_prediction = int(model.predict(df)[0])
+
+    # 4. Range Logic (+/- 10%)
+    low_range = int(base_prediction * 0.9)
+    high_range = int(base_prediction * 1.1)
+
+    # 5. Warning Logic
+    warning = None
+    if match_score < 0.4:
+        warning = f"⚠️ ABERRANT INPUT DETECTED: Title '{input_data.title}' does not match standard industry roles. Results may be inaccurate."
+
+    return {
+        "prediction": {
+            "average": base_prediction,
+            "range": f"${low_range:,} - ${high_range:,}",
+            "confidence_level": confidence,
+            "match_accuracy": f"{match_score:.2%}"
+        },
+        "metadata": {
+            "cleaned_title": cleaned_title,
+            "warning": warning,
+            "disclaimer": "Projection based on synthetic market data (2,000+ samples). Actual results vary by negotiation and stock options."
+        }
+    }
+@app.post("/predict_salary_batch")
+def predict_salary_batch(inputs:List[salary_input]):
+    data=[item.dict()for item in inputs]
+    df=pd.DataFrame(data)
+    df=df.rename(columns={"years_of_experience":"years_experience"})
+    predictions=model.predict(df)
+    return{"estimated_salaries":predictions.tolist()}   
+
+#to directly show frontend in localhost 8000
+from fastapi.responses import FileResponse
+
+@app.get("/")
+def read_root():
+    return FileResponse("static/index.html") 

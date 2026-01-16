@@ -1,122 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Career Agent (Bare Minimum)</title>
+    <title>MarketHub.ai | Platinum Pro Console</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; }
-        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h2 { margin-top: 0; color: #333; }
-        input { padding: 8px; margin: 5px 0; width: 100%; box-sizing: border-box; }
-        button { background-color: #007bff; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
-        button:hover { background-color: #0056b3; }
-        .job-item { border-bottom: 1px solid #eee; padding: 10px 0; }
-        .delete-btn { background-color: #dc3545; font-size: 0.8em; padding: 5px 10px; margin-left: 10px; }
+        :root {
+            --bg-deep: #020617;
+            --bg-sidebar: #050b18;
+            --emerald-bright: #10b981;
+            --emerald-dim: #064e3b;
+            --cyan-neon: #22d3ee;
+            --accent-purple: #818cf8;
+            --text-main: #f8fafc;
+            --text-mute: #94a3b8;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --card-glass: rgba(15, 23, 42, 0.6);
+            --sidebar-width: 280px;
+            --warning-red: #fb7185;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* --- SIDEBAR --- */
+        #pro-sidebar {
+            width: var(--sidebar-width);
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border-glass);
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            z-index: 100;
+        }
+
+        .brand-zone {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(to right, var(--emerald-bright), var(--cyan-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-list {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-item {
+            margin-bottom: 8px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--text-mute);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+        }
+
+        .nav-item.active {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--emerald-bright);
+            box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.2);
+        }
+
+        .sidebar-foot {
+            padding-top: 20px;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .user-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-mute);
+        }
+
+        .dot-online {
+            width: 8px;
+            height: 8px;
+            background: var(--emerald-bright);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--emerald-bright);
+        }
+
+        /* --- WORKSPACE --- */
+        #workspace {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 50px 60px;
+            position: relative;
+        }
+
+        .view-panel {
+            display: none;
+        }
+
+        .view-panel.active {
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 35px;
+        }
+
+        /* --- UI COMPONENTS --- */
+        .card {
+            background: var(--card-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 35px;
+            margin-bottom: 30px;
+        }
+
+        .btn-vibrant {
+            background: var(--emerald-bright);
+            color: var(--bg-deep);
+            border: none;
+            padding: 16px 30px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-vibrant:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-vibrant:active {
+            transform: scale(0.98);
+        }
+
+        .btn-cyan {
+            background: var(--cyan-neon);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--emerald-bright);
+            color: var(--emerald-bright);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-mute);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            padding: 14px 18px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input:focus {
+            border-color: var(--emerald-bright);
+        }
+
+        /* --- MARKET SPECIFIC --- */
+        .market-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+        }
+
+        .job-card-small {
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .job-card-small:hover {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: var(--emerald-bright);
+        }
+
+        .job-card-small.active {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--emerald-bright);
+        }
+
+        .job-dossier {
+            position: sticky;
+            top: 0;
+        }
+
+        /* --- AI SCANNING --- */
+        .scanning-box {
+            position: relative;
+            height: 4px;
+            background: var(--border-glass);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 40px 0;
+            display: none;
+        }
+
+        .scanning-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 30%;
+            background: linear-gradient(to right, transparent, var(--emerald-bright), transparent);
+            animation: scan 1.5s infinite;
+        }
+
+        @keyframes scan {
+            0% {
+                left: -30%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* --- AUTH --- */
+        #auth-guard {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-deep);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-card {
+            width: 420px;
+            padding: 45px;
+            background: var(--bg-sidebar);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .warning-banner {
+            background: rgba(251, 113, 133, 0.1);
+            border: 1px solid rgba(251, 113, 133, 0.2);
+            color: var(--warning-red);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        /* --- SCROLLBAR --- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-glass);
+            border-radius: 10px;
+        }
     </style>
 </head>
+
 <body>
 
-    <h1>🤖 AI Career Agent Dashboard</h1>
-    <p>This is the "Proof" that your backend works.</p>
-
-    <!-- SECTION 1: REGISTER USER -->
-    <div class="card">
-        <h2>1. Register User</h2>
-        <input type="text" id="reg-username" placeholder="Username (e.g. admin)">
-        <input type="password" id="reg-password" placeholder="Password (e.g. secret123)">
-        <button onclick="registerUser()">Create User</button>
-        <p id="reg-result" style="color: green;"></p>
+    <!-- AUTH GUARD -->
+    <div id="auth-guard">
+        <div class="auth-card">
+            <h1 class="brand-zone" style="justify-content:center; margin-bottom:40px;">MarketHubAI</h1>
+            <div id="login-view">
+                <div class="form-group"><label>Signal ID</label><input type="text" id="email"
+                        placeholder="agent@markethub.ai"></div>
+                <div class="form-group"><label>Cipher</label><input type="password" id="password"
+                        placeholder="••••••••"></div>
+                <button class="btn-vibrant" style="width:100%" onclick="initiateLogin()">Access Platform</button>
+                <p style="margin-top:25px; font-size:0.85rem; color:var(--text-mute)">New Signal? <span
+                        style="color:var(--emerald-bright); cursor:pointer" onclick="toggleAuth(true)">Register
+                        Identity</span></p>
+            </div>
+            <div id="reg-view" class="hidden">
+                <div class="form-group"><label>Email (Private Signal)</label><input type="text" id="reg-email"
+                        placeholder="agent@nexus.ai"></div>
+                <div class="form-group"><label>Agent Identity (Username)</label><input type="text" id="reg-user"
+                        placeholder="e.g. Neo"></div>
+                <div class="form-group"><label>Secure Cipher</label><input type="password" id="reg-password"
+                        placeholder="••••••••"></div>
+                <button class="btn-vibrant btn-cyan" style="width:100%" onclick="register()">Create Identity</button>
+                <p style="margin-top:25px; font-size:0.85rem; color:var(--text-mute)">Existing Signal? <span
+                        style="color:var(--cyan-neon); cursor:pointer" onclick="toggleAuth(false)">Back to Login</span>
+                </p>
+            </div>
+        </div>
     </div>
 
-    <!-- SECTION 2: CREATE JOB -->
-    <div class="card">
-        <h2>2. Post a New Job</h2>
-        <input type="text" id="job-title" placeholder="Job Title (e.g. Python Dev)">
-        <input type="text" id="job-location" placeholder="Location (e.g. Remote)">
-        <input type="number" id="job-salary" placeholder="Salary (e.g. 5000)">
-        <button onclick="createJob()">Post Job</button>
-    </div>
+    <!-- SIDEBAR -->
+    <aside id="pro-sidebar">
+        <div class="brand-zone"><i data-lucide="shield-check"></i> MARKET<span>HUB</span></div>
+        <ul class="nav-list">
+            <li class="nav-item active" id="tab-dash" onclick="switchTab('dash')"><i data-lucide="layout-dashboard"></i>
+                Dashboard</li>
+            <li class="nav-item" id="tab-ai" onclick="switchTab('ai')"><i data-lucide="brain-circuit"></i> AI Simulator
+            </li>
+            <li class="nav-item" id="tab-market" onclick="switchTab('market')"><i data-lucide="globe"></i> Marketplace
+            </li>
+            <li class="nav-item" id="tab-todo" onclick="switchTab('todo')"><i data-lucide="list-checks"></i> Directives
+            </li>
+            <li class="nav-item" id="tab-profile" onclick="switchTab('profile')"><i data-lucide="user-cog"></i> HQ
+                Profile</li>
+        </ul>
+        <div class="sidebar-foot">
+            <div class="user-status">
+                <div class="dot-online"></div><span id="nav-user">--</span><i data-lucide="log-out"
+                    style="margin-left:auto; width:16px; cursor:pointer;" onclick="logout()"></i>
+            </div>
+        </div>
+    </aside>
 
-    <!-- SECTION 3: JOB LIST -->
-    <div class="card">
-        <h2>3. Job Board (Live from Database)</h2>
-        <button onclick="loadJobs()" style="background-color: #28a745;">Refresh List</button>
-        <div id="job-list"></div>
-    </div>
+    <main id="workspace">
+
+        <!-- DASHBOARD -->
+        <div id="view-dash" class="view-panel active">
+            <h1>System Overview</h1>
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:30px;">
+                <div class="card" style="text-align:center;">
+                    <div id="count-users" style="font-size:2rem; font-weight:800; color:var(--emerald-bright);">--</div>
+                    <div style="font-size:0.7rem; color:var(--text-mute);">AGENTS</div>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div id="count-jobs" style="font-size:2rem; font-weight:800; color:var(--emerald-bright);">--</div>
+                    <div style="font-size:0.7rem; color:var(--text-mute);">VACANCIES</div>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div style="font-size:2rem; font-weight:800; color:var(--emerald-bright);">99.4%</div>
+                    <div style="font-size:0.7rem; color:var(--text-mute);">UPTIME</div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Community Hub</h2>
+                <div id="community-list" class="friend-list"></div>
+            </div>
+        </div>
+
+        <!-- AI SIMULATOR -->
+        <div id="view-ai" class="view-panel">
+            <h1>Intelligence Simulator</h1>
+            <div class="card">
+                <h3>Salary Core Analysis</h3>
+                <div id="ai-shortcuts" style="margin:20px 0; display:flex; flex-wrap:wrap; gap:10px;"></div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+                    <div class="form-group"><label>Role Title</label><input type="text" id="ai-title"></div>
+                    <div class="form-group"><label>Location</label><input type="text" id="ai-loc"></div>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;">
+                    <div class="form-group"><label>Seniority</label><select id="ai-sen">
+                            <option value="Senior">Senior</option>
+                            <option value="Mid">Mid</option>
+                            <option value="Junior">Junior</option>
+                        </select></div>
+                    <div class="form-group"><label>Exp Years</label><input type="number" id="ai-exp" value="5"></div>
+                    <div class="form-group"><label>Scale</label><select id="ai-scale">
+                            <option value="Large">Enterprise</option>
+                            <option value="Medium">Mid-Scale</option>
+                            <option value="Small">Startup</option>
+                        </select></div>
+                </div>
+                <button class="btn-vibrant" style="width:100%" onclick="runAI()"><i data-lucide="zap"></i> EXECUTE
+                    SIMULATION</button>
+                <div id="ai-scanning" class="scanning-box">
+                    <div class="scanning-bar"></div>
+                </div>
+                <div id="ai-result-panel" class="hidden">
+                    <div style="text-align:center; margin-top:30px;">
+                        <div style="font-size:0.7rem; color:var(--emerald-bright); letter-spacing:2px;">ESTIMATED MARKET
+                            VALUE</div>
+                        <div id="res-bracket" style="font-size:3.5rem; font-weight:800; color:white;">$0</div>
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-top:25px;">
+                        <div
+                            style="padding:15px; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid var(--border-glass);">
+                            <div style="font-size:0.65rem; color:var(--text-mute);">CONFIDENCE</div>
+                            <div id="res-conf" style="font-weight:700; color:var(--emerald-bright);">--</div>
+                        </div>
+                        <div
+                            style="padding:15px; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid var(--border-glass);">
+                            <div style="font-size:0.65rem; color:var(--text-mute);">ACCURACY</div>
+                            <div id="res-acc" style="font-weight:700; color:var(--emerald-bright);">--</div>
+                        </div>
+                    </div>
+                    <div id="res-warning" class="warning-banner hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MARKETPLACE -->
+        <div id="view-market" class="view-panel">
+            <h1>Marketplace Hub</h1>
+
+            <!-- TOP ACTIONS: Post & Search -->
+            <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:20px; margin-bottom:30px;">
+                <div class="card" style="margin-bottom:0;">
+                    <h3>Push to World Market</h3>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-top:15px;">
+                        <div class="form-group"><label>Title</label><input type="text" id="j-title"></div>
+                        <div class="form-group"><label>Location</label><input type="text" id="j-loc"></div>
+                    </div>
+                    <div class="form-group"><label>Description</label><textarea id="j-desc" rows="2"
+                            placeholder="Responsibilities..."></textarea></div>
+                    <div style="display:flex; gap:15px;">
+                        <input type="number" id="j-sal" value="100000" style="width:150px;">
+                        <button class="btn-vibrant btn-cyan" style="flex-grow:1" onclick="postJob()">DEPLOY
+                            SIGNAL</button>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom:0;">
+                    <h3>Registry Search</h3>
+                    <p style="font-size:0.8rem; color:var(--text-mute); margin-bottom:15px;">Fetch direct dossiers by
+                        System ID#</p>
+                    <div style="display:flex; gap:10px;">
+                        <input type="number" id="reg-search-id" placeholder="ID#">
+                        <button class="btn-vibrant btn-outline" style="padding:10px 20px;"
+                            onclick="fetchJobByID()">FETCH</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-split">
+                <!-- WORLD MARKET STREAM -->
+                <div class="card" style="max-height:600px; overflow-y:auto;">
+                    <h3>World Market Stream</h3>
+                    <div id="market-list" style="margin-top:20px;">
+                        <!-- List entries -->
+                    </div>
+                </div>
+
+                <!-- JOB DOSSIER (ACTIVE VIEW) -->
+                <div class="card job-dossier" id="job-dossier">
+                    <div id="dossier-empty">
+                        <div style="text-align:center; padding:100px 0; color:var(--text-mute)">
+                            <i data-lucide="search" style="width:40px; height:40px; margin-bottom:15px;"></i>
+                            <p>Select a job or search by ID to view details and apply.</p>
+                        </div>
+                    </div>
+                    <div id="dossier-content" class="hidden">
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:25px;">
+                            <div>
+                                <div id="dos-id"
+                                    style="font-family:'Fira Code'; font-size:0.75rem; color:var(--cyan-neon); margin-bottom:5px;">
+                                    ID# --</div>
+                                <h2 id="dos-title" style="margin-bottom:5px;">--</h2>
+                                <div id="dos-loc" style="color:var(--text-mute); font-size:0.9rem;">--</div>
+                            </div>
+                            <div id="dos-sal" style="font-size:1.8rem; font-weight:800; color:var(--emerald-bright);">$0
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Role Description</label>
+                            <div id="dos-desc"
+                                style="background:rgba(255,255,255,0.03); padding:20px; border-radius:12px; font-size:0.95rem; line-height:1.6;">
+                                --</div>
+                        </div>
+
+                        <button id="apply-btn" class="btn-vibrant" style="width:100%; margin-top:20px;"
+                            onclick="applyForRole()">
+                            <i data-lucide="send"></i> APPLY FOR ROLE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIRECTIVES -->
+        <div id="view-todo" class="view-panel">
+            <h1>System Directives</h1>
+            <div class="card">
+                <div style="display:flex; gap:10px; margin-bottom:30px;"><input type="text" id="todo-text"
+                        placeholder="Queue new task..."><button class="btn-vibrant" onclick="addTodo()">ENQUEUE</button>
+                </div>
+                <div id="todo-list"></div>
+            </div>
+        </div>
+
+        <!-- PROFILE -->
+        <div id="view-profile" class="view-panel">
+            <h1>HQ Identity</h1>
+            <div class="card" style="display:flex; align-items:center; gap:20px;">
+                <div
+                    style="width:80px; height:80px; border:2px solid var(--emerald-bright); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="user" style="color:var(--emerald-bright);"></i>
+                </div>
+                <div>
+                    <h3 id="prof-email">--</h3>
+                    <p id="prof-id" style="font-family:'Fira Code'; font-size:0.8rem; color:var(--text-mute);"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <script>
-        const API_URL = ""; 
+        lucide.createIcons();
+        const TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOps", "Designer", "QA", "Sales", "HR"];
+        let TOKEN = localStorage.getItem("token");
+        let ACTIVE_JOB = null;
 
-        // 1. REGISTER USER
-        async function registerUser() {
-            const username = document.getElementById('reg-username').value;
-            const password = document.getElementById('reg-password').value;
-            
-            const response = await fetch(API_URL + '/users', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username: username, password: password })
+        window.onload = () => {
+            initShortcuts();
+            if (TOKEN) validateSession();
+            else toggleAuth(false);
+        };
+
+        function initShortcuts() {
+            const container = document.getElementById("ai-shortcuts");
+            TITLES.forEach(t => {
+                const tag = document.createElement("div");
+                tag.style = "padding:6px 14px; background:rgba(255,255,255,0.05); border:1px solid var(--border-glass); border-radius:50px; cursor:pointer; font-size:0.7rem;";
+                tag.innerText = t;
+                tag.onclick = () => document.getElementById("ai-title").value = t;
+                container.appendChild(tag);
             });
-            
-            const data = await response.json();
-            if (response.ok) {
-                document.getElementById('reg-result').innerText = "Success! " + JSON.stringify(data);
+        }
+
+        async function validateSession() {
+            const res = await fetch("/me", { headers: { "Authorization": `Bearer ${TOKEN}` } });
+            if (res.ok) {
+                const data = await res.json();
+                document.getElementById("auth-guard").classList.add("hidden");
+                document.getElementById("nav-user").innerText = data.email;
+                fetchCommunity(); fetchJobCount();
+            } else logout();
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
+            document.getElementById(`tab-${tabId}`).classList.add("active");
+            document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+            document.getElementById(`view-${tabId}`).classList.add("active");
+            if (tabId === 'dash') { fetchCommunity(); fetchJobCount(); }
+            if (tabId === 'market') fetchJobs();
+            if (tabId === 'todo') fetchTodos();
+            if (tabId === 'profile') fetchProfile();
+        }
+
+        function logout() { localStorage.removeItem("token"); location.reload(); }
+        function toggleAuth(isReg) { document.getElementById("login-view").classList.toggle("hidden", isReg); document.getElementById("reg-view").classList.toggle("hidden", !isReg); }
+
+        async function initiateLogin() {
+            const fd = new URLSearchParams();
+            // FastAPI OAuth2PasswordRequestForm expects 'username' as the key
+            fd.append('username', document.getElementById("email").value);
+            fd.append('password', document.getElementById("password").value);
+
+            const res = await fetch("/login", { method: "POST", body: fd });
+            if (res.ok) {
+                localStorage.setItem("token", (await res.json()).access_token);
+                location.reload();
             } else {
-                document.getElementById('reg-result').innerText = "Error: " + JSON.stringify(data);
-                document.getElementById('reg-result').style.color = "red";
+                const err = await res.json().catch(() => ({ detail: "Cipher Connection Error" }));
+                alert(`❌ ACCESS DENIED: ${err.detail}`);
             }
         }
 
-        // 2. CREATE JOB
-        async function createJob() {
-            const title = document.getElementById('job-title').value;
-            const location = document.getElementById('job-location').value;
-            const salary = document.getElementById('job-salary').value;
+        async function register() {
+            const email = document.getElementById("reg-email").value;
+            const user = document.getElementById("reg-user").value;
+            const pass = document.getElementById("reg-password").value;
 
-            // Notice: We don't send ID. The DB handles it.
-            const response = await fetch(API_URL + '/jobs', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id: 0, title: title, location: location, salary: parseInt(salary) }) 
+            if (!email || !user || !pass) {
+                alert("⚠️ IDENTITY ERROR: All fields (Email, Agent Name, Cipher) are required.");
+                return;
+            }
+
+            const res = await fetch("/users", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, username: user, password: pass })
             });
 
-            if (response.ok) {
-                alert("Job Posted!");
-                loadJobs(); // Auto-refresh list
+            if (res.ok) {
+                toggleAuth(false);
+                alert("✅ SIGNAL ESTABLISHED: Identity registered. Use your Email or Agent Name to login.");
             } else {
-                alert("Error posting job");
+                const errData = await res.json().catch(() => ({ detail: "Server Error" }));
+                alert(`❌ REGISTRY FAILED: ${errData.detail || "Database conflict. Ensure email/name is unique."}`);
             }
         }
 
-        // 3. GET JOBS
-        async function loadJobs() {
-            const response = await fetch(API_URL + '/jobs');
-            const jobs = await response.json();
-            
-            const listDiv = document.getElementById('job-list');
-            listDiv.innerHTML = ""; // Clear list
+        async function fetchCommunity() {
+            const users = await (await fetch("/community")).json();
+            document.getElementById("count-users").innerText = users.length;
+            const container = document.getElementById("community-list");
+            container.innerHTML = "";
+            users.forEach(u => {
+                const tag = document.createElement("div"); tag.className = "friend-tag"; tag.innerText = u.username || "Anonymous Agent";
+                container.appendChild(tag);
+            });
+        }
 
-            jobs.forEach(job => {
-                const item = document.createElement('div');
-                item.className = 'job-item';
+        async function fetchJobCount() { document.getElementById("count-jobs").innerText = (await (await fetch("/jobs")).json()).length; }
+
+        async function fetchJobs() {
+            const data = await (await fetch("/jobs")).json();
+            const container = document.getElementById("market-list");
+            container.innerHTML = "";
+            data.forEach(j => {
+                const item = document.createElement("div");
+                item.className = "job-card-small";
+                if (ACTIVE_JOB && ACTIVE_JOB.id === j.id) item.classList.add("active");
                 item.innerHTML = `
-                    <strong>${job.title}</strong> (${job.location}) - $${job.salary}
-                    <button class="delete-btn" onclick="deleteJob(${job.id})">Delete</button>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <strong>${j.title}</strong>
+                        <span style="color:var(--emerald-bright); font-size:0.8rem;">$${j.salary.toLocaleString()}</span>
+                    </div>
+                    <div style="font-size:0.75rem; color:var(--text-mute); margin-top:4px;">${j.location} • ID# ${j.id}</div>
                 `;
-                listDiv.appendChild(item);
+                item.onclick = () => showDossier(j);
+                container.appendChild(item);
             });
         }
 
-        // 4. DELETE JOB
-        async function deleteJob(id) {
-            if(!confirm("Are you sure?")) return;
-            await fetch(API_URL + '/jobs/' + id, { method: 'DELETE' });
-            loadJobs();
+        function showDossier(job) {
+            ACTIVE_JOB = job;
+            document.querySelectorAll(".job-card-small").forEach(i => i.classList.remove("active"));
+
+            document.getElementById("dossier-empty").classList.add("hidden");
+            document.getElementById("dossier-content").classList.remove("hidden");
+
+            document.getElementById("dos-id").innerText = `ID# ${job.id}`;
+            document.getElementById("dos-title").innerText = job.title;
+            document.getElementById("dos-loc").innerText = job.location;
+            document.getElementById("dos-sal").innerText = `$${job.salary.toLocaleString()}`;
+            document.getElementById("dos-desc").innerText = job.description || "No specific dossier description provided for this registry entry.";
+
+            gsap.from("#dossier-content", { opacity: 0, x: 10, duration: 0.3 });
+            lucide.createIcons();
         }
 
-        // Load jobs on page load
-        loadJobs();
+        async function fetchJobByID() {
+            const id = document.getElementById("reg-search-id").value;
+            if (!id) return;
+            const res = await fetch(`/jobs/${id}`);
+            if (res.ok) {
+                const job = await res.json();
+                showDossier(job);
+            } else alert("Registry Error: ID not found.");
+        }
+
+        async function applyForRole() {
+            if (!ACTIVE_JOB) return;
+            const btn = document.getElementById("apply-btn");
+            btn.innerText = "PROCESSING...";
+            btn.disabled = true;
+
+            const res = await fetch(`/jobs/${ACTIVE_JOB.id}/apply`, {
+                method: "POST",
+                headers: { "Authorization": `Bearer ${TOKEN}` }
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                alert(`✅ ${data.message}`);
+                btn.innerText = "APPLICATION SENT";
+            } else {
+                alert("❌ Registry Link Failed. Ensure your signal is authorized.");
+                btn.innerText = "RETRY APPLICATION";
+                btn.disabled = false;
+            }
+        }
+
+        async function postJob() {
+            try {
+                const title = document.getElementById("j-title").value;
+                const loc = document.getElementById("j-loc").value;
+                const sal = document.getElementById("j-sal").value;
+                const desc = document.getElementById("j-desc").value;
+
+                if (!title || !loc) {
+                    alert("⚠️ REGISTRY ERROR: Job Title and Location are required.");
+                    return;
+                }
+
+                const res = await fetch("/jobs", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        id: 0,
+                        title: title,
+                        location: loc,
+                        salary: parseInt(sal) || 0,
+                        description: desc || ""
+                    })
+                });
+
+                if (res.ok) {
+                    fetchJobs(); fetchJobCount();
+                    alert("✅ SIGNAL DEPLOYED: Job pushed to World Market.");
+                    document.getElementById("j-title").value = "";
+                    document.getElementById("j-loc").value = "";
+                    document.getElementById("j-desc").value = "";
+                } else {
+                    const errData = await res.json().catch(() => ({ detail: "Server Error" }));
+                    alert("❌ DEPLOYMENT FAILED: " + (errData.detail || "Database link error. If you just added a description field, the DB may need a reset."));
+                }
+            } catch (err) {
+                alert("🚫 SYSTEM CRITICAL: " + err.message);
+            }
+        }
+
+        async function runAI() {
+            const scan = document.getElementById("ai-scanning");
+            const resPanel = document.getElementById("ai-result-panel");
+            scan.style.display = "block"; resPanel.classList.add("hidden");
+
+            const res = await fetch("/predict_salary", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ title: document.getElementById("ai-title").value, location: document.getElementById("ai-loc").value, years_of_experience: parseInt(document.getElementById("ai-exp").value), tech_stack: "Default", seniority: document.getElementById("ai-sen").value, company_size: document.getElementById("ai-scale").value })
+            });
+
+            setTimeout(async () => {
+                scan.style.display = "none";
+                const data = await res.json();
+                resPanel.classList.remove("hidden");
+                document.getElementById("res-bracket").innerText = `$${data.prediction.average.toLocaleString()}`;
+                document.getElementById("res-conf").innerText = data.prediction.confidence_level;
+                document.getElementById("res-acc").innerText = data.prediction.match_accuracy;
+
+                const warn = document.getElementById("res-warning");
+                if (data.metadata.warning) { warn.innerText = data.metadata.warning; warn.classList.remove("hidden"); }
+                else warn.classList.add("hidden");
+
+                gsap.from(resPanel, { opacity: 0, y: 15 });
+            }, 1200);
+        }
+
+        async function fetchTodos() {
+            const data = await (await fetch("/todos", { headers: { "Authorization": `Bearer ${TOKEN}` } })).json();
+            const container = document.getElementById("todo-list");
+            container.innerHTML = "";
+            data.forEach(t => {
+                const div = document.createElement("div");
+                div.style = "padding:12px; border-bottom:1px solid var(--border-glass); font-size:0.9rem;";
+                div.innerText = `➢ ${t.task}`; container.appendChild(div);
+            });
+        }
+
+        async function addTodo() {
+            await fetch("/todos", { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${TOKEN}` }, body: JSON.stringify({ task: document.getElementById("todo-text").value }) });
+            document.getElementById("todo-text").value = ""; fetchTodos();
+        }
+
+        async function fetchProfile() {
+            const data = await (await fetch("/me", { headers: { "Authorization": `Bearer ${TOKEN}` } })).json();
+            document.getElementById("prof-email").innerText = data.username || data.email;
+            document.getElementById("prof-id").innerText = `ID: RF-0${data.id}-NEXUS • ${data.email}`;
+        }
     </script>
 </body>
+
 </html>

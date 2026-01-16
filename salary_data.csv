@@ -1,0 +1,2001 @@
+title,seniority,location,tech_stack,company_size,years_experience,salary
+Sales,Lead,London,Python,Mid-Size,12,227361.94
+DevOps,Senior,Germany,Java,Mid-Size,0,123270.6
+Designer,Principal,London,Javascript,Big Tech,4,301410.22
+Sales,Junior,London,Rust,Startup,25,66051.74
+Product Manager,Principal,SF,Rust,Big Tech,12,798436.64
+HR,Junior,Germany,Go,Startup,24,49595.68
+Designer,Mid,SF,C++,Startup,13,135205.71
+Designer,Junior,London,Python,Big Tech,23,98604.08
+Sales,Lead,Germany,Go,Mid-Size,2,176838.99
+Data Scientist,Senior,London,Java,Mid-Size,14,183193.42
+Product Manager,Mid,India,Rust,Startup,18,26848.66
+Sales,Junior,Germany,Python,Big Tech,16,86111.01
+Product Manager,Principal,Germany,Java,Mid-Size,2,226150.65
+Product Manager,Mid,London,C++,Mid-Size,15,136530.27
+HR,Mid,India,Java,Startup,13,20715.07
+Designer,Junior,Remote,Python,Startup,11,54841.06
+DevOps,Mid,SF,C++,Big Tech,11,248102.59
+HR,Principal,London,Java,Startup,10,188853.26
+HR,Mid,Germany,C++,Mid-Size,16,83433.14
+Product Manager,Principal,SF,Python,Mid-Size,7,436266.02
+QA Engineer,Junior,SF,Python,Mid-Size,16,96774.63
+Designer,Senior,SF,C++,Mid-Size,20,245578.14
+Data Scientist,Mid,Remote,Javascript,Big Tech,24,186605.04
+HR,Senior,New York,Go,Big Tech,22,300784.67
+DevOps,Principal,London,Java,Startup,19,257494.84
+QA Engineer,Mid,New York,Java,Startup,10,95213.03
+QA Engineer,Lead,New York,Javascript,Startup,24,200405.87
+Data Scientist,Senior,New York,Javascript,Big Tech,24,321297.24
+HR,Mid,SF,Javascript,Mid-Size,1,107323.59
+DevOps,Senior,India,Rust,Startup,9,36444.05
+Designer,Mid,SF,Rust,Mid-Size,9,156333.44
+Software Engineer,Junior,SF,C++,Startup,10,86157.61
+DevOps,Senior,Germany,Rust,Startup,5,104074.01
+Data Scientist,Lead,Germany,Python,Startup,3,133178.88
+QA Engineer,Lead,New York,C++,Startup,23,215358.77
+Designer,Principal,SF,Java,Startup,11,306726.25
+DevOps,Mid,New York,Go,Mid-Size,10,168750.39
+Software Engineer,Senior,Germany,Python,Startup,22,111963.02
+Software Engineer,Principal,India,Java,Mid-Size,22,84170.35
+Product Manager,Senior,London,Java,Big Tech,25,253378.81
+Product Manager,Mid,New York,C++,Startup,24,129912.08
+Sales,Lead,India,Javascript,Mid-Size,12,51295.74
+Data Scientist,Junior,London,Javascript,Big Tech,4,89212.29
+HR,Lead,Remote,Python,Big Tech,5,197592.31
+DevOps,Principal,New York,Javascript,Big Tech,0,472585.49
+DevOps,Junior,New York,Java,Mid-Size,5,96513.9
+HR,Principal,Remote,Javascript,Startup,17,193501.08
+Sales,Mid,Remote,Rust,Startup,21,109276.5
+QA Engineer,Junior,New York,Javascript,Mid-Size,8,86189.85
+QA Engineer,Principal,Remote,Java,Startup,23,217294.74
+Sales,Mid,SF,C++,Mid-Size,24,175610.72
+QA Engineer,Lead,London,Python,Startup,14,141987.67
+Product Manager,Mid,London,Go,Big Tech,25,198899.02
+DevOps,Senior,London,Javascript,Startup,7,109814.37
+Sales,Mid,SF,Java,Mid-Size,18,180385.87
+DevOps,Mid,Remote,Go,Mid-Size,23,148185.33
+HR,Senior,India,Go,Big Tech,15,56590.68
+Software Engineer,Principal,Remote,Rust,Mid-Size,5,302954.37
+Product Manager,Principal,New York,Go,Startup,5,335995.5
+Designer,Mid,Germany,C++,Startup,21,86726.84
+Product Manager,Senior,London,Java,Big Tech,2,187344.6
+Sales,Senior,Remote,Java,Mid-Size,9,168205.25
+Designer,Lead,India,Javascript,Big Tech,0,51565.71
+Software Engineer,Principal,New York,Javascript,Startup,13,336317.84
+Sales,Junior,SF,Javascript,Big Tech,3,124732.99
+Data Scientist,Principal,SF,C++,Mid-Size,25,525676.11
+DevOps,Principal,India,Go,Big Tech,11,127796.4
+Software Engineer,Lead,New York,Go,Mid-Size,5,289553.04
+DevOps,Junior,London,Rust,Mid-Size,10,88793.82
+QA Engineer,Lead,Remote,C++,Startup,11,165453.91
+Data Scientist,Junior,New York,Javascript,Startup,9,72220.94
+Data Scientist,Mid,SF,Python,Startup,17,126615.97
+Software Engineer,Junior,India,Rust,Mid-Size,6,18620.7
+Data Scientist,Lead,India,Python,Big Tech,6,67910.25
+Designer,Principal,Remote,Go,Mid-Size,10,334223.54
+Data Scientist,Junior,India,Rust,Startup,3,15370.68
+DevOps,Junior,India,Rust,Startup,19,18440.45
+DevOps,Senior,New York,Java,Big Tech,0,239216.23
+Sales,Principal,London,Go,Startup,12,239890.8
+DevOps,Mid,Remote,Go,Startup,17,108268.94
+Sales,Lead,New York,C++,Startup,8,210960.28
+DevOps,Mid,London,Rust,Big Tech,25,205347.48
+Designer,Principal,New York,Go,Mid-Size,23,441309.8
+HR,Junior,Germany,Rust,Startup,23,53293.53
+Sales,Junior,New York,C++,Big Tech,8,136533.86
+Product Manager,Principal,India,C++,Startup,22,78556.1
+QA Engineer,Junior,London,Java,Big Tech,8,79884.92
+Software Engineer,Junior,Remote,Rust,Startup,9,70719.67
+DevOps,Junior,Remote,Go,Big Tech,1,111720.27
+Data Scientist,Lead,London,Go,Startup,5,164727.99
+HR,Lead,India,Rust,Mid-Size,14,54318.04
+DevOps,Senior,SF,Rust,Startup,2,166434.23
+Data Scientist,Mid,New York,Rust,Big Tech,10,233757.06
+QA Engineer,Principal,India,Javascript,Startup,5,41496.59
+QA Engineer,Principal,Germany,Go,Mid-Size,2,202798.43
+QA Engineer,Principal,London,C++,Startup,23,216599.59
+Data Scientist,Senior,New York,Go,Big Tech,10,344364.47
+DevOps,Lead,Remote,Javascript,Big Tech,14,341483.6
+QA Engineer,Senior,SF,Rust,Mid-Size,12,245154.77
+Designer,Principal,Germany,Java,Big Tech,19,338847.25
+Sales,Mid,Remote,Rust,Startup,9,93361.25
+Data Scientist,Junior,London,Rust,Startup,5,57796.78
+Data Scientist,Lead,New York,Javascript,Startup,14,239866.87
+DevOps,Lead,London,Go,Big Tech,24,353665.08
+Data Scientist,Senior,New York,Rust,Startup,17,215171.93
+Data Scientist,Lead,India,Go,Startup,17,52266.68
+QA Engineer,Principal,SF,Python,Startup,6,238019.49
+DevOps,Principal,India,C++,Mid-Size,14,95357.87
+QA Engineer,Senior,India,Go,Big Tech,17,61926.16
+Sales,Principal,London,Java,Big Tech,17,432129.02
+HR,Mid,SF,C++,Big Tech,19,189791.7
+Sales,Senior,New York,Java,Mid-Size,8,194294.8
+HR,Mid,New York,Rust,Big Tech,23,205784.19
+QA Engineer,Junior,Germany,C++,Mid-Size,1,45706.17
+Sales,Mid,Remote,Go,Mid-Size,7,122369.41
+DevOps,Junior,Germany,C++,Big Tech,19,108915.74
+Software Engineer,Junior,Germany,Rust,Startup,1,46392.9
+QA Engineer,Mid,New York,Javascript,Startup,10,104040.49
+HR,Senior,London,Java,Big Tech,25,192745.49
+Designer,Principal,India,Rust,Big Tech,6,99686.49
+HR,Principal,India,Javascript,Mid-Size,5,54665.84
+Designer,Junior,India,C++,Big Tech,9,24152.52
+Data Scientist,Junior,SF,C++,Mid-Size,4,98204.04
+Sales,Senior,New York,Rust,Big Tech,10,295422.88
+Designer,Lead,London,Go,Startup,0,128271.3
+HR,Mid,SF,C++,Startup,1,86763.7
+Data Scientist,Junior,Remote,Go,Big Tech,23,134670.36
+Software Engineer,Principal,London,Go,Mid-Size,0,283006.8
+DevOps,Senior,Germany,Go,Startup,18,138863.72
+DevOps,Mid,London,Python,Mid-Size,1,83435.16
+DevOps,Senior,London,Javascript,Big Tech,20,256338.24
+Designer,Mid,India,Javascript,Big Tech,19,37355.32
+Software Engineer,Mid,London,C++,Startup,22,99018.31
+Designer,Junior,Germany,C++,Big Tech,20,85270.14
+Sales,Senior,Germany,Go,Startup,23,129368.79
+Designer,Senior,New York,Python,Mid-Size,3,159153.62
+Software Engineer,Principal,London,Go,Startup,11,264178.32
+Software Engineer,Principal,India,Python,Startup,21,65414.81
+Sales,Junior,London,Go,Mid-Size,19,89510.99
+Software Engineer,Junior,Remote,Java,Startup,17,63218.51
+HR,Lead,Remote,Java,Startup,0,94969.86
+Software Engineer,Principal,India,Rust,Big Tech,0,96551.58
+DevOps,Mid,New York,Go,Mid-Size,23,207988.75
+HR,Senior,New York,C++,Startup,13,140275.47
+HR,Junior,Germany,Javascript,Mid-Size,3,42479.59
+Sales,Senior,Germany,Rust,Mid-Size,4,142465.47
+Product Manager,Senior,SF,C++,Startup,10,202818.7
+Product Manager,Lead,India,Java,Big Tech,23,84513.45
+Software Engineer,Principal,London,Go,Mid-Size,22,372082.46
+HR,Junior,India,Rust,Startup,12,13626.61
+Product Manager,Senior,SF,Go,Mid-Size,15,324917.37
+Product Manager,Junior,Germany,Java,Big Tech,23,103838.41
+Software Engineer,Mid,India,Rust,Big Tech,12,46728.56
+Product Manager,Lead,India,Java,Big Tech,23,93263.1
+Designer,Mid,Germany,Python,Startup,21,63369.71
+Data Scientist,Junior,SF,Java,Startup,25,95178.77
+Sales,Junior,Germany,Go,Big Tech,1,81137.63
+Data Scientist,Principal,New York,Javascript,Startup,15,333282.32
+Software Engineer,Senior,London,Java,Big Tech,5,200723.81
+DevOps,Senior,Germany,C++,Startup,13,120913.88
+Sales,Mid,SF,Javascript,Big Tech,0,156262.5
+Software Engineer,Lead,Remote,Python,Mid-Size,16,228775.51
+HR,Senior,New York,Rust,Big Tech,10,285846.23
+DevOps,Principal,Remote,Rust,Big Tech,18,499934.69
+Data Scientist,Mid,Germany,Javascript,Startup,2,69095.23
+Software Engineer,Mid,New York,Rust,Startup,10,129186.06
+HR,Principal,London,Java,Startup,4,157926.72
+Sales,Lead,Germany,Javascript,Startup,16,147949.11
+Sales,Principal,London,Go,Startup,25,263522.19
+QA Engineer,Lead,India,Java,Startup,21,36792.01
+HR,Principal,Remote,Java,Mid-Size,6,240633.6
+Designer,Principal,New York,Java,Big Tech,9,469038.32
+Product Manager,Junior,London,Go,Big Tech,10,121917.51
+DevOps,Mid,SF,Python,Big Tech,2,197629.76
+HR,Principal,London,C++,Mid-Size,19,270081.98
+QA Engineer,Principal,SF,Rust,Big Tech,9,601340.55
+Product Manager,Senior,Germany,Javascript,Mid-Size,9,153884.81
+Product Manager,Mid,New York,Python,Mid-Size,13,173071.15
+Software Engineer,Senior,London,Javascript,Mid-Size,11,166511.4
+Product Manager,Mid,London,Rust,Big Tech,14,199842.63
+Designer,Senior,New York,Go,Mid-Size,9,215234.29
+Sales,Principal,London,Java,Big Tech,9,386807.23
+QA Engineer,Principal,SF,Java,Big Tech,25,589216.21
+Product Manager,Junior,London,Go,Startup,18,74777.27
+Software Engineer,Senior,Remote,Python,Startup,0,92748.14
+Designer,Lead,Germany,Python,Mid-Size,23,180673.01
+Data Scientist,Junior,India,Javascript,Mid-Size,25,22617.57
+Sales,Senior,SF,Go,Big Tech,9,345291.38
+Sales,Senior,Remote,Python,Mid-Size,1,134800.61
+QA Engineer,Junior,Germany,Go,Mid-Size,16,72114.45
+Sales,Principal,New York,Rust,Big Tech,23,608683.18
+Product Manager,Senior,SF,Java,Mid-Size,6,230409.02
+Software Engineer,Principal,India,Java,Mid-Size,6,65911.85
+Sales,Junior,Germany,Java,Big Tech,19,96811.44
+Sales,Principal,India,Go,Big Tech,8,98802.14
+Data Scientist,Mid,New York,Go,Startup,21,138822.81
+Data Scientist,Lead,New York,Javascript,Big Tech,1,314408.47
+DevOps,Senior,SF,Java,Startup,13,204838.98
+Designer,Lead,London,Javascript,Mid-Size,16,198182.44
+Product Manager,Principal,New York,Java,Big Tech,0,454859.1
+Sales,Senior,Germany,Javascript,Big Tech,8,172692.2
+HR,Principal,London,Javascript,Big Tech,19,347714.22
+Sales,Mid,Remote,Rust,Mid-Size,20,129254.52
+Software Engineer,Junior,India,Javascript,Startup,18,15004.1
+DevOps,Senior,London,Go,Mid-Size,3,176209.12
+Designer,Mid,India,Javascript,Mid-Size,7,24995.49
+HR,Mid,London,Java,Big Tech,12,130359.44
+DevOps,Senior,Remote,Javascript,Startup,3,111912.52
+QA Engineer,Principal,New York,Python,Mid-Size,8,326541.46
+Designer,Mid,Remote,C++,Big Tech,8,145627.87
+Sales,Lead,New York,Java,Mid-Size,21,304623.37
+Sales,Mid,New York,Python,Mid-Size,17,162192.89
+Designer,Principal,India,Java,Big Tech,11,96343.46
+Sales,Principal,Germany,Go,Big Tech,9,400363.59
+Product Manager,Lead,Remote,C++,Startup,10,167834.47
+Designer,Mid,London,C++,Mid-Size,6,99594.63
+DevOps,Principal,Remote,Go,Big Tech,8,474770.06
+Designer,Senior,India,C++,Big Tech,5,49000.45
+HR,Junior,New York,Go,Startup,18,72901.72
+Sales,Junior,India,Python,Startup,15,13969.97
+Product Manager,Junior,SF,Rust,Big Tech,14,204242.56
+Product Manager,Mid,SF,Java,Startup,6,113452.04
+QA Engineer,Lead,London,Go,Big Tech,15,292404.68
+DevOps,Principal,India,Java,Mid-Size,4,67693.75
+Data Scientist,Senior,London,Python,Startup,15,134967.14
+Data Scientist,Senior,London,Rust,Mid-Size,0,155070.49
+Designer,Mid,SF,Python,Mid-Size,18,154871.61
+QA Engineer,Junior,London,C++,Mid-Size,4,57873.39
+Software Engineer,Mid,SF,Java,Big Tech,6,208138.0
+Designer,Lead,New York,Rust,Mid-Size,18,310505.97
+QA Engineer,Lead,India,C++,Mid-Size,21,51529.88
+DevOps,Principal,London,Rust,Mid-Size,4,329458.64
+DevOps,Principal,SF,C++,Big Tech,16,697352.48
+DevOps,Lead,Remote,Python,Mid-Size,25,256261.69
+DevOps,Lead,London,Go,Mid-Size,21,279862.45
+DevOps,Lead,Germany,Java,Startup,7,129442.87
+QA Engineer,Mid,New York,Javascript,Big Tech,0,129149.84
+QA Engineer,Lead,New York,Javascript,Mid-Size,1,197116.71
+Product Manager,Senior,Remote,Python,Startup,14,134629.63
+HR,Junior,SF,Java,Big Tech,19,125666.18
+Data Scientist,Lead,London,Java,Big Tech,17,306630.72
+Sales,Junior,SF,Python,Big Tech,10,147825.26
+DevOps,Mid,New York,Java,Big Tech,24,236204.67
+Software Engineer,Junior,SF,Go,Big Tech,9,175485.45
+Sales,Mid,New York,Python,Big Tech,23,209662.55
+QA Engineer,Senior,SF,Go,Mid-Size,23,247648.7
+Software Engineer,Mid,Remote,Java,Mid-Size,3,96604.32
+Software Engineer,Mid,India,Python,Mid-Size,4,24566.13
+Software Engineer,Principal,Remote,Java,Mid-Size,3,296715.3
+Product Manager,Lead,Remote,Python,Startup,12,198437.98
+QA Engineer,Lead,India,Java,Mid-Size,24,47878.88
+Software Engineer,Senior,India,Go,Big Tech,12,77676.03
+DevOps,Senior,London,Go,Mid-Size,17,204549.23
+Designer,Lead,London,Java,Mid-Size,23,206757.56
+Software Engineer,Principal,Remote,Python,Big Tech,1,349398.12
+Product Manager,Lead,Remote,Javascript,Mid-Size,15,241668.18
+Sales,Principal,New York,Go,Mid-Size,0,326759.87
+QA Engineer,Senior,New York,Go,Mid-Size,25,250335.59
+HR,Junior,London,C++,Startup,18,49708.85
+Product Manager,Senior,Germany,Javascript,Mid-Size,8,158248.08
+Software Engineer,Senior,Germany,Java,Big Tech,2,154540.25
+QA Engineer,Mid,London,Python,Big Tech,24,136702.9
+Designer,Mid,New York,C++,Mid-Size,6,142112.53
+Software Engineer,Mid,New York,Java,Mid-Size,9,151840.5
+Product Manager,Mid,Germany,Rust,Mid-Size,0,95103.91
+Data Scientist,Principal,SF,Go,Big Tech,9,671839.32
+DevOps,Lead,SF,Rust,Big Tech,20,527083.57
+HR,Junior,New York,Go,Startup,8,70879.69
+Sales,Senior,SF,Go,Startup,14,216767.66
+Product Manager,Principal,India,Rust,Startup,14,75117.81
+QA Engineer,Junior,London,Rust,Big Tech,2,80079.29
+HR,Principal,London,Java,Startup,24,190880.17
+HR,Principal,New York,C++,Mid-Size,4,298168.73
+HR,Senior,Remote,C++,Mid-Size,8,131321.58
+Software Engineer,Lead,Germany,Rust,Big Tech,25,331310.18
+DevOps,Mid,New York,Java,Startup,21,128983.86
+Software Engineer,Lead,SF,C++,Mid-Size,8,315661.95
+QA Engineer,Senior,Germany,Java,Big Tech,22,170553.41
+Software Engineer,Senior,Remote,Java,Startup,6,110825.86
+Data Scientist,Senior,SF,Go,Mid-Size,23,348552.96
+DevOps,Junior,India,C++,Startup,22,18927.24
+DevOps,Lead,SF,C++,Big Tech,11,469488.78
+QA Engineer,Lead,India,Go,Startup,24,46964.49
+Sales,Principal,Germany,Rust,Big Tech,8,395707.05
+Data Scientist,Principal,India,Go,Startup,5,60534.71
+Product Manager,Principal,Germany,C++,Mid-Size,22,317911.39
+Software Engineer,Senior,Germany,C++,Big Tech,1,166726.73
+Designer,Lead,Germany,Rust,Big Tech,8,253614.68
+Software Engineer,Senior,Germany,Go,Big Tech,16,235344.24
+HR,Junior,Germany,Python,Startup,0,31703.48
+Software Engineer,Principal,SF,Python,Startup,18,327354.6
+Product Manager,Senior,Germany,Rust,Mid-Size,5,161674.2
+Software Engineer,Senior,SF,Go,Big Tech,4,296858.01
+Data Scientist,Junior,Germany,Go,Big Tech,1,80466.99
+Data Scientist,Mid,India,Java,Startup,8,21194.82
+DevOps,Lead,Germany,C++,Startup,25,170315.29
+QA Engineer,Mid,Remote,Javascript,Mid-Size,13,102744.93
+Sales,Principal,Germany,Rust,Mid-Size,3,228132.65
+Designer,Senior,Germany,Javascript,Startup,3,83240.4
+HR,Junior,India,Javascript,Big Tech,20,24372.78
+Software Engineer,Junior,London,Rust,Mid-Size,14,94701.37
+Software Engineer,Lead,India,Go,Startup,7,48349.92
+Product Manager,Mid,Remote,Rust,Startup,25,127965.34
+QA Engineer,Lead,London,Javascript,Big Tech,3,197077.13
+Data Scientist,Senior,New York,C++,Startup,15,201822.37
+Designer,Lead,New York,C++,Startup,20,218282.58
+DevOps,Junior,Remote,C++,Mid-Size,3,75932.56
+Data Scientist,Junior,India,Go,Startup,15,18930.82
+HR,Principal,SF,Python,Startup,21,271109.91
+QA Engineer,Principal,Remote,Rust,Mid-Size,11,333444.37
+HR,Senior,London,C++,Big Tech,15,199184.09
+Sales,Mid,London,Rust,Big Tech,18,170685.48
+DevOps,Lead,Germany,C++,Mid-Size,7,187959.72
+Sales,Senior,New York,Go,Mid-Size,5,205215.25
+Product Manager,Principal,London,Python,Big Tech,9,408459.2
+HR,Lead,Remote,Python,Big Tech,4,200722.38
+Product Manager,Principal,London,C++,Big Tech,17,506995.47
+Software Engineer,Lead,Remote,Go,Big Tech,9,336258.36
+Sales,Mid,SF,Java,Big Tech,9,200728.98
+QA Engineer,Senior,Germany,Rust,Mid-Size,6,136986.81
+HR,Lead,New York,Rust,Startup,17,192023.9
+Designer,Junior,London,Javascript,Big Tech,0,70315.07
+DevOps,Junior,Remote,Go,Big Tech,6,114589.04
+Data Scientist,Lead,India,Javascript,Startup,20,44583.3
+QA Engineer,Lead,New York,C++,Startup,0,150627.6
+QA Engineer,Lead,SF,Javascript,Startup,14,210081.11
+Product Manager,Junior,Remote,Python,Startup,3,57319.29
+Sales,Junior,Germany,Rust,Startup,19,61042.61
+HR,Lead,Germany,Javascript,Startup,9,120603.11
+HR,Principal,SF,Python,Mid-Size,22,367225.89
+Software Engineer,Principal,SF,Go,Startup,8,384444.73
+Software Engineer,Mid,Germany,Javascript,Startup,1,55651.37
+DevOps,Senior,London,C++,Mid-Size,13,188213.71
+Product Manager,Principal,London,C++,Startup,15,270074.8
+QA Engineer,Junior,Remote,C++,Big Tech,0,74470.11
+HR,Principal,India,Rust,Big Tech,1,78974.9
+Designer,Mid,Remote,Javascript,Startup,6,68456.95
+Product Manager,Mid,India,Go,Mid-Size,9,37336.97
+DevOps,Senior,SF,Javascript,Big Tech,21,354307.77
+DevOps,Principal,New York,Rust,Mid-Size,19,505895.58
+Product Manager,Junior,Remote,Python,Big Tech,0,89047.51
+DevOps,Junior,Remote,Rust,Startup,12,68442.13
+Product Manager,Lead,India,C++,Mid-Size,0,51373.28
+Data Scientist,Junior,SF,Python,Mid-Size,4,98509.28
+Product Manager,Senior,SF,C++,Mid-Size,15,293797.44
+Sales,Senior,India,Java,Big Tech,14,58099.43
+Product Manager,Junior,SF,Rust,Big Tech,16,217368.36
+DevOps,Junior,Germany,Rust,Big Tech,22,125230.1
+HR,Lead,London,Go,Startup,15,166545.54
+Sales,Junior,Germany,Javascript,Big Tech,12,88575.96
+DevOps,Lead,New York,Python,Startup,10,213628.31
+Software Engineer,Lead,Remote,Python,Mid-Size,16,237809.84
+Software Engineer,Junior,New York,Go,Mid-Size,16,127554.12
+HR,Mid,Remote,Go,Startup,1,66561.85
+HR,Mid,London,Javascript,Big Tech,12,127536.35
+Sales,Lead,SF,C++,Startup,13,234792.12
+Data Scientist,Junior,Germany,Javascript,Mid-Size,10,67751.35
+HR,Mid,India,Rust,Mid-Size,9,25465.97
+Software Engineer,Junior,Germany,C++,Startup,2,43719.69
+Product Manager,Junior,London,Java,Big Tech,16,121842.4
+DevOps,Junior,New York,Javascript,Big Tech,14,160167.14
+Software Engineer,Principal,India,Go,Startup,8,65135.87
+Software Engineer,Junior,SF,C++,Startup,9,75360.78
+Data Scientist,Principal,London,Javascript,Big Tech,7,357314.17
+Sales,Lead,India,Python,Mid-Size,20,56128.79
+Sales,Mid,London,Java,Startup,12,83255.79
+QA Engineer,Mid,London,Rust,Big Tech,17,167860.51
+Data Scientist,Mid,SF,Python,Big Tech,4,200815.7
+Product Manager,Mid,Remote,Python,Mid-Size,5,108294.41
+Sales,Mid,India,Java,Mid-Size,16,30915.76
+DevOps,Mid,SF,Rust,Mid-Size,10,197617.89
+HR,Mid,London,Go,Mid-Size,19,107910.21
+Data Scientist,Lead,SF,C++,Mid-Size,15,337696.6
+HR,Junior,Remote,Rust,Startup,8,51554.66
+Software Engineer,Senior,Germany,Javascript,Big Tech,1,155408.15
+DevOps,Principal,India,Python,Startup,4,50284.2
+DevOps,Senior,Remote,Javascript,Startup,0,106185.18
+Software Engineer,Senior,New York,Go,Startup,3,164082.87
+Data Scientist,Junior,India,Javascript,Startup,3,12907.11
+Software Engineer,Junior,Remote,Rust,Startup,21,72492.47
+HR,Junior,London,Javascript,Mid-Size,25,66859.75
+QA Engineer,Mid,India,Go,Mid-Size,24,31357.09
+DevOps,Lead,India,Go,Big Tech,2,70858.55
+Designer,Mid,SF,Go,Startup,8,120082.75
+Designer,Lead,London,Rust,Big Tech,21,324714.17
+HR,Lead,New York,Go,Mid-Size,22,255723.2
+Product Manager,Senior,Germany,Python,Mid-Size,11,154131.91
+Sales,Senior,Remote,Go,Mid-Size,9,186523.67
+Software Engineer,Lead,SF,Javascript,Startup,1,194967.91
+Software Engineer,Lead,Remote,C++,Startup,10,182922.54
+Product Manager,Mid,New York,Javascript,Mid-Size,9,170749.39
+Product Manager,Mid,New York,C++,Big Tech,21,257062.01
+HR,Senior,India,Javascript,Big Tech,5,38288.42
+HR,Junior,New York,Rust,Mid-Size,17,99476.32
+Product Manager,Lead,Remote,Javascript,Big Tech,1,234108.66
+DevOps,Mid,London,Rust,Mid-Size,1,113253.98
+HR,Senior,London,Rust,Big Tech,9,186842.75
+QA Engineer,Mid,India,Go,Mid-Size,15,29970.13
+HR,Lead,Germany,Python,Big Tech,11,218546.14
+Software Engineer,Lead,Remote,C++,Startup,0,123067.09
+HR,Principal,Remote,Go,Mid-Size,20,290736.59
+DevOps,Junior,New York,Go,Mid-Size,7,115490.8
+Product Manager,Principal,Remote,Rust,Big Tech,15,588733.82
+Software Engineer,Senior,SF,Rust,Mid-Size,17,291969.51
+HR,Mid,Germany,C++,Mid-Size,12,87222.82
+DevOps,Senior,New York,Javascript,Mid-Size,14,264185.16
+QA Engineer,Lead,SF,Javascript,Startup,20,219173.18
+HR,Principal,India,Go,Startup,11,56441.77
+DevOps,Principal,London,Java,Big Tech,7,406226.11
+QA Engineer,Principal,India,Java,Startup,9,47847.4
+Product Manager,Senior,London,Javascript,Big Tech,13,282621.97
+HR,Lead,India,Java,Startup,4,25264.84
+QA Engineer,Mid,Remote,Javascript,Big Tech,17,155124.68
+Software Engineer,Mid,SF,Rust,Startup,18,159007.56
+Product Manager,Senior,London,Go,Startup,14,166075.32
+Software Engineer,Principal,New York,Python,Big Tech,5,486318.22
+Designer,Junior,SF,Go,Mid-Size,10,112142.95
+Data Scientist,Senior,New York,Javascript,Mid-Size,20,262136.42
+HR,Senior,SF,Javascript,Startup,10,141677.04
+QA Engineer,Lead,SF,Go,Big Tech,19,423696.54
+Data Scientist,Mid,India,C++,Mid-Size,19,36294.99
+Data Scientist,Senior,London,Javascript,Big Tech,20,264505.93
+QA Engineer,Senior,London,Java,Mid-Size,17,132803.68
+Product Manager,Principal,SF,Java,Big Tech,24,780870.62
+HR,Principal,Remote,Javascript,Startup,17,191149.75
+Designer,Junior,Remote,Javascript,Big Tech,9,88137.64
+Software Engineer,Lead,New York,C++,Mid-Size,1,224134.35
+DevOps,Junior,New York,Java,Startup,25,85998.65
+Software Engineer,Principal,India,Javascript,Big Tech,8,94013.25
+DevOps,Mid,SF,Javascript,Mid-Size,13,173246.97
+Software Engineer,Principal,New York,C++,Startup,18,332137.63
+QA Engineer,Lead,New York,C++,Big Tech,9,340513.36
+Designer,Principal,Germany,Go,Mid-Size,22,299067.09
+HR,Lead,SF,C++,Big Tech,3,312439.19
+DevOps,Lead,India,Python,Big Tech,5,73500.0
+HR,Lead,New York,Java,Startup,13,193756.51
+HR,Lead,India,Go,Startup,3,31546.13
+HR,Lead,London,Python,Mid-Size,25,164228.35
+Sales,Mid,India,Javascript,Startup,14,20352.76
+Product Manager,Junior,Remote,Javascript,Mid-Size,15,97101.91
+Software Engineer,Senior,Remote,Go,Big Tech,6,248200.65
+HR,Junior,India,C++,Big Tech,16,23079.69
+Software Engineer,Lead,Remote,Javascript,Mid-Size,18,220855.24
+HR,Mid,London,Rust,Big Tech,18,140883.54
+DevOps,Principal,SF,Go,Startup,16,429727.04
+Product Manager,Mid,Remote,Python,Big Tech,5,155054.35
+Product Manager,Lead,Remote,Go,Startup,10,220603.32
+QA Engineer,Mid,India,Java,Mid-Size,15,26172.09
+Sales,Mid,London,C++,Mid-Size,24,117943.85
+QA Engineer,Lead,SF,C++,Big Tech,7,366503.1
+QA Engineer,Mid,India,Go,Big Tech,10,34497.7
+QA Engineer,Senior,India,Javascript,Startup,6,24836.18
+QA Engineer,Senior,Germany,Javascript,Startup,25,96973.15
+QA Engineer,Mid,London,Rust,Big Tech,23,163588.46
+Designer,Principal,SF,Rust,Big Tech,21,674112.35
+Product Manager,Lead,London,C++,Mid-Size,24,252053.59
+QA Engineer,Senior,SF,Rust,Mid-Size,18,242748.98
+HR,Principal,London,Python,Mid-Size,25,225968.38
+Product Manager,Mid,India,Rust,Big Tech,9,50628.9
+Product Manager,Principal,India,Python,Big Tech,8,111808.56
+Data Scientist,Junior,New York,Rust,Big Tech,3,148284.44
+Designer,Senior,Remote,C++,Mid-Size,22,168555.36
+QA Engineer,Mid,Germany,C++,Big Tech,14,134941.5
+Software Engineer,Lead,London,Python,Startup,12,155917.55
+DevOps,Mid,Germany,Go,Big Tech,24,150975.41
+Sales,Lead,New York,C++,Big Tech,1,305083.67
+HR,Mid,Remote,Go,Big Tech,1,111871.2
+Software Engineer,Principal,London,Javascript,Big Tech,15,408279.0
+Designer,Principal,SF,Python,Big Tech,8,528949.44
+DevOps,Principal,Remote,C++,Startup,12,286196.81
+Designer,Junior,India,Java,Startup,2,10789.07
+HR,Lead,New York,Javascript,Big Tech,8,293262.25
+Product Manager,Principal,Remote,Go,Mid-Size,12,414190.6
+DevOps,Junior,Remote,C++,Big Tech,20,120941.94
+Product Manager,Lead,India,Python,Big Tech,21,90842.98
+HR,Mid,London,Rust,Big Tech,1,100958.16
+Software Engineer,Junior,SF,Java,Mid-Size,7,96186.62
+HR,Senior,India,Go,Mid-Size,8,35609.16
+Software Engineer,Junior,SF,Javascript,Mid-Size,15,120783.17
+DevOps,Junior,London,Python,Startup,1,45534.86
+DevOps,Lead,Remote,Java,Mid-Size,5,219237.71
+QA Engineer,Mid,SF,Python,Startup,21,116971.81
+Designer,Senior,New York,C++,Startup,7,139127.07
+QA Engineer,Principal,New York,Rust,Mid-Size,25,440495.61
+Designer,Principal,India,Javascript,Mid-Size,4,59245.58
+QA Engineer,Junior,London,Python,Mid-Size,8,61499.39
+Product Manager,Lead,India,Go,Startup,0,42039.13
+DevOps,Lead,India,C++,Big Tech,8,82809.13
+Software Engineer,Principal,Germany,C++,Mid-Size,9,274781.84
+Designer,Senior,India,Javascript,Mid-Size,22,44226.25
+HR,Mid,Germany,C++,Mid-Size,3,71588.96
+Designer,Senior,New York,Go,Startup,2,139996.43
+Software Engineer,Mid,New York,Python,Startup,9,109756.85
+QA Engineer,Principal,India,Javascript,Big Tech,14,93347.41
+Designer,Mid,New York,C++,Mid-Size,10,146752.09
+Sales,Lead,London,C++,Startup,13,168788.92
+Product Manager,Junior,Germany,Go,Big Tech,5,101465.75
+DevOps,Junior,Germany,Rust,Mid-Size,11,83873.49
+Software Engineer,Principal,India,Rust,Startup,12,71282.98
+DevOps,Lead,New York,C++,Mid-Size,16,375451.61
+Sales,Senior,SF,Python,Mid-Size,15,235670.04
+Designer,Lead,Germany,Javascript,Startup,2,105624.49
+Designer,Junior,India,C++,Startup,1,10825.52
+HR,Junior,India,Java,Startup,10,10260.04
+Sales,Lead,London,Javascript,Mid-Size,8,188406.62
+Software Engineer,Lead,Remote,Rust,Mid-Size,2,197526.49
+HR,Junior,Remote,C++,Big Tech,17,94937.74
+Product Manager,Senior,Germany,Go,Mid-Size,19,195437.16
+HR,Principal,London,Java,Startup,14,195210.19
+Data Scientist,Principal,London,C++,Mid-Size,13,340141.95
+Software Engineer,Lead,London,Python,Big Tech,1,220017.25
+Data Scientist,Principal,Germany,Java,Big Tech,16,419021.37
+Sales,Junior,Remote,C++,Startup,21,60300.34
+QA Engineer,Junior,London,Python,Startup,25,46196.17
+Data Scientist,Lead,New York,Java,Big Tech,7,382029.84
+Product Manager,Lead,India,Python,Big Tech,9,84444.46
+HR,Lead,India,Python,Big Tech,25,66474.34
+QA Engineer,Senior,SF,Java,Startup,17,163860.24
+HR,Principal,SF,Java,Big Tech,24,539800.39
+Data Scientist,Lead,Germany,Python,Big Tech,18,302274.23
+HR,Mid,Germany,Rust,Startup,7,62813.08
+Sales,Mid,India,Java,Mid-Size,7,26183.84
+QA Engineer,Junior,New York,C++,Mid-Size,2,74863.58
+Sales,Principal,Remote,Javascript,Big Tech,2,324852.8
+Data Scientist,Lead,Remote,Go,Mid-Size,11,288499.12
+Sales,Mid,Germany,Python,Mid-Size,21,100971.02
+Product Manager,Principal,New York,Python,Mid-Size,16,468461.3
+Data Scientist,Junior,Germany,Go,Mid-Size,3,58427.07
+Data Scientist,Senior,Remote,Rust,Big Tech,16,284840.6
+Data Scientist,Principal,Germany,Go,Mid-Size,13,319878.83
+Software Engineer,Principal,London,Java,Mid-Size,18,318555.28
+HR,Senior,Germany,Go,Startup,8,88617.37
+Software Engineer,Principal,India,Python,Big Tech,20,116851.24
+Software Engineer,Junior,Germany,Go,Startup,11,61745.74
+Product Manager,Junior,India,Javascript,Startup,4,13838.41
+QA Engineer,Senior,New York,C++,Big Tech,10,251687.02
+HR,Lead,Remote,Java,Mid-Size,19,193126.53
+Sales,Mid,SF,Go,Startup,2,119796.42
+Designer,Lead,SF,Python,Big Tech,20,436870.41
+Data Scientist,Principal,Remote,C++,Mid-Size,14,344396.61
+Sales,Mid,SF,Java,Big Tech,13,208408.89
+Data Scientist,Senior,Germany,Python,Startup,10,103511.43
+Product Manager,Senior,New York,Rust,Mid-Size,19,282284.16
+Data Scientist,Mid,New York,Javascript,Mid-Size,7,150518.44
+Software Engineer,Junior,Remote,Rust,Big Tech,3,98707.34
+HR,Mid,SF,Javascript,Mid-Size,11,128442.23
+Designer,Principal,Germany,Go,Startup,7,201564.72
+DevOps,Junior,New York,Java,Startup,5,72511.01
+Data Scientist,Senior,New York,Go,Startup,14,196007.47
+Sales,Mid,London,Javascript,Big Tech,11,152998.2
+Software Engineer,Lead,London,Javascript,Mid-Size,15,231820.72
+DevOps,Lead,New York,Javascript,Mid-Size,15,333450.84
+Designer,Principal,Remote,C++,Mid-Size,20,308463.15
+DevOps,Lead,India,Python,Startup,19,46417.43
+Software Engineer,Mid,India,Java,Mid-Size,19,28392.96
+HR,Mid,Germany,Go,Startup,3,60029.78
+HR,Lead,New York,Go,Mid-Size,10,251114.38
+QA Engineer,Mid,New York,Rust,Startup,12,111576.7
+HR,Principal,New York,Javascript,Mid-Size,8,295821.74
+QA Engineer,Junior,Remote,Javascript,Big Tech,3,81802.19
+DevOps,Principal,London,Javascript,Big Tech,11,415470.82
+Product Manager,Principal,New York,Go,Startup,8,384345.34
+Sales,Mid,New York,Rust,Startup,12,130222.55
+Sales,Junior,SF,Python,Mid-Size,15,107088.59
+DevOps,Mid,Remote,C++,Mid-Size,25,131897.01
+Data Scientist,Senior,Germany,Java,Big Tech,5,174465.06
+Data Scientist,Mid,New York,Python,Mid-Size,9,155438.63
+HR,Mid,SF,Go,Startup,12,121795.82
+Sales,Mid,India,C++,Startup,6,19394.96
+Sales,Junior,Germany,C++,Startup,25,52058.26
+QA Engineer,Mid,New York,C++,Startup,18,104812.97
+Product Manager,Junior,New York,Javascript,Startup,23,84711.44
+Software Engineer,Lead,SF,Java,Big Tech,18,421083.45
+Data Scientist,Senior,Remote,Go,Big Tech,16,311339.31
+Sales,Junior,New York,Go,Startup,12,84620.98
+QA Engineer,Lead,India,C++,Mid-Size,12,50450.89
+Designer,Junior,New York,Go,Startup,25,81941.18
+QA Engineer,Junior,India,Java,Big Tech,20,23715.73
+Data Scientist,Senior,Germany,Java,Startup,1,91292.27
+Data Scientist,Principal,Germany,Rust,Big Tech,9,412051.5
+QA Engineer,Principal,London,Rust,Big Tech,21,425030.9
+Software Engineer,Junior,London,Python,Startup,12,62262.73
+DevOps,Mid,India,Java,Startup,25,23789.61
+Data Scientist,Lead,Remote,Java,Mid-Size,8,216476.4
+QA Engineer,Mid,New York,Java,Big Tech,0,138560.86
+Sales,Mid,New York,Rust,Mid-Size,13,190974.75
+QA Engineer,Junior,London,C++,Startup,15,50098.15
+Product Manager,Junior,India,C++,Big Tech,19,29959.67
+DevOps,Junior,New York,Go,Mid-Size,14,131855.0
+Designer,Junior,New York,C++,Mid-Size,0,73327.16
+Software Engineer,Principal,Remote,Javascript,Mid-Size,16,347762.84
+HR,Junior,SF,Rust,Startup,23,83365.56
+Designer,Principal,London,Java,Startup,12,208948.57
+DevOps,Principal,London,C++,Startup,14,277784.91
+DevOps,Junior,SF,Rust,Big Tech,15,185175.05
+DevOps,Senior,New York,C++,Startup,15,197708.29
+Designer,Lead,Remote,Python,Big Tech,1,199814.63
+Sales,Mid,Remote,Java,Mid-Size,16,119447.86
+DevOps,Principal,London,Python,Mid-Size,10,288483.33
+QA Engineer,Lead,Remote,Java,Startup,7,123817.51
+Designer,Senior,Germany,Rust,Mid-Size,19,173799.9
+HR,Mid,SF,Go,Startup,2,83749.26
+DevOps,Mid,New York,C++,Big Tech,11,229097.14
+QA Engineer,Principal,Germany,C++,Mid-Size,19,265440.77
+Sales,Junior,SF,Javascript,Startup,15,93096.37
+Product Manager,Senior,India,Python,Mid-Size,13,50132.47
+Sales,Principal,London,C++,Mid-Size,15,322130.81
+HR,Senior,Remote,Rust,Startup,20,125829.18
+DevOps,Junior,India,Go,Mid-Size,16,26697.94
+HR,Junior,Remote,Rust,Mid-Size,10,73308.95
+Designer,Principal,Germany,Python,Mid-Size,16,249648.97
+Data Scientist,Junior,New York,Javascript,Mid-Size,18,121055.23
+DevOps,Lead,New York,C++,Big Tech,21,449861.21
+Data Scientist,Mid,New York,Rust,Mid-Size,0,129985.92
+QA Engineer,Principal,Remote,Java,Mid-Size,11,249677.83
+Product Manager,Senior,India,Go,Startup,14,42734.14
+Software Engineer,Lead,New York,Rust,Big Tech,17,482818.27
+HR,Principal,India,Go,Startup,22,60729.41
+Sales,Junior,Remote,C++,Startup,13,64392.77
+Product Manager,Junior,Germany,Java,Startup,0,42242.99
+DevOps,Junior,India,Javascript,Big Tech,12,30379.49
+Data Scientist,Junior,Germany,Javascript,Startup,14,56263.31
+Sales,Senior,Remote,Java,Startup,6,102245.16
+Data Scientist,Lead,Remote,Go,Startup,14,199282.25
+Designer,Mid,London,C++,Mid-Size,19,120348.53
+Data Scientist,Senior,Remote,Rust,Startup,9,132733.5
+Designer,Senior,Remote,Java,Big Tech,13,217346.86
+QA Engineer,Mid,SF,Python,Big Tech,5,191062.3
+Sales,Mid,New York,Go,Mid-Size,13,181752.95
+Sales,Junior,London,Javascript,Big Tech,23,101276.35
+Software Engineer,Senior,London,Java,Big Tech,24,213756.07
+DevOps,Principal,London,Javascript,Mid-Size,21,362263.9
+Designer,Mid,SF,Go,Startup,11,137978.95
+Software Engineer,Mid,Germany,Javascript,Mid-Size,10,102855.15
+Data Scientist,Lead,Remote,Java,Startup,24,187419.75
+Data Scientist,Principal,New York,Go,Startup,19,406890.74
+Software Engineer,Principal,India,Python,Big Tech,21,112557.32
+Sales,Mid,Germany,Java,Mid-Size,23,96793.78
+Data Scientist,Junior,Remote,Rust,Big Tech,24,143478.07
+HR,Lead,SF,C++,Big Tech,18,376891.73
+QA Engineer,Principal,Remote,Java,Startup,1,161702.66
+QA Engineer,Mid,Remote,Go,Big Tech,21,165265.78
+HR,Principal,SF,C++,Mid-Size,19,404260.07
+Software Engineer,Lead,London,Java,Big Tech,0,217867.01
+HR,Lead,London,Python,Big Tech,7,210071.58
+Designer,Senior,New York,Python,Startup,24,159944.47
+Designer,Mid,New York,Rust,Mid-Size,13,193241.03
+Software Engineer,Lead,London,Javascript,Big Tech,8,281197.58
+HR,Senior,Germany,C++,Startup,1,80974.91
+Designer,Senior,India,Go,Big Tech,24,63549.12
+Sales,Principal,Remote,Go,Mid-Size,22,361407.55
+HR,Principal,India,Javascript,Big Tech,4,68677.95
+Sales,Senior,Remote,Python,Big Tech,22,252125.91
+Designer,Principal,London,Python,Startup,24,205708.44
+QA Engineer,Lead,New York,Java,Big Tech,7,334616.43
+Designer,Junior,Germany,Rust,Startup,15,52608.18
+Sales,Lead,New York,C++,Mid-Size,21,322308.84
+Product Manager,Senior,India,Rust,Big Tech,15,71521.35
+DevOps,Senior,New York,Rust,Mid-Size,12,271398.96
+Data Scientist,Lead,London,Java,Mid-Size,19,237667.11
+HR,Principal,Germany,Rust,Big Tech,14,344118.24
+Product Manager,Principal,India,Javascript,Startup,0,49080.92
+Designer,Senior,Germany,Java,Mid-Size,21,138084.52
+QA Engineer,Mid,Remote,Javascript,Mid-Size,2,84361.71
+Software Engineer,Principal,New York,Java,Big Tech,5,433840.96
+Designer,Lead,Germany,Rust,Big Tech,21,274707.83
+QA Engineer,Principal,SF,Javascript,Big Tech,13,569548.16
+DevOps,Lead,New York,Javascript,Big Tech,3,351064.84
+Designer,Senior,Remote,Javascript,Big Tech,17,235185.98
+Sales,Principal,Germany,Java,Big Tech,14,380178.54
+Software Engineer,Lead,India,Go,Startup,8,42991.26
+QA Engineer,Senior,Remote,Rust,Mid-Size,17,183783.85
+QA Engineer,Mid,SF,Javascript,Startup,2,85571.04
+QA Engineer,Lead,Germany,C++,Startup,9,136770.83
+DevOps,Mid,London,Go,Big Tech,16,202952.12
+Designer,Mid,New York,C++,Mid-Size,6,133880.8
+DevOps,Junior,India,Rust,Startup,14,19654.68
+HR,Principal,London,Rust,Big Tech,0,289814.29
+Data Scientist,Lead,Germany,Javascript,Big Tech,24,293094.8
+Data Scientist,Mid,Germany,Javascript,Mid-Size,10,103032.15
+HR,Junior,Remote,Java,Startup,16,51749.39
+Designer,Senior,Germany,Go,Startup,4,100624.6
+Sales,Lead,India,Go,Startup,6,43270.19
+DevOps,Mid,London,Javascript,Big Tech,18,177641.97
+Software Engineer,Principal,India,Rust,Mid-Size,24,103883.95
+QA Engineer,Junior,SF,Javascript,Mid-Size,23,105572.21
+QA Engineer,Mid,SF,Rust,Startup,14,133387.35
+Designer,Principal,New York,Rust,Big Tech,2,435674.32
+Sales,Mid,New York,Javascript,Startup,14,110036.1
+Data Scientist,Lead,SF,Python,Mid-Size,4,276415.51
+Data Scientist,Lead,Germany,Go,Big Tech,22,330545.2
+QA Engineer,Lead,India,C++,Startup,11,40481.19
+Designer,Junior,SF,Rust,Startup,19,78599.44
+DevOps,Lead,New York,Rust,Big Tech,4,382644.2
+Data Scientist,Principal,SF,Python,Mid-Size,2,370336.38
+DevOps,Mid,Germany,C++,Big Tech,8,134150.07
+Sales,Senior,SF,Java,Startup,25,174300.38
+Data Scientist,Principal,India,Python,Startup,8,57127.7
+Data Scientist,Principal,London,C++,Startup,6,211941.91
+Product Manager,Lead,Germany,Python,Startup,25,160451.72
+Data Scientist,Junior,New York,Rust,Mid-Size,1,103622.95
+HR,Mid,India,Go,Mid-Size,22,29870.15
+Software Engineer,Junior,SF,Python,Startup,22,91568.99
+HR,Mid,SF,Java,Mid-Size,20,140879.23
+Designer,Mid,London,Javascript,Mid-Size,15,113176.32
+Designer,Junior,New York,C++,Mid-Size,8,95274.86
+DevOps,Principal,New York,Python,Startup,12,344152.13
+HR,Mid,Remote,Python,Big Tech,18,131629.07
+HR,Junior,New York,Java,Big Tech,19,115329.4
+HR,Mid,London,Go,Big Tech,16,156532.87
+Sales,Senior,Remote,Python,Startup,5,103766.66
+Data Scientist,Principal,Remote,Python,Mid-Size,3,256983.41
+Software Engineer,Lead,SF,Go,Mid-Size,0,266364.59
+DevOps,Mid,SF,Java,Startup,17,149746.24
+HR,Senior,New York,C++,Startup,18,145070.43
+HR,Lead,Remote,C++,Big Tech,8,242963.45
+Product Manager,Lead,SF,Python,Big Tech,12,465867.82
+DevOps,Mid,London,Go,Startup,7,97267.76
+HR,Junior,SF,Python,Big Tech,22,130416.89
+DevOps,Mid,Germany,Javascript,Mid-Size,12,101097.0
+Data Scientist,Senior,Germany,C++,Startup,14,129631.86
+Product Manager,Lead,SF,Rust,Startup,10,268847.65
+DevOps,Mid,Remote,Javascript,Mid-Size,11,122203.1
+Software Engineer,Junior,Remote,Python,Mid-Size,13,83352.32
+Software Engineer,Mid,India,Java,Mid-Size,3,26789.72
+Designer,Principal,Germany,C++,Big Tech,0,264389.88
+Product Manager,Junior,London,Rust,Startup,23,72806.44
+Product Manager,Senior,Remote,Javascript,Big Tech,3,207087.06
+Designer,Lead,New York,C++,Mid-Size,18,305893.97
+DevOps,Mid,Germany,Go,Big Tech,8,148807.7
+Product Manager,Junior,London,Java,Mid-Size,9,83996.57
+Software Engineer,Principal,London,Javascript,Big Tech,3,326727.76
+Software Engineer,Junior,Remote,Go,Big Tech,19,124441.66
+HR,Principal,London,Python,Mid-Size,8,220623.35
+Data Scientist,Senior,Remote,Go,Big Tech,12,264914.95
+Product Manager,Lead,SF,Javascript,Startup,11,232777.56
+DevOps,Senior,Germany,Javascript,Big Tech,10,202783.57
+Designer,Mid,India,Python,Big Tech,11,36236.53
+Designer,Junior,SF,Go,Startup,17,92457.58
+DevOps,Principal,Germany,Go,Mid-Size,11,326185.99
+Sales,Principal,Remote,Python,Startup,15,267281.16
+QA Engineer,Junior,Germany,Go,Big Tech,4,76011.69
+Data Scientist,Junior,Remote,C++,Mid-Size,19,86236.29
+Designer,Mid,SF,Python,Big Tech,24,202324.66
+Product Manager,Senior,New York,Java,Big Tech,11,333788.53
+Data Scientist,Principal,New York,Javascript,Startup,20,336491.1
+Product Manager,Mid,Germany,Java,Startup,24,82930.23
+Sales,Senior,New York,C++,Mid-Size,10,218505.92
+Software Engineer,Mid,Remote,C++,Mid-Size,8,116920.89
+Data Scientist,Principal,London,Rust,Mid-Size,17,416185.73
+HR,Junior,Remote,Rust,Big Tech,24,99549.31
+Designer,Junior,London,Rust,Startup,2,45921.43
+Data Scientist,Senior,SF,Python,Startup,19,216633.32
+Data Scientist,Lead,India,Go,Startup,16,54769.98
+Data Scientist,Senior,London,C++,Mid-Size,13,180536.17
+QA Engineer,Lead,New York,Java,Startup,0,135852.66
+Data Scientist,Mid,Remote,Java,Startup,16,93201.25
+Product Manager,Mid,SF,Java,Startup,24,146092.27
+Software Engineer,Principal,New York,Java,Mid-Size,7,396984.18
+Sales,Lead,SF,Rust,Startup,4,236223.07
+DevOps,Principal,India,Java,Mid-Size,4,65316.4
+Data Scientist,Junior,Remote,Go,Startup,8,70306.49
+Designer,Lead,Germany,Rust,Startup,2,119875.04
+Data Scientist,Senior,Remote,Java,Startup,18,141447.94
+Designer,Junior,India,Python,Mid-Size,22,18505.62
+Product Manager,Junior,Remote,Javascript,Mid-Size,8,73979.55
+Designer,Senior,Germany,Javascript,Startup,21,107753.57
+HR,Junior,London,Javascript,Big Tech,17,80500.78
+DevOps,Lead,SF,Rust,Mid-Size,15,387287.58
+Software Engineer,Principal,Germany,Java,Mid-Size,0,208263.44
+Designer,Junior,New York,C++,Startup,1,51768.92
+Designer,Lead,India,C++,Big Tech,13,70387.85
+Software Engineer,Mid,London,C++,Startup,13,99293.2
+DevOps,Lead,New York,Rust,Mid-Size,0,268486.12
+Data Scientist,Principal,New York,Go,Mid-Size,25,509972.56
+Designer,Lead,India,Python,Startup,25,40415.52
+Software Engineer,Senior,London,Python,Startup,24,134015.72
+HR,Principal,New York,Javascript,Big Tech,15,498274.13
+HR,Mid,New York,Javascript,Big Tech,14,167064.29
+Product Manager,Senior,London,C++,Mid-Size,25,189466.52
+Software Engineer,Lead,Remote,C++,Big Tech,14,347626.69
+Product Manager,Principal,New York,Javascript,Big Tech,11,635947.21
+HR,Mid,SF,Java,Mid-Size,15,131636.95
+DevOps,Senior,London,Go,Mid-Size,13,197052.73
+Data Scientist,Mid,New York,Go,Mid-Size,23,195872.45
+Software Engineer,Lead,India,Go,Mid-Size,14,68505.66
+Sales,Mid,Germany,Go,Startup,22,87982.92
+HR,Junior,SF,Javascript,Mid-Size,14,87685.74
+HR,Senior,Germany,Python,Mid-Size,18,124018.83
+Sales,Mid,Germany,Javascript,Mid-Size,7,84782.59
+QA Engineer,Lead,New York,Go,Big Tech,1,282868.95
+HR,Lead,SF,Javascript,Mid-Size,1,196004.18
+Designer,Mid,SF,Go,Startup,9,123513.75
+DevOps,Lead,Remote,Rust,Startup,2,169735.19
+Software Engineer,Principal,Germany,C++,Mid-Size,22,286970.64
+Sales,Principal,SF,Python,Startup,16,339100.99
+Designer,Principal,Remote,Rust,Big Tech,7,373936.01
+Sales,Junior,London,Java,Mid-Size,22,74768.16
+Software Engineer,Mid,Remote,Javascript,Startup,3,75280.75
+Product Manager,Junior,India,Java,Startup,13,17672.58
+Software Engineer,Lead,New York,Javascript,Mid-Size,20,317983.28
+QA Engineer,Junior,London,C++,Startup,9,50404.9
+Software Engineer,Lead,London,Rust,Mid-Size,0,181585.28
+Software Engineer,Lead,India,C++,Startup,3,37385.16
+QA Engineer,Senior,Remote,Go,Big Tech,0,187580.52
+DevOps,Principal,New York,C++,Startup,16,352743.07
+HR,Lead,Remote,C++,Startup,25,160287.34
+Software Engineer,Senior,SF,Go,Mid-Size,16,305861.21
+QA Engineer,Principal,Remote,Javascript,Startup,6,178135.9
+Designer,Lead,London,Go,Mid-Size,22,231873.73
+Product Manager,Lead,New York,Rust,Big Tech,19,531505.91
+Product Manager,Junior,Remote,C++,Mid-Size,14,100998.62
+Software Engineer,Junior,New York,Go,Mid-Size,12,124447.91
+DevOps,Principal,New York,C++,Startup,1,259413.62
+DevOps,Lead,SF,Rust,Big Tech,18,486613.5
+Designer,Mid,SF,Java,Mid-Size,23,164095.72
+Software Engineer,Junior,London,Rust,Startup,12,60400.56
+Product Manager,Principal,India,Python,Startup,23,64566.88
+DevOps,Lead,New York,Python,Mid-Size,10,295594.34
+Software Engineer,Lead,India,Python,Startup,21,41916.09
+Sales,Mid,London,C++,Mid-Size,14,121296.41
+DevOps,Principal,New York,Javascript,Mid-Size,9,409890.52
+QA Engineer,Lead,New York,Javascript,Mid-Size,8,242079.35
+Sales,Junior,Germany,Javascript,Big Tech,8,74585.58
+HR,Mid,India,C++,Mid-Size,19,25584.31
+DevOps,Principal,Remote,Rust,Startup,0,217395.64
+Product Manager,Mid,SF,Javascript,Big Tech,16,262513.64
+Data Scientist,Junior,Remote,Java,Startup,11,65023.25
+Sales,Principal,India,Python,Big Tech,9,93257.52
+HR,Mid,SF,Rust,Big Tech,4,171169.61
+Designer,Senior,Remote,Python,Big Tech,17,226739.51
+Designer,Junior,Germany,Javascript,Big Tech,14,77214.63
+Product Manager,Junior,SF,Rust,Startup,5,93413.2
+DevOps,Junior,New York,Go,Mid-Size,6,115383.5
+Software Engineer,Senior,Remote,Java,Startup,16,127397.77
+DevOps,Senior,SF,Javascript,Mid-Size,5,216303.45
+Product Manager,Lead,Germany,Javascript,Startup,7,155012.72
+Designer,Mid,SF,Java,Big Tech,11,210327.07
+DevOps,Lead,SF,Java,Big Tech,20,482866.5
+Designer,Mid,Germany,Go,Mid-Size,13,115509.81
+Sales,Senior,Remote,Javascript,Mid-Size,11,179075.28
+HR,Senior,London,C++,Startup,22,109027.94
+Software Engineer,Lead,Remote,Javascript,Mid-Size,9,211504.39
+Sales,Principal,India,Python,Startup,21,62808.2
+Designer,Lead,Germany,Rust,Mid-Size,19,207418.05
+Designer,Mid,Remote,Rust,Mid-Size,14,124358.85
+Data Scientist,Lead,SF,Python,Mid-Size,6,286919.21
+Data Scientist,Junior,Germany,Rust,Big Tech,25,118208.54
+Sales,Mid,New York,Java,Big Tech,8,181882.4
+QA Engineer,Mid,Remote,Rust,Startup,9,82225.11
+Sales,Principal,Germany,Rust,Mid-Size,9,268506.07
+Data Scientist,Senior,Remote,Python,Startup,15,153611.2
+Designer,Mid,Germany,Go,Mid-Size,6,91828.88
+Product Manager,Senior,SF,Rust,Big Tech,4,335723.64
+Sales,Lead,New York,C++,Big Tech,22,404039.68
+Designer,Junior,New York,Rust,Mid-Size,2,89007.56
+Product Manager,Principal,India,Go,Mid-Size,17,109305.4
+Product Manager,Senior,Germany,Python,Big Tech,10,207967.46
+Data Scientist,Mid,Remote,Go,Big Tech,14,205727.6
+Sales,Senior,New York,Python,Startup,20,170909.81
+DevOps,Mid,New York,Java,Big Tech,19,224012.6
+Software Engineer,Senior,London,Python,Mid-Size,4,127665.05
+Data Scientist,Mid,London,Java,Startup,23,96691.22
+Data Scientist,Lead,New York,Java,Mid-Size,11,298615.67
+DevOps,Mid,Germany,Python,Startup,3,67111.48
+Software Engineer,Mid,India,C++,Mid-Size,14,33605.9
+Designer,Junior,New York,Javascript,Big Tech,8,117842.62
+QA Engineer,Mid,SF,Python,Mid-Size,6,123685.35
+Sales,Junior,Remote,Rust,Startup,9,60457.37
+QA Engineer,Principal,India,C++,Mid-Size,22,70702.64
+Designer,Junior,SF,C++,Startup,12,78478.87
+HR,Lead,India,Rust,Mid-Size,7,48656.56
+Data Scientist,Junior,SF,Javascript,Big Tech,11,169431.3
+Software Engineer,Principal,Remote,C++,Big Tech,21,506073.68
+Data Scientist,Lead,Remote,Java,Mid-Size,23,251717.06
+Product Manager,Senior,London,Javascript,Mid-Size,18,203477.57
+Data Scientist,Senior,Germany,Rust,Mid-Size,25,183934.57
+Data Scientist,Junior,SF,Javascript,Startup,25,86631.81
+Designer,Junior,London,Python,Mid-Size,0,56227.04
+Designer,Principal,SF,Javascript,Mid-Size,15,434638.49
+Designer,Principal,London,Java,Startup,21,198927.42
+QA Engineer,Mid,Remote,Python,Big Tech,16,155855.75
+Product Manager,Principal,India,Go,Mid-Size,24,102310.2
+HR,Mid,London,Rust,Mid-Size,17,107228.39
+HR,Lead,SF,Rust,Big Tech,10,403899.39
+Designer,Junior,SF,Javascript,Big Tech,17,152612.31
+Software Engineer,Lead,Germany,C++,Startup,6,127557.83
+QA Engineer,Principal,Remote,Python,Mid-Size,17,306605.75
+DevOps,Lead,SF,Go,Mid-Size,25,419925.98
+Software Engineer,Lead,New York,Python,Startup,7,192537.72
+Sales,Lead,India,Rust,Big Tech,5,71198.21
+Sales,Principal,London,Python,Startup,6,206222.48
+Software Engineer,Lead,Germany,Go,Big Tech,22,289564.41
+Designer,Mid,India,C++,Startup,21,23866.89
+DevOps,Principal,Remote,Javascript,Big Tech,9,450338.68
+DevOps,Lead,Germany,Java,Startup,10,151697.78
+QA Engineer,Principal,London,Python,Big Tech,24,368693.89
+DevOps,Senior,London,Java,Big Tech,12,261536.15
+Sales,Mid,New York,Rust,Big Tech,8,236633.99
+Product Manager,Lead,Remote,Javascript,Big Tech,6,288727.43
+Designer,Senior,Germany,Javascript,Big Tech,8,171575.27
+DevOps,Senior,Germany,Python,Mid-Size,12,172582.27
+QA Engineer,Principal,SF,C++,Big Tech,25,544526.09
+Sales,Senior,New York,Javascript,Mid-Size,2,172251.91
+Product Manager,Mid,New York,Python,Big Tech,2,193413.87
+Data Scientist,Mid,Germany,Python,Mid-Size,0,72232.68
+Data Scientist,Junior,Germany,Java,Mid-Size,20,78075.84
+Product Manager,Mid,India,Javascript,Startup,19,24573.22
+Sales,Senior,India,Python,Big Tech,1,43344.54
+QA Engineer,Mid,India,Java,Startup,24,21230.24
+Product Manager,Principal,New York,Go,Startup,2,276287.87
+Designer,Junior,SF,Java,Big Tech,14,148498.33
+Designer,Senior,London,Java,Startup,23,128601.91
+Data Scientist,Junior,India,Python,Big Tech,5,23799.86
+DevOps,Senior,SF,Rust,Startup,12,230623.85
+QA Engineer,Principal,Remote,Rust,Big Tech,20,472996.9
+Data Scientist,Junior,India,C++,Big Tech,0,20547.45
+DevOps,Lead,London,Rust,Big Tech,19,382528.5
+DevOps,Senior,Remote,Java,Mid-Size,18,200882.09
+HR,Lead,Remote,C++,Startup,0,110519.81
+Designer,Junior,London,Python,Mid-Size,20,72131.06
+Sales,Lead,India,Javascript,Startup,21,40273.19
+Software Engineer,Lead,New York,Java,Startup,1,182599.86
+Sales,Junior,London,Java,Startup,14,56955.59
+Software Engineer,Principal,London,C++,Mid-Size,13,317726.97
+Product Manager,Lead,London,Python,Startup,18,183566.39
+Designer,Lead,Remote,Go,Mid-Size,10,232948.13
+DevOps,Principal,SF,Java,Big Tech,14,614742.72
+QA Engineer,Lead,New York,Go,Startup,5,186490.76
+Software Engineer,Lead,India,Go,Startup,19,50249.07
+Sales,Lead,India,Rust,Big Tech,8,82918.11
+DevOps,Mid,SF,Python,Big Tech,4,181285.17
+Software Engineer,Principal,London,Go,Startup,19,288232.47
+Software Engineer,Lead,New York,Python,Big Tech,1,329074.2
+HR,Principal,India,Rust,Mid-Size,5,57649.08
+Software Engineer,Senior,Germany,Python,Mid-Size,25,141417.59
+QA Engineer,Senior,India,Java,Startup,17,31596.36
+Designer,Lead,London,Go,Mid-Size,22,223431.74
+QA Engineer,Principal,Germany,Python,Mid-Size,18,280325.04
+Data Scientist,Principal,SF,Javascript,Startup,8,298478.83
+DevOps,Principal,New York,Python,Big Tech,20,624428.36
+Designer,Mid,SF,Go,Startup,23,136770.33
+HR,Senior,SF,Rust,Mid-Size,5,190551.53
+Designer,Principal,New York,Rust,Startup,13,344436.78
+Designer,Principal,New York,Go,Startup,25,347892.68
+Sales,Mid,India,Java,Mid-Size,23,29674.14
+Designer,Mid,India,Java,Mid-Size,12,26143.48
+HR,Principal,New York,Rust,Startup,10,294525.52
+QA Engineer,Junior,Germany,Rust,Mid-Size,11,68385.94
+Designer,Principal,Remote,Go,Mid-Size,18,349752.38
+Product Manager,Principal,India,Java,Mid-Size,18,95155.22
+DevOps,Mid,Remote,Rust,Mid-Size,20,157994.53
+Designer,Mid,Germany,Java,Mid-Size,25,92718.83
+DevOps,Principal,New York,Rust,Mid-Size,18,542222.15
+Product Manager,Principal,Germany,Python,Big Tech,23,412388.44
+Product Manager,Principal,India,Javascript,Startup,25,72079.05
+DevOps,Mid,SF,C++,Mid-Size,12,187106.95
+Software Engineer,Principal,New York,Python,Startup,13,335208.4
+Data Scientist,Principal,London,C++,Big Tech,23,464784.72
+Sales,Lead,Remote,Rust,Mid-Size,17,268643.63
+Software Engineer,Junior,Germany,Javascript,Startup,11,48382.88
+Software Engineer,Senior,New York,Javascript,Mid-Size,3,184543.13
+QA Engineer,Junior,Germany,Rust,Mid-Size,9,66417.0
+Sales,Lead,New York,Rust,Mid-Size,16,345915.71
+Sales,Senior,India,Java,Mid-Size,3,33976.87
+Software Engineer,Principal,India,Rust,Mid-Size,11,100045.64
+Designer,Lead,India,Go,Mid-Size,12,62884.85
+QA Engineer,Principal,Germany,Rust,Mid-Size,3,226654.78
+QA Engineer,Mid,London,Go,Big Tech,9,148005.97
+Product Manager,Lead,India,Rust,Big Tech,24,105587.66
+HR,Mid,New York,Java,Mid-Size,2,107436.55
+Sales,Lead,India,Go,Mid-Size,14,63646.25
+Software Engineer,Lead,SF,Python,Big Tech,1,347641.56
+Product Manager,Mid,India,Go,Big Tech,24,54752.97
+DevOps,Senior,Germany,Java,Big Tech,24,215086.61
+Data Scientist,Junior,London,C++,Mid-Size,16,87540.81
+HR,Principal,SF,Go,Startup,5,269537.51
+HR,Lead,Germany,Rust,Startup,25,133585.18
+HR,Principal,Germany,Rust,Startup,7,177677.52
+QA Engineer,Mid,Germany,C++,Startup,2,54000.48
+DevOps,Principal,New York,Java,Mid-Size,24,460587.6
+HR,Mid,Germany,Javascript,Startup,17,68620.69
+DevOps,Principal,New York,Rust,Big Tech,21,716657.89
+Designer,Junior,Germany,Python,Big Tech,0,66775.56
+HR,Junior,Remote,Java,Startup,15,49077.47
+Data Scientist,Junior,SF,Go,Big Tech,6,152714.87
+DevOps,Junior,Remote,Go,Mid-Size,2,75683.47
+DevOps,Junior,Germany,Python,Startup,22,48314.28
+Data Scientist,Junior,SF,Rust,Startup,3,86674.27
+HR,Mid,SF,Java,Mid-Size,8,118499.3
+Data Scientist,Lead,London,Python,Big Tech,4,248478.62
+DevOps,Principal,Remote,Rust,Mid-Size,18,420250.43
+Data Scientist,Junior,London,Java,Mid-Size,14,84289.06
+DevOps,Mid,SF,Go,Big Tech,7,243054.44
+DevOps,Mid,New York,Java,Mid-Size,5,126891.62
+Designer,Mid,SF,C++,Big Tech,17,239679.14
+Software Engineer,Lead,London,Javascript,Big Tech,18,316270.47
+DevOps,Principal,Remote,Java,Mid-Size,23,389062.92
+HR,Lead,Germany,Javascript,Big Tech,14,211969.03
+Product Manager,Senior,Germany,Java,Mid-Size,25,157794.81
+QA Engineer,Mid,Remote,Javascript,Big Tech,6,127925.77
+Sales,Senior,Germany,C++,Startup,9,104000.92
+Software Engineer,Junior,Germany,Go,Big Tech,5,93914.0
+Software Engineer,Junior,London,Rust,Big Tech,13,132967.42
+Software Engineer,Lead,Remote,Javascript,Mid-Size,16,242619.02
+Designer,Principal,India,C++,Big Tech,8,95709.77
+DevOps,Senior,New York,Javascript,Startup,18,188465.23
+Designer,Principal,New York,Go,Startup,4,249047.39
+DevOps,Lead,Germany,Javascript,Big Tech,22,302647.32
+HR,Junior,New York,C++,Big Tech,6,110490.09
+Designer,Principal,Remote,C++,Startup,18,244457.5
+Designer,Principal,Remote,Python,Mid-Size,19,279487.08
+QA Engineer,Junior,SF,Go,Startup,25,85693.25
+Product Manager,Senior,SF,Python,Startup,6,189920.68
+Designer,Junior,New York,Go,Big Tech,23,148263.57
+QA Engineer,Principal,India,Javascript,Big Tech,1,75114.59
+Data Scientist,Senior,SF,C++,Startup,24,211268.16
+Product Manager,Senior,SF,Python,Mid-Size,22,290265.03
+HR,Junior,Remote,Javascript,Startup,15,49361.4
+Designer,Principal,India,C++,Startup,12,58078.0
+Sales,Lead,Germany,Go,Mid-Size,7,195189.19
+Software Engineer,Principal,New York,C++,Startup,5,267251.34
+Data Scientist,Mid,SF,Javascript,Startup,5,115671.54
+Data Scientist,Lead,India,Python,Big Tech,8,64660.31
+HR,Senior,India,Python,Mid-Size,3,27487.67
+QA Engineer,Lead,New York,C++,Big Tech,10,355574.13
+Data Scientist,Senior,India,Javascript,Big Tech,4,54487.11
+Product Manager,Senior,India,Java,Mid-Size,24,51233.06
+Designer,Lead,India,Go,Mid-Size,16,57301.54
+Designer,Senior,SF,Go,Startup,19,208002.87
+Sales,Senior,New York,Javascript,Big Tech,6,241188.92
+HR,Mid,India,Java,Mid-Size,14,25973.89
+Software Engineer,Principal,India,Python,Big Tech,24,107129.92
+QA Engineer,Principal,SF,Rust,Big Tech,14,596753.15
+Software Engineer,Mid,New York,Rust,Mid-Size,13,178081.46
+Data Scientist,Lead,Remote,Javascript,Startup,12,183335.01
+HR,Junior,SF,Java,Big Tech,10,116782.97
+Sales,Junior,New York,Java,Mid-Size,12,103340.29
+Software Engineer,Junior,India,Go,Startup,25,18095.62
+Product Manager,Mid,New York,Python,Big Tech,21,224782.4
+Designer,Mid,New York,C++,Mid-Size,23,156925.66
+Data Scientist,Senior,Germany,Java,Big Tech,8,177112.94
+Sales,Junior,New York,C++,Mid-Size,9,94445.57
+Software Engineer,Lead,Remote,Rust,Mid-Size,3,209217.59
+QA Engineer,Lead,New York,C++,Big Tech,16,364713.67
+Product Manager,Junior,Remote,Python,Big Tech,13,113647.48
+Product Manager,Junior,India,Python,Mid-Size,23,24683.69
+Software Engineer,Junior,Remote,C++,Startup,17,71600.77
+Designer,Mid,India,Javascript,Big Tech,10,39538.24
+Software Engineer,Mid,India,Java,Mid-Size,15,33307.55
+Data Scientist,Mid,Remote,Javascript,Mid-Size,0,92631.52
+Software Engineer,Principal,SF,C++,Startup,6,305785.49
+Product Manager,Lead,London,Java,Startup,9,165252.97
+Sales,Lead,New York,Go,Startup,8,246834.43
+Software Engineer,Senior,Germany,Javascript,Big Tech,24,207638.49
+Designer,Mid,London,Javascript,Mid-Size,2,86743.38
+HR,Principal,New York,C++,Mid-Size,21,388769.59
+Sales,Principal,New York,Rust,Mid-Size,22,481726.65
+QA Engineer,Lead,India,C++,Startup,13,36673.19
+DevOps,Mid,New York,Javascript,Mid-Size,25,171182.35
+Software Engineer,Senior,Germany,Java,Big Tech,24,210379.66
+Designer,Mid,New York,Rust,Startup,14,135274.12
+Sales,Junior,Remote,C++,Startup,1,46279.11
+Designer,Mid,London,C++,Startup,23,79710.63
+QA Engineer,Junior,Remote,Javascript,Startup,13,55793.74
+Product Manager,Junior,Germany,Javascript,Big Tech,15,104822.7
+Designer,Senior,New York,Go,Mid-Size,6,180132.76
+Sales,Lead,Germany,C++,Big Tech,3,215546.63
+Designer,Mid,India,Javascript,Mid-Size,17,29059.84
+Designer,Junior,Remote,Python,Big Tech,23,97758.49
+Designer,Mid,Remote,Rust,Startup,4,77494.66
+Data Scientist,Lead,SF,Python,Startup,5,222626.93
+Data Scientist,Lead,New York,Rust,Big Tech,6,432156.15
+Product Manager,Principal,India,C++,Big Tech,14,120743.39
+Software Engineer,Lead,Remote,Go,Mid-Size,25,290854.83
+Designer,Senior,Remote,Javascript,Big Tech,0,171425.75
+QA Engineer,Junior,India,Javascript,Big Tech,23,23482.79
+Software Engineer,Principal,Germany,Javascript,Mid-Size,3,201126.05
+QA Engineer,Senior,Germany,C++,Mid-Size,24,143393.12
+Software Engineer,Mid,New York,Rust,Mid-Size,0,130021.77
+Product Manager,Junior,SF,Javascript,Big Tech,10,166503.47
+Designer,Lead,Remote,Python,Mid-Size,17,237785.25
+Designer,Junior,SF,Javascript,Startup,13,72719.54
+DevOps,Mid,Germany,C++,Startup,21,85030.94
+QA Engineer,Principal,Germany,Go,Startup,10,192534.17
+Software Engineer,Principal,London,Python,Big Tech,9,416152.24
+Software Engineer,Principal,New York,Javascript,Startup,16,385841.01
+HR,Lead,London,Javascript,Big Tech,3,192466.56
+HR,Senior,London,Java,Big Tech,23,171492.59
+Data Scientist,Senior,London,Rust,Startup,14,153877.43
+DevOps,Junior,New York,Python,Mid-Size,25,110217.71
+Sales,Lead,New York,Java,Big Tech,15,411121.95
+HR,Principal,India,Go,Startup,20,59052.21
+Sales,Principal,SF,Rust,Big Tech,12,638851.91
+Data Scientist,Mid,SF,Python,Mid-Size,8,157215.25
+Data Scientist,Mid,India,Javascript,Mid-Size,10,30159.59
+Data Scientist,Principal,India,Python,Startup,10,60689.87
+QA Engineer,Principal,Germany,Javascript,Big Tech,5,268635.63
+QA Engineer,Lead,London,Rust,Big Tech,0,213640.23
+Product Manager,Senior,India,Javascript,Big Tech,21,71739.29
+Product Manager,Mid,Remote,Go,Big Tech,5,173250.57
+Data Scientist,Senior,SF,C++,Startup,12,199105.56
+DevOps,Lead,India,Javascript,Mid-Size,21,58293.0
+Software Engineer,Principal,Remote,Go,Startup,23,286556.28
+QA Engineer,Senior,Remote,C++,Big Tech,21,222096.28
+DevOps,Principal,Remote,Rust,Big Tech,4,400404.58
+Designer,Principal,Germany,Rust,Mid-Size,14,290534.97
+QA Engineer,Junior,Germany,Python,Big Tech,17,86684.73
+QA Engineer,Senior,Remote,Go,Startup,19,137753.88
+Product Manager,Senior,Germany,Go,Startup,13,148444.15
+Software Engineer,Principal,London,Java,Mid-Size,14,329114.55
+Software Engineer,Lead,Remote,Java,Startup,25,173379.69
+HR,Junior,London,C++,Startup,4,38797.61
+Sales,Principal,London,C++,Startup,25,253988.19
+Sales,Mid,Remote,Java,Startup,3,72792.19
+Sales,Mid,SF,C++,Big Tech,1,168243.87
+Sales,Junior,Remote,Javascript,Startup,6,45706.39
+Designer,Lead,Remote,Java,Mid-Size,9,187261.25
+Designer,Principal,Germany,Go,Mid-Size,15,303629.33
+QA Engineer,Senior,Remote,Javascript,Startup,9,101787.11
+Data Scientist,Junior,SF,C++,Mid-Size,17,131793.73
+Product Manager,Lead,Germany,Rust,Startup,16,205557.1
+Product Manager,Senior,New York,Python,Mid-Size,20,259049.44
+Sales,Mid,New York,Java,Mid-Size,12,152932.32
+QA Engineer,Mid,London,Rust,Startup,0,64828.75
+HR,Senior,London,C++,Startup,0,73595.42
+DevOps,Junior,SF,Go,Big Tech,14,184292.92
+Data Scientist,Mid,India,Python,Startup,0,18362.08
+QA Engineer,Principal,New York,Rust,Startup,5,263531.46
+Data Scientist,Senior,London,Python,Big Tech,24,246577.82
+Data Scientist,Senior,New York,Java,Startup,25,186632.59
+Data Scientist,Mid,SF,C++,Startup,12,148624.19
+QA Engineer,Junior,SF,Go,Big Tech,0,113263.4
+Sales,Principal,India,C++,Startup,4,51402.2
+Product Manager,Junior,India,Python,Startup,8,16282.73
+Product Manager,Lead,Germany,Rust,Big Tech,24,373229.61
+Sales,Lead,SF,Java,Big Tech,16,475266.59
+Data Scientist,Mid,London,Java,Mid-Size,15,122046.33
+DevOps,Mid,New York,C++,Startup,7,131514.22
+Software Engineer,Mid,Remote,Rust,Mid-Size,16,136953.88
+QA Engineer,Lead,India,Rust,Mid-Size,14,63789.07
+Software Engineer,Junior,Remote,Python,Big Tech,23,109805.45
+HR,Junior,London,C++,Startup,0,35786.22
+Sales,Mid,India,C++,Startup,11,22408.43
+DevOps,Principal,Remote,Javascript,Big Tech,4,364507.17
+QA Engineer,Junior,London,C++,Mid-Size,23,71530.31
+Sales,Lead,New York,Java,Big Tech,5,312659.51
+Data Scientist,Senior,London,Python,Startup,24,127751.33
+Product Manager,Senior,Germany,Rust,Big Tech,0,188341.01
+Software Engineer,Senior,India,C++,Startup,24,38679.61
+Designer,Principal,SF,Python,Mid-Size,0,298559.22
+Designer,Mid,New York,C++,Startup,9,110268.26
+DevOps,Lead,Remote,Rust,Mid-Size,9,249676.02
+Data Scientist,Principal,India,Go,Mid-Size,2,71868.64
+HR,Lead,SF,Rust,Startup,16,235125.3
+Software Engineer,Lead,London,Rust,Startup,18,212129.46
+Data Scientist,Mid,SF,Rust,Mid-Size,10,199854.94
+Software Engineer,Senior,India,C++,Big Tech,17,67162.03
+DevOps,Mid,India,Javascript,Startup,1,19614.64
+DevOps,Principal,Germany,Rust,Mid-Size,8,304891.29
+HR,Principal,Germany,Java,Mid-Size,23,226742.83
+Designer,Principal,SF,Java,Big Tech,16,585026.77
+Data Scientist,Mid,London,Python,Startup,13,96632.22
+QA Engineer,Lead,SF,Javascript,Mid-Size,3,205082.81
+Designer,Lead,India,Python,Big Tech,16,73361.44
+Data Scientist,Junior,India,Java,Mid-Size,16,22049.25
+Designer,Principal,Remote,Java,Startup,11,206954.51
+QA Engineer,Lead,Germany,Go,Big Tech,19,266028.31
+Product Manager,Junior,Remote,Rust,Mid-Size,17,100068.63
+Product Manager,Lead,New York,Java,Big Tech,2,321595.32
+HR,Principal,India,C++,Startup,10,49304.25
+Product Manager,Senior,Remote,C++,Big Tech,24,296583.23
+Product Manager,Principal,SF,Python,Startup,17,381341.17
+Sales,Mid,Germany,Python,Mid-Size,3,75410.51
+Software Engineer,Lead,Germany,Rust,Startup,16,167458.17
+Sales,Lead,London,Rust,Mid-Size,17,253794.11
+Sales,Mid,SF,Go,Mid-Size,4,167026.94
+HR,Mid,London,Javascript,Startup,13,74053.95
+Sales,Senior,Remote,Python,Mid-Size,9,167046.14
+Product Manager,Lead,New York,Rust,Big Tech,14,500700.79
+QA Engineer,Lead,SF,Python,Mid-Size,0,201552.2
+HR,Senior,SF,Rust,Startup,15,184766.9
+HR,Junior,SF,Java,Big Tech,10,109685.33
+DevOps,Senior,London,Python,Big Tech,22,237017.86
+HR,Principal,Remote,Java,Mid-Size,19,281460.74
+DevOps,Lead,SF,Python,Mid-Size,5,291098.38
+HR,Mid,SF,Javascript,Startup,23,100732.63
+Software Engineer,Principal,Germany,Go,Big Tech,21,407239.18
+Product Manager,Lead,New York,C++,Startup,15,285938.96
+HR,Senior,Germany,C++,Mid-Size,1,85788.95
+Product Manager,Principal,Germany,C++,Big Tech,0,328144.83
+Product Manager,Lead,New York,Java,Startup,23,248451.89
+Designer,Junior,Remote,Rust,Startup,23,68618.7
+HR,Junior,Germany,C++,Startup,8,37765.18
+Data Scientist,Mid,Remote,Javascript,Startup,21,112197.67
+Designer,Lead,Germany,C++,Startup,11,138951.0
+Data Scientist,Junior,India,Python,Big Tech,16,30611.51
+Product Manager,Senior,New York,Java,Startup,24,187650.25
+Product Manager,Lead,Germany,Python,Big Tech,14,298412.02
+Designer,Senior,India,Python,Startup,18,30547.5
+Designer,Senior,London,Python,Mid-Size,21,169584.31
+Data Scientist,Junior,India,Go,Mid-Size,9,23463.6
+DevOps,Lead,SF,Go,Startup,25,309959.4
+Data Scientist,Principal,Germany,Rust,Mid-Size,11,336344.19
+Designer,Junior,India,Java,Big Tech,13,26128.97
+QA Engineer,Junior,Remote,Javascript,Startup,8,44134.91
+Designer,Lead,London,Javascript,Big Tech,12,294206.25
+QA Engineer,Lead,Germany,Javascript,Startup,2,93361.72
+Software Engineer,Senior,SF,Python,Mid-Size,20,254310.73
+Designer,Lead,India,Go,Big Tech,13,88863.17
+Software Engineer,Senior,London,Java,Mid-Size,20,189624.84
+DevOps,Junior,Germany,Python,Mid-Size,9,70749.09
+Data Scientist,Mid,London,Go,Startup,15,105667.78
+QA Engineer,Principal,SF,Go,Big Tech,6,526546.49
+Data Scientist,Junior,India,C++,Mid-Size,3,18176.36
+Software Engineer,Lead,London,C++,Startup,19,179855.57
+QA Engineer,Principal,London,Java,Startup,22,190974.83
+Data Scientist,Mid,New York,Java,Startup,24,137119.73
+Designer,Mid,London,Java,Mid-Size,10,100708.18
+Product Manager,Senior,New York,Python,Startup,15,188146.33
+Software Engineer,Principal,India,Rust,Big Tech,19,127160.23
+Data Scientist,Senior,Germany,Java,Big Tech,3,173034.37
+Software Engineer,Junior,Germany,C++,Mid-Size,21,69711.2
+Sales,Principal,India,Rust,Big Tech,21,129330.94
+Software Engineer,Junior,India,Python,Startup,22,15934.85
+QA Engineer,Senior,Remote,Rust,Mid-Size,16,191832.2
+Sales,Principal,India,Javascript,Startup,12,58365.54
+HR,Senior,London,Rust,Mid-Size,10,139690.97
+QA Engineer,Principal,Germany,Java,Mid-Size,2,172795.95
+Product Manager,Senior,SF,Python,Startup,8,182548.8
+Sales,Mid,Germany,Java,Big Tech,5,111220.68
+HR,Senior,New York,C++,Big Tech,21,260694.46
+Designer,Mid,Germany,Javascript,Mid-Size,20,97009.21
+Software Engineer,Senior,Remote,C++,Startup,10,129143.83
+Data Scientist,Principal,India,Java,Startup,15,66990.79
+DevOps,Principal,India,Java,Mid-Size,18,85903.94
+Software Engineer,Principal,Germany,Java,Big Tech,4,318190.39
+HR,Lead,SF,Go,Startup,13,224726.55
+Software Engineer,Junior,SF,Javascript,Big Tech,16,168652.39
+Product Manager,Principal,Remote,Java,Big Tech,2,390105.33
+Designer,Mid,New York,Java,Mid-Size,3,115887.96
+DevOps,Principal,Germany,C++,Mid-Size,15,311604.39
+Sales,Lead,India,C++,Big Tech,15,74038.72
+Sales,Mid,Germany,Java,Startup,20,81702.06
+Sales,Lead,Remote,Python,Startup,25,163802.86
+HR,Mid,London,Go,Mid-Size,24,110623.59
+QA Engineer,Senior,London,C++,Big Tech,3,164982.4
+QA Engineer,Junior,Remote,Python,Startup,18,53058.65
+Data Scientist,Junior,India,Go,Startup,25,20306.22
+DevOps,Lead,Remote,Java,Mid-Size,16,234638.97
+Sales,Junior,India,Javascript,Big Tech,12,28431.25
+QA Engineer,Lead,SF,Rust,Startup,25,252479.56
+HR,Lead,Remote,Rust,Mid-Size,21,216262.19
+Data Scientist,Lead,India,Java,Startup,22,46305.15
+Designer,Junior,Remote,C++,Startup,25,52936.08
+Data Scientist,Lead,Remote,Python,Startup,23,179476.0
+QA Engineer,Junior,India,Javascript,Mid-Size,0,12524.39
+Product Manager,Lead,India,Go,Big Tech,11,97380.54
+HR,Principal,New York,Java,Mid-Size,3,289198.34
+Product Manager,Lead,Remote,Javascript,Big Tech,10,361619.6
+Sales,Mid,London,Javascript,Startup,4,69157.83
+Product Manager,Lead,Remote,C++,Big Tech,1,275831.5
+Sales,Senior,Remote,Go,Startup,16,145470.03
+Sales,Lead,India,Javascript,Startup,7,33498.22
+QA Engineer,Mid,Remote,C++,Mid-Size,5,89575.81
+Product Manager,Mid,Germany,Python,Startup,20,87449.62
+Sales,Junior,Remote,C++,Mid-Size,8,77833.4
+DevOps,Principal,Germany,Python,Big Tech,12,403486.71
+Designer,Lead,London,Python,Big Tech,10,257914.94
+Data Scientist,Junior,India,Javascript,Startup,15,16057.25
+Data Scientist,Principal,Remote,C++,Mid-Size,15,333727.23
+QA Engineer,Lead,Germany,Python,Startup,1,85765.28
+Product Manager,Senior,Germany,Go,Mid-Size,9,162756.14
+Product Manager,Lead,Germany,Javascript,Mid-Size,11,208316.94
+Sales,Mid,SF,C++,Mid-Size,7,159637.51
+HR,Mid,New York,C++,Big Tech,10,180821.44
+Software Engineer,Senior,London,Rust,Mid-Size,9,187529.95
+Sales,Junior,Remote,C++,Big Tech,12,107054.55
+Designer,Principal,SF,Javascript,Mid-Size,24,447581.76
+DevOps,Lead,Remote,Go,Big Tech,16,369908.39
+Data Scientist,Mid,Remote,C++,Big Tech,6,164810.02
+Sales,Junior,India,Rust,Big Tech,23,28379.09
+Software Engineer,Senior,India,Javascript,Startup,2,24316.82
+Software Engineer,Mid,India,Python,Mid-Size,19,34102.87
+Sales,Senior,SF,Java,Startup,12,174560.61
+QA Engineer,Lead,Remote,Java,Mid-Size,18,195411.99
+Data Scientist,Principal,New York,Python,Mid-Size,6,407882.56
+QA Engineer,Mid,London,C++,Startup,8,75286.81
+DevOps,Mid,India,Java,Big Tech,18,43683.92
+Software Engineer,Lead,India,Java,Mid-Size,12,58604.76
+Software Engineer,Junior,Remote,Python,Big Tech,21,114176.27
+Designer,Principal,Remote,C++,Startup,7,176727.16
+DevOps,Mid,SF,C++,Big Tech,21,244225.24
+Software Engineer,Principal,SF,Python,Mid-Size,17,492561.82
+DevOps,Mid,India,C++,Mid-Size,22,33282.98
+Data Scientist,Principal,Remote,C++,Mid-Size,1,279758.05
+Product Manager,Senior,New York,Javascript,Startup,17,197762.21
+Software Engineer,Mid,London,Javascript,Mid-Size,17,126974.37
+Designer,Principal,Remote,Python,Startup,10,196239.28
+Data Scientist,Junior,Remote,Go,Big Tech,0,99735.31
+Sales,Senior,Germany,Java,Mid-Size,13,145438.0
+DevOps,Senior,SF,Javascript,Mid-Size,15,256975.19
+Sales,Junior,London,Java,Mid-Size,10,67590.48
+QA Engineer,Principal,India,Rust,Big Tech,0,80078.07
+Data Scientist,Lead,Remote,Python,Mid-Size,6,217261.37
+Sales,Junior,India,Go,Startup,15,17261.59
+HR,Principal,Remote,Rust,Big Tech,13,416293.35
+HR,Junior,India,Rust,Big Tech,14,25431.91
+Software Engineer,Junior,London,C++,Big Tech,13,109881.62
+DevOps,Mid,SF,Rust,Big Tech,20,276160.15
+Product Manager,Principal,London,Python,Big Tech,10,428740.77
+Data Scientist,Lead,Germany,Javascript,Startup,15,164048.18
+Software Engineer,Mid,New York,Python,Big Tech,18,228940.37
+Designer,Junior,SF,Javascript,Mid-Size,16,99088.07
+QA Engineer,Junior,London,Rust,Big Tech,25,100586.06
+DevOps,Junior,Germany,Rust,Big Tech,5,92210.89
+Data Scientist,Principal,New York,Go,Big Tech,10,659061.71
+HR,Principal,Germany,Javascript,Big Tech,16,282489.74
+Data Scientist,Mid,Remote,Rust,Big Tech,8,173927.33
+Product Manager,Lead,Remote,C++,Startup,17,191884.41
+HR,Mid,India,Java,Startup,16,19278.46
+Product Manager,Senior,SF,Go,Big Tech,11,412764.62
+Designer,Junior,Remote,Python,Startup,22,55388.68
+QA Engineer,Junior,Germany,Go,Mid-Size,21,66083.01
+Designer,Junior,SF,Java,Big Tech,21,139689.85
+Software Engineer,Mid,Remote,Javascript,Mid-Size,4,97953.95
+Software Engineer,Mid,India,Python,Mid-Size,10,31640.7
+Designer,Junior,London,Python,Big Tech,3,79251.1
+QA Engineer,Mid,India,Javascript,Mid-Size,3,20126.32
+Designer,Principal,New York,Go,Mid-Size,2,345122.48
+QA Engineer,Principal,Remote,Rust,Mid-Size,25,343945.79
+QA Engineer,Mid,New York,Go,Big Tech,23,208686.28
+Sales,Junior,New York,Java,Big Tech,22,130125.75
+HR,Mid,Germany,C++,Mid-Size,24,81881.37
+DevOps,Mid,SF,Rust,Big Tech,16,305846.33
+QA Engineer,Mid,Germany,Go,Big Tech,6,117984.56
+Product Manager,Senior,Remote,C++,Mid-Size,25,213271.97
+QA Engineer,Principal,New York,C++,Big Tech,3,397989.09
+QA Engineer,Lead,London,Javascript,Startup,22,135001.08
+QA Engineer,Lead,New York,Java,Big Tech,12,326245.97
+Sales,Senior,London,Java,Startup,11,109184.51
+HR,Mid,Germany,Java,Mid-Size,0,63800.98
+Sales,Senior,Germany,Rust,Big Tech,20,245190.54
+Software Engineer,Senior,SF,Python,Mid-Size,18,255274.49
+Sales,Junior,New York,Rust,Mid-Size,20,110247.25
+Product Manager,Principal,India,Go,Mid-Size,19,108898.35
+Product Manager,Lead,Germany,C++,Mid-Size,17,248435.09
+Sales,Mid,Germany,C++,Mid-Size,10,104020.91
+HR,Lead,SF,Python,Big Tech,19,359331.85
+Designer,Lead,London,Go,Startup,2,131328.26
+DevOps,Principal,SF,Python,Big Tech,16,665552.89
+HR,Lead,New York,C++,Big Tech,11,353736.41
+Sales,Lead,Remote,Rust,Big Tech,9,330531.5
+QA Engineer,Senior,Remote,Java,Big Tech,7,177020.26
+Data Scientist,Principal,London,C++,Startup,14,258515.68
+DevOps,Junior,Germany,Javascript,Big Tech,4,79017.52
+DevOps,Mid,London,Java,Mid-Size,3,92645.78
+Product Manager,Lead,Germany,C++,Big Tech,25,336757.22
+DevOps,Mid,Germany,Rust,Big Tech,20,167709.22
+Sales,Junior,Remote,Python,Startup,19,61317.15
+QA Engineer,Mid,London,Java,Startup,18,73785.11
+QA Engineer,Junior,SF,Rust,Mid-Size,20,112211.06
+Software Engineer,Senior,Germany,Go,Big Tech,3,185926.13
+QA Engineer,Lead,India,Javascript,Big Tech,14,70137.61
+HR,Junior,India,Java,Big Tech,16,22386.04
+QA Engineer,Mid,SF,Python,Mid-Size,11,134329.41
+Product Manager,Lead,India,Go,Startup,2,42781.97
+QA Engineer,Senior,New York,Rust,Mid-Size,9,201758.41
+Software Engineer,Lead,Germany,Javascript,Big Tech,14,294186.5
+Data Scientist,Junior,SF,Python,Startup,9,82918.6
+Sales,Senior,London,Rust,Startup,23,136938.38
+Product Manager,Mid,Germany,Rust,Mid-Size,22,148858.95
+HR,Senior,SF,Java,Startup,17,158528.07
+Data Scientist,Senior,Remote,Java,Startup,0,97784.64
+Product Manager,Principal,London,Python,Big Tech,2,344702.05
+Designer,Senior,Remote,C++,Big Tech,20,237691.44
+DevOps,Senior,Germany,C++,Startup,25,128195.63
+Designer,Lead,London,Rust,Startup,11,174155.77
+QA Engineer,Mid,India,Java,Mid-Size,0,18491.32
+Data Scientist,Lead,SF,Javascript,Mid-Size,2,274179.98
+QA Engineer,Lead,Germany,Javascript,Startup,2,86717.89
+DevOps,Junior,New York,Rust,Big Tech,4,141308.03
+Product Manager,Lead,London,Java,Startup,18,180776.3
+DevOps,Principal,London,Python,Startup,24,245650.75
+Software Engineer,Principal,Germany,Python,Big Tech,0,273983.42
+DevOps,Junior,Germany,Python,Big Tech,3,83284.46
+Software Engineer,Mid,Remote,Javascript,Mid-Size,25,118729.55
+DevOps,Mid,India,Java,Mid-Size,25,29456.52
+Sales,Lead,Remote,Java,Mid-Size,3,166898.31
+Software Engineer,Lead,Remote,Javascript,Mid-Size,16,250166.99
+Data Scientist,Lead,India,Python,Big Tech,13,76851.33
+QA Engineer,Mid,New York,Python,Startup,17,101436.29
+HR,Senior,Remote,Rust,Mid-Size,0,124620.67
+QA Engineer,Principal,Remote,C++,Mid-Size,21,299003.92
+Designer,Senior,London,Go,Big Tech,15,255218.43
+QA Engineer,Senior,India,C++,Big Tech,2,37284.73
+Product Manager,Mid,SF,Java,Startup,22,143189.81
+Sales,Senior,New York,Java,Startup,20,179848.4
+DevOps,Junior,New York,Java,Big Tech,8,129375.79
+Designer,Lead,India,C++,Mid-Size,22,59136.74
+Product Manager,Junior,Germany,Go,Mid-Size,3,69492.65
+Product Manager,Principal,Germany,Rust,Mid-Size,20,369126.2
+Software Engineer,Lead,London,C++,Startup,4,151450.08
+QA Engineer,Senior,London,Go,Mid-Size,10,160310.5
+Data Scientist,Principal,India,Python,Mid-Size,20,85592.59
+HR,Lead,London,Python,Big Tech,25,251050.45
+Data Scientist,Senior,New York,Java,Mid-Size,8,212756.94
+Designer,Junior,New York,Javascript,Big Tech,25,134491.49
+Sales,Lead,SF,Java,Mid-Size,2,224664.79
+Data Scientist,Senior,Germany,Javascript,Startup,5,100217.14
+DevOps,Junior,India,Go,Mid-Size,23,26865.37
+Data Scientist,Principal,Remote,Python,Mid-Size,10,322706.15
+Designer,Principal,Germany,C++,Big Tech,8,340361.17
+HR,Principal,Remote,Javascript,Big Tech,14,419007.19
+Data Scientist,Principal,SF,Go,Big Tech,22,765700.94
+DevOps,Mid,SF,Python,Mid-Size,2,144544.65
+Software Engineer,Lead,London,C++,Mid-Size,0,173618.2
+Sales,Lead,SF,Javascript,Startup,19,240077.04
+Designer,Mid,SF,Java,Mid-Size,21,165014.32
+Software Engineer,Senior,Remote,Java,Startup,18,134806.75
+Software Engineer,Senior,London,Java,Big Tech,13,224070.59
+Software Engineer,Principal,SF,Go,Big Tech,16,674562.63
+Product Manager,Junior,Germany,Java,Big Tech,21,104211.88
+Sales,Senior,SF,Rust,Startup,13,216628.2
+HR,Junior,London,Python,Mid-Size,16,60840.17
+QA Engineer,Lead,India,Go,Big Tech,24,79486.12
+Sales,Junior,London,C++,Mid-Size,13,78545.44
+Product Manager,Lead,Remote,Java,Mid-Size,11,240991.06
+QA Engineer,Mid,India,Python,Big Tech,15,32797.23
+Sales,Mid,Germany,Javascript,Startup,0,58220.45
+Software Engineer,Principal,New York,Java,Mid-Size,12,435292.71
+Designer,Senior,London,Python,Big Tech,5,195556.53
+QA Engineer,Principal,Remote,Rust,Mid-Size,16,346166.12
+DevOps,Lead,Germany,Javascript,Mid-Size,11,215319.95
+DevOps,Principal,India,Rust,Mid-Size,22,92558.15
+Data Scientist,Junior,Germany,C++,Mid-Size,18,71764.37
+QA Engineer,Lead,London,Python,Mid-Size,5,158200.23
+Designer,Mid,SF,Rust,Startup,6,108787.49
+HR,Senior,London,C++,Startup,0,75154.62
+Product Manager,Lead,New York,Python,Big Tech,0,369639.1
+Software Engineer,Lead,London,Python,Startup,4,143730.93
+Data Scientist,Junior,India,Rust,Startup,5,14891.19
+DevOps,Senior,India,Python,Startup,15,31592.2
+Product Manager,Mid,London,Java,Mid-Size,24,124955.24
+Product Manager,Lead,India,Python,Mid-Size,15,63626.58
+Software Engineer,Lead,SF,Go,Big Tech,13,505348.03
+HR,Junior,Germany,C++,Big Tech,0,54135.38
+HR,Principal,London,Python,Big Tech,12,353804.98
+QA Engineer,Mid,SF,Go,Mid-Size,19,166297.11
+DevOps,Senior,Germany,Python,Startup,9,114097.65
+HR,Lead,Germany,Python,Startup,23,121707.04
+Designer,Lead,SF,Rust,Mid-Size,9,327518.72
+HR,Mid,Remote,Java,Big Tech,8,119094.2
+Product Manager,Principal,London,C++,Big Tech,12,461131.05
+Software Engineer,Lead,Germany,Java,Big Tech,2,200590.72
+Designer,Mid,Germany,Javascript,Mid-Size,17,93573.07
+QA Engineer,Junior,India,Rust,Big Tech,19,30572.78
+DevOps,Principal,Germany,Rust,Big Tech,1,343832.1
+QA Engineer,Senior,SF,Java,Mid-Size,16,216630.17
+Product Manager,Lead,Germany,Rust,Startup,18,200396.59
+Designer,Mid,Remote,Java,Mid-Size,22,113399.6
+Designer,Junior,London,Rust,Mid-Size,12,84732.98
+Designer,Senior,London,Python,Mid-Size,12,148351.76
+Product Manager,Mid,Germany,Java,Mid-Size,0,82157.16
+Product Manager,Mid,New York,Java,Startup,1,94547.77
+QA Engineer,Senior,New York,Go,Big Tech,0,243646.19
+Data Scientist,Junior,SF,Rust,Mid-Size,23,141506.24
+QA Engineer,Junior,New York,Rust,Startup,4,60286.18
+DevOps,Principal,SF,Java,Big Tech,23,673354.14
+Software Engineer,Lead,India,Python,Big Tech,2,58840.77
+Designer,Senior,SF,Python,Big Tech,6,255850.4
+Data Scientist,Senior,New York,C++,Mid-Size,23,264904.52
+Software Engineer,Senior,Germany,Python,Mid-Size,21,166464.82
+Data Scientist,Junior,India,Rust,Big Tech,12,33423.46
+HR,Lead,New York,Go,Big Tech,22,370613.12
+HR,Principal,SF,Java,Big Tech,17,495206.36
+Sales,Mid,Remote,Javascript,Big Tech,23,166898.93
+HR,Mid,London,Go,Big Tech,20,134110.33
+QA Engineer,Senior,New York,Javascript,Big Tech,6,216904.37
+HR,Lead,SF,Go,Startup,0,165966.04
+Product Manager,Junior,India,Python,Big Tech,4,22819.1
+Designer,Lead,New York,Rust,Mid-Size,16,315225.14
+QA Engineer,Lead,New York,Javascript,Mid-Size,7,221863.05
+Software Engineer,Junior,London,Go,Mid-Size,14,95796.17
+Sales,Senior,SF,Rust,Big Tech,19,371095.37
+Sales,Lead,Remote,Javascript,Mid-Size,3,186479.96
+Sales,Mid,India,Java,Startup,1,16577.31
+Software Engineer,Junior,SF,Go,Big Tech,4,159032.55
+Software Engineer,Principal,India,Java,Mid-Size,0,55837.53
+Software Engineer,Senior,New York,Python,Startup,24,191797.96
+Software Engineer,Junior,London,Java,Startup,4,46895.76
+Sales,Principal,London,Java,Mid-Size,5,267447.31
+Sales,Principal,Germany,C++,Startup,1,166511.73
+Data Scientist,Lead,Remote,Go,Mid-Size,25,246405.22
+QA Engineer,Lead,London,Python,Startup,25,147592.09
+Designer,Lead,New York,Java,Big Tech,0,281908.79
+HR,Junior,Remote,Rust,Big Tech,3,86622.67
+HR,Junior,SF,Javascript,Big Tech,6,100751.67
+Product Manager,Senior,London,Java,Big Tech,21,264335.22
+Sales,Lead,Remote,Python,Big Tech,25,308212.17
+Product Manager,Principal,New York,Java,Mid-Size,0,350602.98
+QA Engineer,Mid,Germany,Javascript,Big Tech,0,92168.27
+QA Engineer,Senior,India,Python,Big Tech,7,47735.29
+Product Manager,Junior,India,Go,Big Tech,19,34686.91
+Sales,Senior,New York,Python,Big Tech,15,307466.44
+Product Manager,Senior,New York,Go,Startup,20,224935.94
+HR,Senior,India,Python,Big Tech,12,47164.71
+Data Scientist,Senior,Germany,Javascript,Big Tech,22,217710.85
+HR,Mid,Remote,Javascript,Mid-Size,23,101787.78
+DevOps,Lead,India,Python,Startup,25,45445.92
+Sales,Principal,New York,Java,Mid-Size,22,433281.25
+Sales,Senior,London,Javascript,Big Tech,17,235817.34
+Designer,Senior,SF,Go,Mid-Size,19,252897.96
+Software Engineer,Senior,Germany,Go,Mid-Size,9,172023.2
+DevOps,Lead,Germany,Rust,Big Tech,11,300461.33
+QA Engineer,Junior,London,C++,Startup,0,39867.1
+Sales,Junior,London,C++,Startup,9,57721.58
+Product Manager,Mid,New York,C++,Mid-Size,8,166775.55
+DevOps,Junior,India,Go,Big Tech,2,24868.62
+Designer,Senior,Remote,Rust,Mid-Size,18,182825.49
+QA Engineer,Senior,Germany,C++,Mid-Size,25,140567.82
+Software Engineer,Senior,Germany,C++,Mid-Size,8,158003.84
+Software Engineer,Mid,London,Python,Big Tech,9,134182.89
+Designer,Senior,India,Python,Big Tech,18,55559.58
+Designer,Junior,Germany,Python,Startup,15,47982.77
+Product Manager,Lead,Remote,Java,Big Tech,23,345362.58
+Sales,Lead,London,C++,Mid-Size,17,224623.79
+Software Engineer,Principal,Remote,Java,Mid-Size,13,324556.16
+QA Engineer,Junior,India,Rust,Startup,2,12381.24
+DevOps,Senior,Germany,Go,Big Tech,1,197986.5
+QA Engineer,Lead,SF,C++,Mid-Size,0,213351.06
+Data Scientist,Junior,Germany,Go,Startup,17,64205.29
+Data Scientist,Lead,India,Python,Startup,23,45701.16
+Designer,Senior,Germany,C++,Mid-Size,8,130068.4
+Product Manager,Lead,Germany,Javascript,Mid-Size,12,236144.47
+Data Scientist,Principal,New York,Java,Big Tech,1,453165.11
+Software Engineer,Principal,Germany,Java,Startup,6,172962.44
+QA Engineer,Lead,Germany,C++,Mid-Size,15,176961.9
+QA Engineer,Junior,Remote,Python,Startup,20,55567.42
+Designer,Junior,SF,Java,Big Tech,18,137756.35
+Sales,Junior,Remote,Python,Mid-Size,24,79665.51
+Sales,Lead,Remote,Rust,Big Tech,14,359319.83
+DevOps,Junior,London,Go,Startup,21,69949.54
+Designer,Senior,New York,Javascript,Big Tech,10,243386.37
+HR,Principal,Remote,Go,Big Tech,0,282112.07
+DevOps,Senior,India,Go,Startup,20,39436.62
+HR,Junior,India,Rust,Big Tech,6,21731.88
+Sales,Senior,Germany,Java,Startup,19,110467.89
+Designer,Junior,London,Javascript,Mid-Size,7,64629.48
+HR,Lead,New York,Java,Startup,9,158068.38
+Designer,Senior,New York,C++,Startup,4,138701.88
+Designer,Lead,Germany,Go,Mid-Size,8,182011.89
+Sales,Lead,India,C++,Startup,24,40539.4
+DevOps,Mid,SF,Python,Mid-Size,24,185345.71
+DevOps,Junior,London,Go,Mid-Size,0,73357.27
+Designer,Principal,Germany,Java,Startup,1,148093.65
+Data Scientist,Junior,London,Go,Big Tech,18,129587.9
+Product Manager,Principal,India,Python,Big Tech,13,130820.28
+Sales,Junior,India,Rust,Mid-Size,19,23163.0
+Product Manager,Lead,SF,C++,Big Tech,9,494420.57
+Product Manager,Senior,SF,C++,Big Tech,8,322656.35
+DevOps,Senior,New York,Java,Startup,9,158460.07
+DevOps,Mid,London,Go,Mid-Size,5,123055.27
+Data Scientist,Principal,London,Java,Mid-Size,16,360955.3
+Product Manager,Principal,India,Rust,Startup,24,81357.82
+Product Manager,Principal,New York,Go,Big Tech,5,597503.77
+Designer,Lead,Germany,Go,Mid-Size,3,156085.22
+DevOps,Principal,London,Java,Big Tech,19,445332.53
+Product Manager,Senior,New York,Java,Mid-Size,2,209011.6
+QA Engineer,Lead,New York,Python,Mid-Size,22,258485.94
+Data Scientist,Junior,India,Rust,Mid-Size,18,26685.93
+HR,Principal,New York,Python,Mid-Size,17,360841.76
+QA Engineer,Principal,SF,C++,Big Tech,25,615343.56
+QA Engineer,Junior,SF,Go,Big Tech,23,156741.81
+HR,Principal,Remote,Java,Big Tech,3,281827.38
+Sales,Junior,India,Go,Big Tech,7,28238.16
+Sales,Lead,Germany,Go,Startup,16,158008.12
+Data Scientist,Senior,Remote,Javascript,Mid-Size,4,149485.93
+QA Engineer,Junior,SF,C++,Mid-Size,12,93394.6
+Product Manager,Mid,Remote,Javascript,Mid-Size,24,129907.53
+DevOps,Junior,India,Go,Startup,0,14890.77
+Data Scientist,Principal,India,Java,Big Tech,12,119671.93
+Designer,Lead,New York,Go,Mid-Size,3,232233.91
+HR,Lead,London,C++,Big Tech,21,271714.95
+QA Engineer,Junior,New York,Javascript,Big Tech,25,120898.09
+Data Scientist,Senior,India,Java,Startup,23,36979.55
+Software Engineer,Mid,SF,Go,Startup,13,155786.48
+Software Engineer,Lead,Germany,Rust,Big Tech,2,257592.87
+Sales,Principal,SF,C++,Mid-Size,4,365286.57
+HR,Principal,New York,C++,Mid-Size,6,297808.44
+DevOps,Senior,Germany,Rust,Startup,0,86616.73
+Product Manager,Lead,India,Go,Startup,22,56106.92
+DevOps,Junior,SF,C++,Startup,11,95728.72
+DevOps,Principal,India,Java,Startup,10,64072.34
+DevOps,Senior,Germany,Go,Startup,23,148873.26
+HR,Lead,Germany,Go,Startup,7,122391.2
+DevOps,Lead,SF,Javascript,Startup,24,269017.6
+Designer,Lead,India,C++,Mid-Size,5,46344.19
+HR,Lead,Remote,C++,Startup,21,155243.79
+Designer,Lead,India,Rust,Startup,1,32393.05
+HR,Principal,Germany,Javascript,Mid-Size,18,212389.7
+Sales,Senior,India,Javascript,Mid-Size,19,41433.89
+Data Scientist,Lead,New York,C++,Big Tech,19,465421.95
+Software Engineer,Mid,Remote,Go,Startup,23,101608.82
+DevOps,Mid,London,Javascript,Startup,13,90627.16
+Sales,Senior,New York,Rust,Startup,0,134311.18
+Data Scientist,Junior,London,Javascript,Startup,9,59235.59
+Software Engineer,Junior,SF,Rust,Big Tech,15,188599.81
+QA Engineer,Junior,London,Javascript,Mid-Size,3,52996.62
+Product Manager,Mid,India,Rust,Mid-Size,10,37835.75
+Designer,Junior,London,Javascript,Startup,15,55132.96
+QA Engineer,Principal,Germany,Javascript,Startup,19,178759.79
+HR,Lead,New York,Java,Startup,0,129003.23
+Software Engineer,Mid,New York,Rust,Big Tech,15,273838.43
+QA Engineer,Senior,London,Rust,Big Tech,18,199766.8
+Product Manager,Senior,New York,Rust,Mid-Size,20,288205.43
+Sales,Lead,Germany,Python,Startup,21,142670.1
+Software Engineer,Mid,New York,Javascript,Startup,8,111856.42
+QA Engineer,Junior,London,Rust,Startup,8,54759.22
+Designer,Junior,Remote,C++,Startup,8,57626.37
+Designer,Principal,Remote,Python,Big Tech,16,406368.0
+Data Scientist,Principal,SF,Java,Mid-Size,11,468643.67
+QA Engineer,Junior,New York,Rust,Mid-Size,24,108678.3
+DevOps,Senior,London,Rust,Big Tech,12,266524.86
+QA Engineer,Senior,New York,Python,Startup,7,122643.38
+Sales,Principal,India,Javascript,Mid-Size,15,79415.96
+Software Engineer,Lead,Germany,C++,Mid-Size,17,220331.41
+Software Engineer,Junior,New York,Java,Big Tech,0,104021.01
+Sales,Principal,New York,Rust,Startup,0,260929.63
+QA Engineer,Principal,Remote,Javascript,Mid-Size,11,245967.62
+Sales,Junior,Germany,C++,Startup,5,43917.91
+Product Manager,Junior,London,C++,Mid-Size,8,79988.62
+HR,Senior,New York,Java,Big Tech,22,239236.51
+Sales,Lead,Remote,Go,Startup,4,161135.55
+Designer,Lead,SF,C++,Big Tech,15,464307.24
+Sales,Junior,Germany,Go,Mid-Size,17,81865.56
+Software Engineer,Mid,Remote,C++,Big Tech,16,188015.24
+Designer,Principal,Remote,Java,Big Tech,17,422783.08
+Software Engineer,Principal,Remote,Python,Big Tech,0,334472.51
+Data Scientist,Junior,New York,Java,Mid-Size,18,104343.86
+DevOps,Mid,New York,Java,Startup,21,128167.26
+Software Engineer,Senior,SF,Python,Big Tech,7,304858.3
+Designer,Junior,India,Python,Startup,2,11017.67
+Data Scientist,Junior,India,Javascript,Mid-Size,25,23452.06
+Software Engineer,Principal,India,C++,Startup,24,62735.34
+Product Manager,Junior,Germany,Javascript,Big Tech,25,109248.42
+Sales,Junior,Germany,Python,Big Tech,4,69355.35
+DevOps,Junior,SF,Go,Big Tech,22,189673.53
+Software Engineer,Principal,Germany,Go,Big Tech,7,382031.83
+Data Scientist,Senior,India,Java,Big Tech,18,67277.88
+Product Manager,Senior,India,Rust,Big Tech,17,80596.87
+QA Engineer,Junior,Remote,Java,Mid-Size,17,71829.58
+Data Scientist,Principal,Germany,Java,Mid-Size,20,267612.35
+Sales,Senior,New York,Rust,Mid-Size,0,188739.04
+Data Scientist,Senior,New York,C++,Startup,14,193020.23
+Product Manager,Senior,Remote,Python,Startup,17,160598.98
+Data Scientist,Principal,Remote,Go,Mid-Size,24,429119.77
+Product Manager,Principal,Remote,Java,Startup,6,222682.02
+Software Engineer,Junior,New York,Rust,Startup,15,96926.6
+HR,Lead,India,Javascript,Big Tech,15,66193.94
+Product Manager,Senior,Remote,Java,Big Tech,14,277421.12
+Product Manager,Lead,SF,Go,Startup,5,264860.89
+DevOps,Principal,Remote,Python,Startup,8,241744.15
+Product Manager,Principal,London,Java,Mid-Size,6,318161.79
+Product Manager,Principal,Remote,Java,Startup,13,267632.46
+QA Engineer,Lead,New York,C++,Big Tech,10,330482.81
+HR,Principal,Germany,Rust,Startup,20,204776.25
+Software Engineer,Junior,Remote,Javascript,Mid-Size,15,76089.88
+Sales,Principal,Germany,Javascript,Big Tech,24,378259.86
+DevOps,Mid,London,Python,Big Tech,5,142699.37
+QA Engineer,Lead,SF,Go,Big Tech,21,388133.29
+Designer,Mid,Germany,Python,Big Tech,15,125986.29
+HR,Principal,India,Java,Startup,19,54371.46
+Software Engineer,Junior,Remote,Java,Mid-Size,15,77879.86
+Software Engineer,Senior,London,Javascript,Startup,11,124500.72
+Designer,Principal,London,Go,Startup,16,235329.28
+Sales,Junior,Germany,Rust,Big Tech,4,81258.61
+Product Manager,Lead,SF,Go,Mid-Size,24,461884.23
+QA Engineer,Mid,New York,Java,Big Tech,12,183717.19
+Data Scientist,Mid,Remote,Rust,Startup,7,101171.71
+DevOps,Mid,London,Go,Startup,23,107793.74
+Data Scientist,Lead,SF,Go,Big Tech,4,401607.87
+Designer,Junior,India,Rust,Startup,11,14568.69
+Software Engineer,Lead,London,Java,Startup,8,159044.72
+Sales,Mid,SF,Go,Big Tech,2,198490.17
+Software Engineer,Principal,New York,Rust,Startup,2,274259.92
+DevOps,Senior,New York,C++,Mid-Size,0,186117.06
+Software Engineer,Lead,London,C++,Big Tech,24,331098.75
+Software Engineer,Lead,London,Java,Mid-Size,21,231238.0
+DevOps,Junior,Germany,Rust,Startup,17,62172.83
+QA Engineer,Junior,Remote,C++,Startup,23,51798.73
+QA Engineer,Lead,SF,Rust,Big Tech,11,409212.64
+DevOps,Mid,London,Go,Startup,8,101338.59
+Sales,Senior,Remote,Java,Big Tech,8,215570.65
+Designer,Junior,Germany,C++,Big Tech,17,92957.7
+HR,Mid,Remote,Go,Big Tech,17,155154.93
+Software Engineer,Principal,London,Python,Big Tech,6,353819.78
+Sales,Junior,New York,Python,Big Tech,3,108207.67
+Software Engineer,Mid,SF,Java,Mid-Size,12,178058.22
+HR,Mid,SF,C++,Big Tech,16,210141.41
+Designer,Senior,New York,C++,Mid-Size,23,220660.39
+QA Engineer,Senior,London,C++,Startup,1,95945.58
+Sales,Principal,SF,Rust,Big Tech,13,692008.12
+Product Manager,Mid,London,Go,Startup,2,84493.56
+Product Manager,Mid,Germany,C++,Big Tech,4,143453.76
+HR,Senior,London,Go,Mid-Size,13,141836.21
+Product Manager,Junior,Remote,Java,Mid-Size,2,71639.16
+QA Engineer,Junior,New York,C++,Mid-Size,22,97106.25
+HR,Lead,London,Java,Startup,6,122621.41
+QA Engineer,Senior,Germany,C++,Big Tech,17,192031.87
+Designer,Lead,India,Python,Startup,12,39286.35
+Software Engineer,Senior,New York,Javascript,Mid-Size,22,244438.96
+Designer,Principal,SF,Java,Startup,21,300761.58
+Designer,Mid,Remote,C++,Mid-Size,9,113234.98
+QA Engineer,Principal,SF,Javascript,Mid-Size,24,372959.04
+HR,Senior,Germany,Java,Mid-Size,12,122379.0
+HR,Mid,Germany,Rust,Big Tech,15,133255.07
+Product Manager,Junior,SF,C++,Big Tech,8,148094.46
+Data Scientist,Junior,New York,Rust,Mid-Size,1,97344.96
+Software Engineer,Lead,SF,Python,Startup,22,253423.42
+QA Engineer,Senior,London,C++,Startup,4,89556.27
+Product Manager,Senior,SF,Python,Big Tech,21,359224.09
+Sales,Junior,Remote,Javascript,Mid-Size,16,81763.79
+Data Scientist,Principal,Remote,Java,Startup,22,269393.43
+Data Scientist,Mid,India,Go,Mid-Size,21,38467.62
+QA Engineer,Principal,Remote,Python,Startup,3,166843.73
+DevOps,Principal,SF,Go,Big Tech,16,745088.47
+Software Engineer,Junior,Remote,Go,Mid-Size,8,95280.39
+Data Scientist,Junior,New York,Java,Mid-Size,19,112949.67
+QA Engineer,Junior,Remote,Javascript,Startup,1,37693.33
+QA Engineer,Lead,London,Java,Startup,23,144531.0
+Product Manager,Principal,New York,C++,Startup,17,374954.79
+Sales,Senior,India,Python,Mid-Size,20,42530.13
+DevOps,Mid,London,Go,Big Tech,21,213411.96
+Software Engineer,Lead,SF,Java,Big Tech,10,394095.78
+HR,Senior,SF,Java,Startup,12,148789.99
+Designer,Principal,SF,Java,Big Tech,7,467723.95
+Sales,Junior,London,Python,Startup,0,39513.88
+Sales,Principal,London,Javascript,Big Tech,16,444910.04
+Product Manager,Mid,London,Java,Mid-Size,11,126846.75
+HR,Lead,New York,Python,Startup,3,146480.66
+Data Scientist,Lead,Germany,Go,Big Tech,20,314283.45
+Data Scientist,Mid,New York,C++,Mid-Size,12,171705.24
+Product Manager,Senior,SF,Rust,Big Tech,8,420537.03
+QA Engineer,Senior,Germany,Python,Mid-Size,6,113598.75
+Data Scientist,Lead,Remote,Rust,Mid-Size,22,282503.55
+DevOps,Lead,SF,Java,Big Tech,23,482716.18
+Software Engineer,Junior,India,Java,Big Tech,4,22983.53
+Sales,Senior,New York,Python,Mid-Size,4,172268.77
+Sales,Mid,London,Rust,Mid-Size,16,128360.76
+DevOps,Senior,New York,Java,Mid-Size,8,244842.18
+HR,Junior,London,Go,Startup,5,46116.0
+Data Scientist,Lead,Germany,Javascript,Mid-Size,24,195750.6
+Sales,Lead,India,Javascript,Startup,18,43475.24
+Designer,Junior,Germany,Java,Mid-Size,15,68446.82
+HR,Mid,India,Rust,Startup,20,20752.17
+Software Engineer,Lead,New York,C++,Mid-Size,1,233551.97
+Software Engineer,Principal,London,Java,Mid-Size,9,310607.7
+Sales,Lead,Germany,C++,Mid-Size,15,202146.51
+Product Manager,Principal,India,C++,Big Tech,4,104033.05
+HR,Junior,SF,Rust,Big Tech,14,136302.02
+Sales,Junior,SF,C++,Mid-Size,12,120054.19
+Product Manager,Lead,Germany,Go,Startup,12,184691.36
+Sales,Senior,London,Rust,Startup,12,122683.45
+Designer,Principal,Germany,Java,Mid-Size,14,236828.46
+HR,Mid,New York,Go,Big Tech,13,196314.88
+QA Engineer,Lead,India,Python,Startup,7,31024.86
+Software Engineer,Mid,New York,Javascript,Big Tech,10,195931.05
+Sales,Lead,SF,Java,Startup,17,265236.82
+Designer,Senior,India,Java,Mid-Size,23,42398.65
+Product Manager,Senior,Germany,Java,Big Tech,3,155811.52
+Product Manager,Senior,New York,Go,Startup,25,220946.39
+Software Engineer,Senior,Remote,Python,Mid-Size,9,164361.23
+DevOps,Junior,London,Rust,Mid-Size,0,63744.82
+Sales,Junior,London,Python,Mid-Size,4,62268.47
+HR,Principal,Remote,Go,Big Tech,12,364010.98
+Data Scientist,Mid,SF,Java,Big Tech,0,188401.01
+Product Manager,Lead,India,Javascript,Mid-Size,22,70167.41
+HR,Lead,London,Java,Big Tech,7,235873.64
+HR,Junior,Remote,Rust,Startup,2,40429.61
+QA Engineer,Lead,Germany,C++,Mid-Size,2,127333.85
+HR,Junior,Remote,Javascript,Mid-Size,6,58601.65
+HR,Principal,SF,Java,Big Tech,3,418929.02
+QA Engineer,Mid,SF,Javascript,Mid-Size,2,118117.86
+Product Manager,Principal,New York,C++,Startup,14,398805.06
+HR,Senior,London,Python,Big Tech,7,172500.09
+DevOps,Senior,New York,Go,Big Tech,2,294973.66
+DevOps,Senior,Remote,Java,Mid-Size,6,159358.23
+Designer,Principal,India,Rust,Mid-Size,17,80992.53
+QA Engineer,Lead,India,Python,Mid-Size,10,46262.51
+Designer,Mid,SF,Java,Big Tech,10,197575.24
+QA Engineer,Senior,India,Python,Mid-Size,16,36838.55
+Sales,Senior,India,Rust,Startup,5,30565.61
+Sales,Senior,India,Java,Mid-Size,7,35374.29
+HR,Mid,Remote,C++,Mid-Size,0,79808.4
+Data Scientist,Senior,India,C++,Big Tech,9,62740.66
+Sales,Mid,Germany,Rust,Mid-Size,24,114317.91
+Data Scientist,Senior,India,Javascript,Big Tech,18,65105.23
+Sales,Principal,India,Rust,Mid-Size,2,65643.75
+Software Engineer,Principal,New York,Javascript,Startup,3,242259.91
+Sales,Mid,Remote,Java,Startup,10,80720.51
+Designer,Principal,SF,Javascript,Big Tech,14,566051.31
+Product Manager,Mid,New York,Java,Big Tech,0,174971.66
+HR,Principal,London,Java,Mid-Size,8,227817.54
+Designer,Principal,Remote,Go,Mid-Size,10,301627.02
+Product Manager,Mid,Germany,Java,Startup,18,88000.85
+DevOps,Lead,Remote,Javascript,Mid-Size,12,232830.44
+Designer,Principal,London,Go,Startup,25,205545.48
+DevOps,Senior,London,Go,Big Tech,15,325191.09
+Data Scientist,Lead,London,Java,Mid-Size,3,177455.75
+Data Scientist,Mid,SF,Rust,Big Tech,0,197763.74
+Software Engineer,Lead,India,Rust,Mid-Size,19,63818.51
+Sales,Junior,Remote,C++,Startup,12,57819.16
+Designer,Junior,India,Go,Big Tech,0,20761.03
+DevOps,Principal,India,Java,Big Tech,4,101694.42
+Product Manager,Principal,Germany,Rust,Mid-Size,4,286218.6
+Data Scientist,Senior,London,Java,Big Tech,13,239398.43
+Sales,Lead,SF,Java,Startup,22,251652.55
+Data Scientist,Junior,Germany,Go,Big Tech,13,112529.61
+Product Manager,Principal,New York,C++,Big Tech,7,589270.54
+Sales,Lead,SF,Go,Mid-Size,3,270356.95
+Sales,Principal,India,Python,Big Tech,6,98451.59
+DevOps,Principal,SF,Rust,Mid-Size,19,597786.11
+DevOps,Junior,London,Rust,Mid-Size,18,95621.42
+Designer,Junior,New York,Rust,Big Tech,14,149532.35
+Designer,Principal,London,Javascript,Startup,21,215116.99
+QA Engineer,Mid,New York,Java,Mid-Size,3,107650.46
+HR,Principal,Germany,Go,Big Tech,18,327281.18
+QA Engineer,Principal,India,Rust,Mid-Size,8,76662.9
+Software Engineer,Senior,New York,Python,Startup,20,175434.72
+Data Scientist,Senior,New York,Rust,Startup,12,227905.72
+Designer,Senior,New York,C++,Mid-Size,13,226671.89
+DevOps,Mid,SF,Java,Startup,22,121404.16
+Product Manager,Mid,Germany,Java,Big Tech,13,147788.58
+DevOps,Principal,SF,Go,Big Tech,21,684529.89
+Data Scientist,Senior,India,Javascript,Mid-Size,9,40534.63
+QA Engineer,Mid,New York,Go,Startup,15,110277.25
+DevOps,Junior,Germany,Rust,Big Tech,4,94288.6
+HR,Principal,Germany,C++,Big Tech,22,318751.87
+Software Engineer,Lead,Remote,Python,Big Tech,5,273697.35
+Data Scientist,Principal,India,Go,Mid-Size,25,101236.78
+QA Engineer,Lead,Germany,Javascript,Mid-Size,1,124989.68
+HR,Senior,New York,Go,Big Tech,12,314053.18
+Product Manager,Lead,New York,Java,Big Tech,12,451304.24
+QA Engineer,Senior,Germany,Rust,Startup,18,112957.88
+Sales,Junior,SF,Rust,Startup,17,92246.69
+HR,Lead,India,Rust,Startup,18,38641.14
+HR,Principal,New York,Rust,Mid-Size,0,298098.23
+Software Engineer,Senior,Germany,Rust,Big Tech,7,214953.22
+Data Scientist,Principal,New York,Rust,Mid-Size,21,568881.36
+Product Manager,Mid,Germany,Python,Big Tech,15,162851.89
+Software Engineer,Senior,India,Javascript,Startup,1,24612.78
+QA Engineer,Lead,Germany,Rust,Startup,7,131458.39
+Software Engineer,Senior,Remote,Javascript,Startup,5,111674.81
+HR,Principal,Germany,C++,Startup,15,187713.35
+Data Scientist,Junior,Germany,Rust,Big Tech,22,124156.13
+Designer,Senior,India,Go,Startup,10,32520.16
+Software Engineer,Lead,Germany,Rust,Big Tech,16,341666.73
+Sales,Mid,India,Java,Big Tech,22,42799.14
+Software Engineer,Junior,Remote,Python,Mid-Size,18,84074.27
+QA Engineer,Mid,India,Go,Startup,10,22163.07
+QA Engineer,Senior,New York,Go,Startup,7,152206.69
+Product Manager,Principal,India,Java,Mid-Size,21,92501.61
+QA Engineer,Principal,Remote,Rust,Big Tech,3,378236.11
+DevOps,Lead,London,Python,Startup,10,169614.55
+Data Scientist,Principal,Germany,Go,Big Tech,7,385460.61
+Data Scientist,Junior,India,Python,Mid-Size,8,18526.19
+Designer,Principal,Germany,Go,Big Tech,25,379359.32
+Designer,Lead,SF,Rust,Startup,1,194947.31
+Data Scientist,Senior,New York,C++,Big Tech,15,346136.33
+Sales,Senior,New York,Go,Big Tech,5,291418.75
+Designer,Principal,SF,C++,Startup,20,349005.54
+Product Manager,Mid,SF,Go,Startup,20,184335.72
+QA Engineer,Senior,India,Javascript,Big Tech,25,51379.86
+Data Scientist,Principal,SF,Rust,Big Tech,18,712806.21
+HR,Lead,London,Java,Mid-Size,7,170342.49
+Designer,Principal,Germany,C++,Startup,13,186331.24
+Data Scientist,Senior,Germany,Java,Big Tech,23,202879.86
+DevOps,Lead,Remote,Rust,Startup,15,234575.67
+Software Engineer,Principal,SF,Java,Mid-Size,11,470703.88
+QA Engineer,Junior,SF,Rust,Big Tech,4,127159.97
+Data Scientist,Lead,London,Java,Big Tech,23,319696.77
+Software Engineer,Junior,New York,C++,Big Tech,25,152939.67
+Designer,Mid,New York,Javascript,Startup,23,106967.07
+Software Engineer,Lead,Germany,Java,Mid-Size,18,199437.02
+QA Engineer,Junior,Germany,C++,Startup,17,47680.07
+Data Scientist,Senior,India,Go,Big Tech,8,61179.38
+DevOps,Senior,London,Rust,Mid-Size,1,147300.68
+Sales,Mid,Remote,Python,Big Tech,24,144531.23
+Designer,Lead,Remote,Python,Big Tech,19,290296.71
+Data Scientist,Lead,London,Rust,Startup,11,195283.35
+QA Engineer,Lead,Remote,Javascript,Big Tech,1,218794.86
+Designer,Mid,New York,Java,Mid-Size,9,136242.17
+Product Manager,Lead,Remote,Javascript,Big Tech,0,245431.36
+Software Engineer,Senior,Remote,Python,Big Tech,3,189378.65
+Sales,Junior,London,C++,Startup,24,61153.55
+QA Engineer,Senior,London,Rust,Mid-Size,11,162386.53
+Product Manager,Senior,Remote,Rust,Startup,8,157360.61
+HR,Junior,SF,Javascript,Big Tech,3,100749.0
+Data Scientist,Senior,London,C++,Startup,8,125028.05
+DevOps,Mid,India,Javascript,Startup,5,19830.68
+Designer,Junior,India,Java,Startup,0,9826.53
+Software Engineer,Senior,New York,Go,Startup,9,176554.14
+Designer,Principal,Remote,C++,Big Tech,13,402563.23
+Sales,Senior,SF,Go,Big Tech,21,410342.72
+Data Scientist,Mid,New York,Java,Mid-Size,24,173062.44
+Designer,Lead,Remote,Go,Startup,17,183312.92
+Software Engineer,Senior,London,Python,Startup,5,103877.7
+Data Scientist,Lead,India,Go,Mid-Size,17,73386.92
+Designer,Principal,Germany,Java,Startup,19,204382.12
+DevOps,Senior,SF,Go,Mid-Size,15,318797.38
+QA Engineer,Junior,Germany,Rust,Big Tech,14,98562.89
+Data Scientist,Lead,India,Javascript,Mid-Size,15,60642.83
+QA Engineer,Principal,Germany,Python,Startup,7,157328.01
+HR,Junior,London,Rust,Mid-Size,12,69273.78
+Data Scientist,Junior,Remote,Rust,Big Tech,22,137663.29
+DevOps,Junior,London,Java,Startup,10,62066.77
+QA Engineer,Junior,Germany,Javascript,Big Tech,24,83731.55
+Product Manager,Senior,London,Javascript,Big Tech,6,234010.84
+Software Engineer,Senior,India,C++,Mid-Size,16,47085.79
+Product Manager,Senior,SF,Python,Big Tech,17,363111.18
+Designer,Principal,London,Java,Startup,21,220977.16
+DevOps,Principal,India,Python,Big Tech,22,119777.62
+Product Manager,Principal,SF,C++,Big Tech,18,745305.84
+Data Scientist,Mid,Remote,Go,Mid-Size,24,153462.73
+Designer,Principal,Germany,Rust,Big Tech,12,378263.42
+Designer,Senior,Remote,Python,Mid-Size,14,165403.08
+Product Manager,Senior,New York,Rust,Mid-Size,22,313865.44
+HR,Mid,India,Java,Startup,21,19916.92
+Product Manager,Mid,SF,Go,Startup,21,163263.24
+HR,Principal,London,Java,Startup,0,138380.08
+DevOps,Lead,Remote,Go,Startup,15,231457.48
+Software Engineer,Mid,SF,Go,Mid-Size,4,158491.35
+Product Manager,Junior,India,Rust,Big Tech,25,34698.2
+Sales,Senior,New York,Java,Startup,2,132707.02
+HR,Junior,Remote,Java,Startup,22,51959.78
+Product Manager,Senior,Germany,Python,Startup,9,110931.27
+QA Engineer,Senior,SF,Java,Big Tech,18,271924.08
+Data Scientist,Mid,Germany,Python,Startup,4,68186.72
+Sales,Mid,SF,Javascript,Big Tech,6,186691.15
+Sales,Junior,SF,Javascript,Mid-Size,13,101581.94
+HR,Senior,India,Javascript,Mid-Size,2,26613.03
+QA Engineer,Junior,India,C++,Mid-Size,12,18755.59
+QA Engineer,Lead,India,Java,Big Tech,12,65823.38
+Designer,Junior,London,C++,Startup,9,55323.97
+HR,Principal,SF,Java,Startup,1,185977.47
+Software Engineer,Junior,Remote,Python,Startup,5,55212.06
+Data Scientist,Principal,Germany,C++,Startup,7,200596.19
+DevOps,Principal,India,C++,Startup,3,52756.99
+Sales,Principal,India,C++,Big Tech,24,104343.22
+DevOps,Lead,Germany,Go,Mid-Size,11,237459.81
+Product Manager,Junior,Germany,Python,Startup,14,53524.73
+Product Manager,Junior,SF,Javascript,Mid-Size,7,116376.24
+DevOps,Lead,India,Python,Big Tech,6,65708.55
+Product Manager,Senior,Germany,Go,Big Tech,13,244521.65
+Software Engineer,Mid,London,Java,Startup,22,84427.94
+QA Engineer,Junior,London,Python,Big Tech,18,88292.51
+Product Manager,Mid,India,C++,Mid-Size,13,37824.14
+Designer,Lead,Germany,Javascript,Startup,21,146820.95
+Product Manager,Senior,SF,Javascript,Startup,12,197949.3
+Data Scientist,Senior,SF,Java,Mid-Size,20,266917.13
+Software Engineer,Senior,SF,Python,Startup,0,139843.69
+Data Scientist,Lead,New York,Go,Startup,18,275586.7
+Data Scientist,Principal,India,Java,Mid-Size,0,64419.89
+Designer,Principal,SF,Python,Startup,3,247161.58
+Software Engineer,Mid,London,Rust,Startup,9,92467.68
+Software Engineer,Principal,Germany,Javascript,Mid-Size,2,200888.95
+HR,Principal,Remote,Go,Big Tech,19,420421.88
+Software Engineer,Senior,Remote,C++,Mid-Size,8,177370.73
+Software Engineer,Senior,SF,Go,Startup,2,159918.48
+Software Engineer,Mid,Remote,C++,Mid-Size,5,97979.91
+Designer,Junior,Remote,Go,Startup,5,52705.47
+Product Manager,Mid,New York,Javascript,Startup,22,145336.14
+HR,Mid,London,C++,Mid-Size,24,106640.96
+Data Scientist,Lead,London,Python,Startup,11,164241.77
+Software Engineer,Lead,New York,C++,Big Tech,22,448563.36
+Sales,Mid,New York,Java,Startup,0,85919.84
+Product Manager,Mid,Remote,Python,Mid-Size,15,148928.04
+Product Manager,Mid,India,Java,Big Tech,23,43150.88
+Data Scientist,Principal,Germany,Go,Big Tech,4,352546.65
+Designer,Lead,Germany,Python,Startup,8,108792.86
+DevOps,Mid,Remote,Go,Mid-Size,9,133335.64
+DevOps,Senior,Germany,Rust,Startup,12,143353.39
+Product Manager,Senior,New York,Go,Startup,14,218192.12
+QA Engineer,Principal,London,Go,Mid-Size,11,277028.62
+QA Engineer,Principal,Germany,Java,Mid-Size,4,196408.73
+Data Scientist,Junior,Remote,C++,Startup,4,56267.16
+DevOps,Junior,India,Rust,Big Tech,17,32491.81
+Product Manager,Junior,Remote,Go,Startup,11,73794.61
+Designer,Principal,SF,Go,Big Tech,2,501391.24
+DevOps,Principal,Remote,Rust,Startup,25,315639.81
+Product Manager,Principal,New York,Rust,Mid-Size,24,534625.21
+Product Manager,Senior,London,Python,Big Tech,6,207828.69
+Software Engineer,Principal,London,Java,Mid-Size,16,349724.37
+Designer,Senior,Germany,Rust,Mid-Size,18,157920.72
+Software Engineer,Junior,New York,Rust,Mid-Size,17,127146.2
+Data Scientist,Junior,SF,Javascript,Mid-Size,0,91059.29
+Software Engineer,Junior,New York,C++,Mid-Size,24,104415.78
+Sales,Mid,Remote,Rust,Startup,23,103145.61
+Software Engineer,Mid,New York,Java,Big Tech,4,162347.31

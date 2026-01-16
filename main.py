@@ -104,25 +104,25 @@ def get_job_by_id(job_id:int,db:Session=Depends(get_db)):
         
         raise HTTPException(status_code=404,detail="job not found 404 status given")
     return job_to_get
-#to create or leave a job for applicants
+# Pydantic models for Job signals
 class Job(BaseModel):
-    id:int
-    title:str
-    location:str
-    salary:int
+    title: str
+    location: str
+    salary: int
     description: Optional[str] = None
 @app.post("/jobs")
-def create_job(job:Job,db: Session =Depends(get_db)):
-   new_job=models.JobDB(
-       title=job.title,
-       location=job.location,
-       salary=job.salary,
-       description=job.description
-   )
-   db.add(new_job)
-   db.commit()
-   db.refresh(new_job)
-   return new_job
+def create_job(job: Job, db: Session = Depends(get_db)):
+    # Standard DB insertion (ID is auto-generated)
+    new_job = models.JobDB(
+        title=job.title,
+        location=job.location,
+        salary=job.salary,
+        description=job.description
+    )
+    db.add(new_job)
+    db.commit()
+    db.refresh(new_job)
+    return new_job
 #now to apply our resume or give information to jobs company
 class Applicant(BaseModel):
     name:str

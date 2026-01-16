@@ -752,7 +752,6 @@
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        id: 0,
                         title: title,
                         location: loc,
                         salary: parseInt(sal) || 0,
@@ -778,28 +777,47 @@
         async function runAI() {
             const scan = document.getElementById("ai-scanning");
             const resPanel = document.getElementById("ai-result-panel");
-            scan.style.display = "block"; resPanel.classList.add("hidden");
+            scan.style.display = "block";
+            resPanel.classList.add("hidden");
 
-            const res = await fetch("/predict_salary", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ title: document.getElementById("ai-title").value, location: document.getElementById("ai-loc").value, years_of_experience: parseInt(document.getElementById("ai-exp").value), tech_stack: "Default", seniority: document.getElementById("ai-sen").value, company_size: document.getElementById("ai-scale").value })
-            });
+            try {
+                const res = await fetch("/predict_salary", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        title: document.getElementById("ai-title").value,
+                        location: document.getElementById("ai-loc").value,
+                        years_of_experience: parseInt(document.getElementById("ai-exp").value),
+                        tech_stack: "Default",
+                        seniority: document.getElementById("ai-sen").value,
+                        company_size: document.getElementById("ai-scale").value
+                    })
+                });
 
-            setTimeout(async () => {
+                if (res.ok) {
+                    const data = await res.json();
+                    scan.style.display = "none";
+                    resPanel.classList.remove("hidden");
+                    document.getElementById("res-bracket").innerText = `$${data.prediction.average.toLocaleString()}`;
+                    document.getElementById("res-conf").innerText = data.prediction.confidence_level;
+                    document.getElementById("res-acc").innerText = data.prediction.match_accuracy;
+
+                    const warn = document.getElementById("res-warning");
+                    if (data.metadata.warning) {
+                        warn.innerText = data.metadata.warning;
+                        warn.classList.remove("hidden");
+                    } else {
+                        warn.classList.add("hidden");
+                    }
+                    gsap.from(resPanel, { opacity: 0, y: 15 });
+                } else {
+                    scan.style.display = "none";
+                    alert("❌ Simulation Error: Server is under high load or model loading timed out. Try again in 30 seconds.");
+                }
+            } catch (err) {
                 scan.style.display = "none";
-                const data = await res.json();
-                resPanel.classList.remove("hidden");
-                document.getElementById("res-bracket").innerText = `$${data.prediction.average.toLocaleString()}`;
-                document.getElementById("res-conf").innerText = data.prediction.confidence_level;
-                document.getElementById("res-acc").innerText = data.prediction.match_accuracy;
-
-                const warn = document.getElementById("res-warning");
-                if (data.metadata.warning) { warn.innerText = data.metadata.warning; warn.classList.remove("hidden"); }
-                else warn.classList.add("hidden");
-
-                gsap.from(resPanel, { opacity: 0, y: 15 });
-            }, 1200);
+                alert("🚫 Connectivity Error: Failed to link with AI Brain.");
+            }
         }
 
         async function fetchTodos() {
@@ -819,9 +837,18 @@
         }
 
         async function fetchProfile() {
-            const data = await (await fetch("/me", { headers: { "Authorization": `Bearer ${TOKEN}` } })).json();
-            document.getElementById("prof-email").innerText = data.username || data.email;
-            document.getElementById("prof-id").innerText = `ID: RF-0${data.id}-NEXUS • ${data.email}`;
+            try {
+                const res = await fetch("/me", { headers: { "Authorization": `Bearer ${TOKEN}` } });
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById("prof-email").innerText = data.username || data.email;
+                    document.getElementById("prof-id").innerText = `ID: RF-0${data.id}-NEXUS • ${data.email}`;
+                } else {
+                    console.error("Profile Fetch Failed:", res.status);
+                }
+            } catch (err) {
+                console.error("Profile Link Error:", err);
+            }
         }
     </script>
 </body>

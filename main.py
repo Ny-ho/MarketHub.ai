@@ -164,14 +164,33 @@ class UserCreate(BaseModel):
     password:str
 @app.post("/users")
 async def create_user(user: UserCreate, db: Session = Depends(get_db)):
-    new_user = models.UserDB(
-        email=user.email,
-        username=user.username,
-        hashed_password=security.get_password_hash(user.password)
-    )
-    db.add(new_user)
-    db.commit()
-    return {"message": "Agent Signal Initialized."}
+    try:
+        # 1. Check if email already exists
+        existing_email = db.query(models.UserDB).filter(models.UserDB.email == user.email).first()
+        if existing_email:
+            raise HTTPException(status_code=400, detail="Identity Signal already registered with this email.")
+        
+        # 2. Check if username already exists
+        existing_username = db.query(models.UserDB).filter(models.UserDB.username == user.username).first()
+        if existing_username:
+            raise HTTPException(status_code=400, detail="Agent Identity already taken.")
+
+        # 3. Create the user
+        new_user = models.UserDB(
+            email=user.email,
+            username=user.username,
+            hashed_password=security.get_password_hash(user.password)
+        )
+        db.add(new_user)
+        db.commit()
+        return {"message": "Agent Signal Initialized."}
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        db.rollback()
+        # Log the error and return a detailed message
+        print(f"CRITICAL REGISTRY ERROR: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Core Registry Error: {str(e)}")
 
 from fastapi.security import OAuth2PasswordRequestForm
 

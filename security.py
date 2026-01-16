@@ -1,4 +1,4 @@
-from passlib.context import CryptContext
+# Hashing logic and JWT security
 #for jwt token
 from jose import jwt
 from datetime import datetime, timedelta
@@ -8,14 +8,26 @@ SECRET_KEY = os.getenv("SECRET_KEY", "your-default-dev-key-change-this-in-prod")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-# The tool that hashes passwords
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+import bcrypt
 
+def get_password_hash(password: str):
+    # bcrypt 4.0.0+ on Python 3.13 fix:
+    # We use the bcrypt library directly because passlib is unmaintained 
+    # and has a bug with the 72-character check on newer Python versions.
+    pwd_bytes = password.encode('utf-8')
+    # Use salt with '2b' (most compatible ident)
+    salt = bcrypt.gensalt(rounds=12, prefix=b"2b")
+    hashed = bcrypt.hashpw(pwd_bytes, salt)
+    return hashed.decode('utf-8')
 
-def get_password_hash(password:str):
-    return pwd_context.hash(password)
-def verify_password(plain_password,hashed_password):
-    return pwd_context.verify(plain_password,hashed_password)
+def verify_password(plain_password: str, hashed_password: str):
+    try:
+        return bcrypt.checkpw(
+            plain_password.encode('utf-8'), 
+            hashed_password.encode('utf-8')
+        )
+    except Exception:
+        return False
 
 def create_access_token(data:dict):
     to_encode=data.copy()

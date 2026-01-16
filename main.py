@@ -30,9 +30,21 @@ from transformers import pipeline
 # Known Valid Titles (Must match your CSV)
 KNOWN_TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOps", "Designer", "QA Engineer", "Sales", "HR"]
 
-# Load the "Classifier" (Downloads 500MB once)
-# main.py
-classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
+# AI Models (Lazy Loaded)
+_classifier = None
+_model = None
+
+def get_classifier():
+    global _classifier
+    if _classifier is None:
+        _classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
+    return _classifier
+
+def get_salary_model():
+    global _model
+    if _model is None:
+        _model = joblib.load("salary_model.pkl")
+    return _model
 # Dependency
 def get_db():
     db = SessionLocal()
@@ -52,7 +64,6 @@ def get_current_user(token:str=Depends(oauth2_scheme),db:Session=Depends(get_db)
         raise HTTPException(status_code=401,detail="user not found")
     return user
 
-model =joblib.load("salary_model.pkl")
 app=FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 #just a middlware for calculating time taken of a function
@@ -205,7 +216,8 @@ class salary_input(BaseModel):
     company_size: str    
 @app.post("/predict_salary")
 def predict_salary(input_data: salary_input):
-    # 1. AI Cleaning
+    # 1. AI Cleaning (Lazy Loaded)
+    classifier = get_classifier()
     result = classifier(input_data.title, KNOWN_TITLES)
     cleaned_title = result['labels'][0]
     match_score = result['scores'][0] # How sure the LLM is (0.0 to 1.0)
@@ -227,7 +239,7 @@ def predict_salary(input_data: salary_input):
         "seniority": [input_data.seniority],
         "company_size": [input_data.company_size]
     })
-    base_prediction = int(model.predict(df)[0])
+    base_prediction = int(get_salary_model().predict(df)[0])
 
     # 4. Range Logic (+/- 10%)
     low_range = int(base_prediction * 0.9)
@@ -256,7 +268,7 @@ def predict_salary_batch(inputs:List[salary_input]):
     data=[item.dict()for item in inputs]
     df=pd.DataFrame(data)
     df=df.rename(columns={"years_of_experience":"years_experience"})
-    predictions=model.predict(df)
+    predictions=get_salary_model().predict(df)
     return{"estimated_salaries":predictions.tolist()}   
 
 #to directly show frontend in localhost 8000

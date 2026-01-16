@@ -4,11 +4,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # 1. Get the Database URL from the Environment (for Cloud)
-# 2. If not found, use local SQLite (default)
-# Note: For Heroku/Render, Postgres URLs start with 'postgres://', 
-# but SQLAlchemy needs 'postgresql://'
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./sql_app.db")
 
+# Cleaning: Remove any leading/trailing spaces or quotes that might have been pasted
+DATABASE_URL = DATABASE_URL.strip().strip("'").strip('"')
+
+# Handle Heroku/Render 'postgres://' vs SQLAlchemy 'postgresql://'
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 

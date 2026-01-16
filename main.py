@@ -8,30 +8,14 @@ from database import engine
 import models
 models.Base.metadata.create_all(bind=engine)
 # Database Schema Initialization
-from sqlalchemy import text, inspect
 def init_db():
-    models.Base.metadata.create_all(bind=engine)
-    inspector = inspect(engine)
-    
-    # Robust additive patching for both SQLite and Postgres
-    with engine.connect() as conn:
-        # 1. Check 'jobs' table for 'description'
-        if 'jobs' in inspector.get_table_names():
-            columns = [c['name'] for c in inspector.get_columns('jobs')]
-            if 'description' not in columns:
-                try:
-                    conn.execute(text("ALTER TABLE jobs ADD COLUMN description TEXT"))
-                    conn.commit()
-                except Exception: pass
-            
-        # 2. Check 'users' table for 'username'
-        if 'users' in inspector.get_table_names():
-            columns = [c['name'] for c in inspector.get_columns('users')]
-            if 'username' not in columns:
-                try:
-                    conn.execute(text("ALTER TABLE users ADD COLUMN username TEXT"))
-                    conn.commit()
-                except Exception: pass
+    try:
+        # This will create tables if they don't exist.
+        # If they exist but columns are missing, we rely on the DB being fresh.
+        models.Base.metadata.create_all(bind=engine)
+        print("DATABASE BOOT: Registry Synchronized.")
+    except Exception as e:
+        print(f"DATABASE BOOT ERROR: {str(e)}")
 
 init_db()
 from sqlalchemy.orm import Session

@@ -7,16 +7,33 @@ from fastapi.staticfiles import StaticFiles
 from database import engine
 import models
 models.Base.metadata.create_all(bind=engine)
-# Standard SQLite Schema Auto-Patch
-from sqlalchemy import text
-try:
+# Database Schema Initialization
+from sqlalchemy import text, inspect
+def init_db():
+    models.Base.metadata.create_all(bind=engine)
+    inspector = inspect(engine)
+    
+    # Robust additive patching for both SQLite and Postgres
     with engine.connect() as conn:
-        try: conn.execute(text("ALTER TABLE jobs ADD COLUMN description TEXT"))
-        except Exception: pass
-        try: conn.execute(text("ALTER TABLE users ADD COLUMN username TEXT"))
-        except Exception: pass
-        conn.commit()
-except Exception: pass
+        # 1. Check 'jobs' table for 'description'
+        if 'jobs' in inspector.get_table_names():
+            columns = [c['name'] for c in inspector.get_columns('jobs')]
+            if 'description' not in columns:
+                try:
+                    conn.execute(text("ALTER TABLE jobs ADD COLUMN description TEXT"))
+                    conn.commit()
+                except Exception: pass
+            
+        # 2. Check 'users' table for 'username'
+        if 'users' in inspector.get_table_names():
+            columns = [c['name'] for c in inspector.get_columns('users')]
+            if 'username' not in columns:
+                try:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN username TEXT"))
+                    conn.commit()
+                except Exception: pass
+
+init_db()
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from database import SessionLocal

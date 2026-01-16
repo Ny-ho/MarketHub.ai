@@ -1,0 +1,2 @@
+# Tell GitHub to ignore the static folder for language statistics
+static/* linguist-vendored

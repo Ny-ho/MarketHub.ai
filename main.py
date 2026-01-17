@@ -39,7 +39,7 @@ from fastapi.security import OAuth2PasswordBearer
 import joblib
 import pandas as pd
 
-from transformers import pipeline
+# NOTE: transformers is imported lazily inside get_classifier() to avoid startup memory usage
 
 # Known Valid Titles (Must match your CSV)
 KNOWN_TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOps", "Designer", "QA Engineer", "Sales", "HR"]
@@ -54,13 +54,14 @@ def get_classifier():
     global _classifier
     if _classifier is None:
         try:
-            print("INITIALIZING AI BRAIN (HEAVY)...")
+            print("LOADING AI MODEL (first request only)...")
+            from transformers import pipeline  # Lazy import - only loads when needed
             _classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
-            # Collect garbage to free RAM after loading
             gc.collect()
+            print("AI MODEL LOADED SUCCESSFULLY")
         except Exception as e:
-            print(f"AI BRAIN OFFLINE (RAM LIMIT): {str(e)}")
-            # If heavy model fails, we stay None and use the Lite Heuristic
+            print(f"AI MODEL UNAVAILABLE: {str(e)}")
+            _classifier = None  # Will use lite fallback
     return _classifier
 
 def get_salary_model():
@@ -340,19 +341,22 @@ def predict_salary(input_data: salary_input):
             }
         }
     except Exception as e:
-        print(f"RESURRECTION FALLBACK TRIGGERED: {str(e)}")
-        # Ultimate fail-safe
+        print(f"SALARY PREDICTION ERROR: {str(e)}")
         return {
-            "prediction": {"average": 100000, "range": "$90,000 - $110,000", "confidence_level": "Safe", "match_accuracy": "Heuristic"},
-            "metadata": {"cleaned_title": "General System", "mode": "FAILSAFE"}
+            "error": "Salary prediction temporarily unavailable",
+            "message": "The AI model could not be loaded on this server. Please try again later.",
+            "fallback": {"average": 100000, "range": "$90,000 - $110,000"}
         }
 @app.post("/predict_salary_batch")
 def predict_salary_batch(inputs:List[salary_input]):
+    model = get_salary_model()
+    if model is None:
+        return {"error": "Batch salary prediction temporarily unavailable"}
     data=[item.dict()for item in inputs]
     df=pd.DataFrame(data)
     df=df.rename(columns={"years_of_experience":"years_experience"})
-    predictions=get_salary_model().predict(df)
-    return{"estimated_salaries":predictions.tolist()}   
+    predictions=model.predict(df)
+    return{"estimated_salaries":predictions.tolist()}
 
 #to directly show frontend in localhost 8000
 from fastapi.responses import FileResponse

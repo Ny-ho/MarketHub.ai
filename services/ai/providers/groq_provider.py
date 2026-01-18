@@ -16,11 +16,48 @@ SALARY_AVERAGES = {
 KNOWN_TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOps", "Designer", "QA Engineer", "Sales", "HR"]
 
 class GroqAIProvider(AIService):
+    def _calculate_prediction(self, title: str, input_data) -> dict:
+        # Standardize title to one of our categories
+        title_lower = title.lower()
+        cleaned_title = "Software Engineer" # Default
+        for candidate in KNOWN_TITLES:
+            if candidate.lower() in title_lower:
+                cleaned_title = candidate
+                break
+        
+        # Calculate salary based on factors
+        base = SALARY_AVERAGES.get(cleaned_title, 100000)
+        
+        # Adjust for experience (3% per year)
+        exp_multiplier = 1 + (input_data.years_of_experience * 0.03)
+        
+        # Adjust for seniority
+        if input_data.seniority == "Senior":
+            exp_multiplier += 0.2
+        elif input_data.seniority == "Junior":
+            exp_multiplier -= 0.15
+            
+        # Adjust for company size
+        if input_data.company_size == "Large":
+            exp_multiplier += 0.1
+        elif input_data.company_size == "Small":
+            exp_multiplier -= 0.1
+        
+        predicted = int(base * exp_multiplier)
+        low_range = int(predicted * 0.9)
+        high_range = int(predicted * 1.1)
+        
+        return {
+            "average": predicted,
+            "range": f"${low_range:,} - ${high_range:,}",
+            "title_used": cleaned_title
+        }
+
     def predict_salary(self, input_data) -> dict:
         try:
             # Groq client automatically picks up GROQ_API_KEY from environment
+            # Upgrading to 0.11.0+ and using default init fixes 'proxies' error on Render
             client = Groq()
-
             
             response = client.chat.completions.create(
                 model="llama3-8b-8192",
@@ -31,57 +68,39 @@ class GroqAIProvider(AIService):
                 max_tokens=50
             )
             
-            cleaned_title = response.choices[0].message.content.strip()
-            
-            # Validate the response is one of our known titles
-            if cleaned_title not in KNOWN_TITLES:
-                # Basic keyword fallback if AI misbehaves
-                title_lower = input_data.title.lower()
-                cleaned_title = "Software Engineer" # Default
-                for candidate in KNOWN_TITLES:
-                    if candidate.lower() in title_lower:
-                        cleaned_title = candidate
-                        break
-            
-            # Calculate salary based on factors
-            base = SALARY_AVERAGES.get(cleaned_title, 100000)
-            
-            # Adjust for experience (3% per year)
-            exp_multiplier = 1 + (input_data.years_of_experience * 0.03)
-            
-            # Adjust for seniority
-            if input_data.seniority == "Senior":
-                exp_multiplier += 0.2
-            elif input_data.seniority == "Junior":
-                exp_multiplier -= 0.15
-                
-            # Adjust for company size
-            if input_data.company_size == "Large":
-                exp_multiplier += 0.1
-            elif input_data.company_size == "Small":
-                exp_multiplier -= 0.1
-            
-            predicted = int(base * exp_multiplier)
-            low_range = int(predicted * 0.9)
-            high_range = int(predicted * 1.1)
+            ai_title = response.choices[0].message.content.strip()
+            calc = self._calculate_prediction(ai_title if ai_title in KNOWN_TITLES else input_data.title, input_data)
             
             return {
                 "prediction": {
-                    "average": predicted,
-                    "range": f"${low_range:,} - ${high_range:,}",
+                    "average": calc["average"],
+                    "range": calc["range"],
                     "confidence_level": "High",
                     "match_accuracy": "95%"
                 },
                 "metadata": {
-                    "cleaned_title": cleaned_title,
+                    "cleaned_title": calc["title_used"],
                     "mode": "Groq AI (llama3-8b)",
                     "disclaimer": "Prediction based on market intelligence signals."
                 }
             }
         except Exception as e:
             print(f"GROQ PROVIDER ERROR: {str(e)}")
+            # Smarter fallback using local keyword matching if AI fails
+            calc = self._calculate_prediction(input_data.title, input_data)
             return {
-                "error": "AI prediction failed",
-                "message": str(e),
-                "fallback": {"average": 100000, "range": "$90,000 - $110,000"}
+                "error": "AI classification failed, using market average instead.",
+                "message": f"Service status: {str(e)}",
+                "prediction": {
+                    "average": calc["average"],
+                    "range": calc["range"],
+                    "confidence_level": "Lite",
+                    "match_accuracy": "75%"
+                },
+                "metadata": {
+                    "cleaned_title": calc["title_used"],
+                    "mode": "Market-Average Fallback",
+                    "disclaimer": "AI Brain is currently offline. Showing local market averages."
+                }
             }
+

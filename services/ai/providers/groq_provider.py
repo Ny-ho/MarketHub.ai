@@ -18,8 +18,9 @@ KNOWN_TITLES = ["Software Engineer", "Data Scientist", "Product Manager", "DevOp
 class GroqAIProvider(AIService):
     def predict_salary(self, input_data) -> dict:
         try:
-            # Call Groq API to classify the job title
-            client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+            # Groq client automatically picks up GROQ_API_KEY from environment
+            client = Groq()
+
             
             response = client.chat.completions.create(
                 model="llama3-8b-8192",

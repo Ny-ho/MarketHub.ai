@@ -55,9 +55,19 @@ class GroqAIProvider(AIService):
 
     def predict_salary(self, input_data) -> dict:
         try:
-            # Groq client automatically picks up GROQ_API_KEY from environment
-            # Upgrading to 0.11.0+ and using default init fixes 'proxies' error on Render
-            client = Groq()
+            # professional patch for Render/Cloud environments: 
+            # some environments inject proxy vars that the Groq library doesn't handle well.
+            temp_https = os.environ.pop("HTTPS_PROXY", None)
+            temp_http = os.environ.pop("HTTP_PROXY", None)
+            
+            try:
+                # Upgrading to 0.11.0+ and using default init fixes 'proxies' error on Render
+                client = Groq()
+            finally:
+                # Restore environment variables after client is initialized
+                if temp_https: os.environ["HTTPS_PROXY"] = temp_https
+                if temp_http: os.environ["HTTP_PROXY"] = temp_http
+
             
             response = client.chat.completions.create(
                 model="llama3-8b-8192",

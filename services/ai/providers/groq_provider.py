@@ -56,11 +56,10 @@ class GroqAIProvider(AIService):
     def predict_salary(self, input_data) -> dict:
         try:
             # DIRECT API CONNECTION:
-            # We bypass the Groq library entirely because it has a known conflict 
-            # with Render's 'proxies' configuration.
             import httpx
             
-            api_key = os.getenv("GROQ_API_KEY")
+            # Sanitize API Key (remove potential newlines or spaces from Env vars)
+            api_key = os.getenv("GROQ_API_KEY", "").strip()
             url = "https://api.groq.com/openai/v1/chat/completions"
             
             headers = {
@@ -69,22 +68,26 @@ class GroqAIProvider(AIService):
             }
             
             payload = {
-                "model": "llama3-8b-8192",
+                "model": "llama-3.1-8b-instant", # Using the more common 'instant' model
                 "messages": [{
                     "role": "user",
                     "content": f"Classify this job title into exactly one of these categories: {KNOWN_TITLES}. Job title: '{input_data.title}'. Reply with ONLY the category name, nothing else."
                 }],
-                "max_tokens": 50
+                "max_tokens": 50,
+                "temperature": 0.1
             }
 
             # Use a clean client that ignores Render's proxy settings
             with httpx.Client(trust_env=False) as client:
                 response = client.post(url, headers=headers, json=payload, timeout=10.0)
+                if response.status_code != 200:
+                    print(f"GROQ API ERROR [{response.status_code}]: {response.text}")
                 response.raise_for_status()
                 res_data = response.json()
             
             ai_title = res_data["choices"][0]["message"]["content"].strip()
             calc = self._calculate_prediction(ai_title if ai_title in KNOWN_TITLES else input_data.title, input_data)
+
 
             
             return {

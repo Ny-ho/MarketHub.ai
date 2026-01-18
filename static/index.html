@@ -797,19 +797,32 @@
                 if (res.ok) {
                     const data = await res.json();
                     scan.style.display = "none";
+
+                    if (data.error) {
+                        alert(`🤖 AI STATUS: ${data.error}\n\n${data.message || "Predictor is currently offline."}`);
+                        if (data.fallback) {
+                            resPanel.classList.remove("hidden");
+                            document.getElementById("res-bracket").innerText = data.fallback.range;
+                            document.getElementById("res-conf").innerText = "LITE";
+                            document.getElementById("res-acc").innerText = "ESTIMATE";
+                        }
+                        return;
+                    }
+
                     resPanel.classList.remove("hidden");
                     document.getElementById("res-bracket").innerText = `$${data.prediction.average.toLocaleString()}`;
                     document.getElementById("res-conf").innerText = data.prediction.confidence_level;
                     document.getElementById("res-acc").innerText = data.prediction.match_accuracy;
 
                     const warn = document.getElementById("res-warning");
-                    if (data.metadata.warning) {
+                    if (data.metadata && data.metadata.warning) {
                         warn.innerText = data.metadata.warning;
                         warn.classList.remove("hidden");
                     } else {
                         warn.classList.add("hidden");
                     }
                     gsap.from(resPanel, { opacity: 0, y: 15 });
+
                 } else {
                     scan.style.display = "none";
                     alert("❌ Simulation Error: Server is under high load or model loading timed out. Try again in 30 seconds.");

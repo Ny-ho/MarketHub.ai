@@ -55,31 +55,37 @@ class GroqAIProvider(AIService):
 
     def predict_salary(self, input_data) -> dict:
         try:
-            # professional patch for Render/Cloud environments: 
-            # some environments inject proxy vars that the Groq library doesn't handle well.
-            temp_https = os.environ.pop("HTTPS_PROXY", None)
-            temp_http = os.environ.pop("HTTP_PROXY", None)
+            # DIRECT API CONNECTION:
+            # We bypass the Groq library entirely because it has a known conflict 
+            # with Render's 'proxies' configuration.
+            import httpx
             
-            try:
-                # Upgrading to 0.11.0+ and using default init fixes 'proxies' error on Render
-                client = Groq()
-            finally:
-                # Restore environment variables after client is initialized
-                if temp_https: os.environ["HTTPS_PROXY"] = temp_https
-                if temp_http: os.environ["HTTP_PROXY"] = temp_http
-
+            api_key = os.getenv("GROQ_API_KEY")
+            url = "https://api.groq.com/openai/v1/chat/completions"
             
-            response = client.chat.completions.create(
-                model="llama3-8b-8192",
-                messages=[{
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            }
+            
+            payload = {
+                "model": "llama3-8b-8192",
+                "messages": [{
                     "role": "user",
                     "content": f"Classify this job title into exactly one of these categories: {KNOWN_TITLES}. Job title: '{input_data.title}'. Reply with ONLY the category name, nothing else."
                 }],
-                max_tokens=50
-            )
+                "max_tokens": 50
+            }
+
+            # Use a clean client that ignores Render's proxy settings
+            with httpx.Client(trust_env=False) as client:
+                response = client.post(url, headers=headers, json=payload, timeout=10.0)
+                response.raise_for_status()
+                res_data = response.json()
             
-            ai_title = response.choices[0].message.content.strip()
+            ai_title = res_data["choices"][0]["message"]["content"].strip()
             calc = self._calculate_prediction(ai_title if ai_title in KNOWN_TITLES else input_data.title, input_data)
+
             
             return {
                 "prediction": {

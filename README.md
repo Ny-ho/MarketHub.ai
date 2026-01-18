@@ -1,4 +1,4 @@
-MarketHub.ai 💎🚀
+MarketHub.ai 
 
 **A simple and powerful hub for jobs, AI insights, and community.**
 
@@ -6,12 +6,12 @@ MarketHub.ai helps you find the best jobs, use AI to see what you're worth, and 
 
 ---
 
-### 🌟 Core Capabilities
-- **💎 Market Stream:** A live, real-time feed of global job dossiers and high-value roles.
-- **🧠 AI Simulator:** Intelligent salary market-value prediction powered by LLM zero-shot classification.
-- **👤 Social Identities:** Protect your privacy with customizable Agent Names (Usernames) while browsing the community.
-- **🛡️ Secure Cipher:** Robust authentication using JWT (JSON Web Tokens) and bcrypt hashing.
-- **📑 Directives:** A sleek, glass-morphed task management system for agent operations.
+ Core Capabilities
+- Market Stream:** A live, real-time feed of global job dossiers and high-value roles.
+- AI Simulator:** Intelligent salary market-value prediction powered by LLM zero-shot classification.
+- Social Identities:** Protect your privacy with customizable Agent Names (Usernames) while browsing the community.
+- Secure Cipher:** Robust authentication using JWT (JSON Web Tokens) and bcrypt hashing.
+- Directives:** A sleek, glass-morphed task management system for agent operations.
 
 ### 🛠️ Technology Stack
 - **Backend:** [FastAPI](https://fastapi.tiangolo.com/) (Python)

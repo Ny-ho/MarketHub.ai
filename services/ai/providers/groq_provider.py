@@ -28,6 +28,17 @@ class GroqAIProvider(AIService):
         # Calculate salary based on factors
         base = SALARY_AVERAGES.get(cleaned_title, 100000)
         
+        # Location-based scaling (Market Reality Adjustment)
+        loc_lower = input_data.location.lower()
+        loc_multiplier = 1.0 # Global/US Base
+        
+        if "nepal" in loc_lower:
+            loc_multiplier = 0.18 # Adjusted for Nepal cost of living/market
+        elif "india" in loc_lower:
+            loc_multiplier = 0.35
+        elif "europe" in loc_lower or "london" in loc_lower:
+            loc_multiplier = 0.85
+        
         # Adjust for experience (3% per year)
         exp_multiplier = 1 + (input_data.years_of_experience * 0.03)
         
@@ -43,7 +54,7 @@ class GroqAIProvider(AIService):
         elif input_data.company_size == "Small":
             exp_multiplier -= 0.1
         
-        predicted = int(base * exp_multiplier)
+        predicted = int(base * loc_multiplier * exp_multiplier)
         low_range = int(predicted * 0.9)
         high_range = int(predicted * 1.1)
         
@@ -52,6 +63,7 @@ class GroqAIProvider(AIService):
             "range": f"${low_range:,} - ${high_range:,}",
             "title_used": cleaned_title
         }
+
 
     def predict_salary(self, input_data) -> dict:
         try:

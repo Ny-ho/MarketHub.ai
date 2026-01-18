@@ -16,10 +16,18 @@ MarketHub.ai helps you find the best jobs, use AI to see what you're worth, and 
 ### 🛠️ Technology Stack
 - **Backend:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
 - **Database:** PostgreSQL with SQLAlchemy (ORM)
-- **Intelligence:** [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) (Zero-shot NLP)
-- **Security:** JWT Auth & Passlib (Bcrypt)
-- **Frontend:** Pure Vanilla HTML5/CSS3/ES6+
-- **Aesthetics:** [GSAP](https://greensock.com/gsap/) (Animations) & [Lucide](https://lucide.dev/) (Icons)
+- **Intelligence (Optional):** [Groq API](https://groq.com/) (On-demand Salary Prediction)
+- **Architecture:** Modular Service Layer (AI-Optional)
+
+---
+
+### 🧠 AI Intelligence (Optional)
+The AI Intelligence module is fully isolated. You can toggle it using the `AI_PROVIDER` environment variable:
+
+- `disabled` (Default): AI endpoints return a graceful "service disabled" message.
+- `groq`: Enables salary prediction using the internal Groq provider (requires `GROQ_API_KEY`).
+
+---
 
 ---
 
